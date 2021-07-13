@@ -1,4 +1,6 @@
--- borrowed from https://github.com/ChristianChiarulli/LunarVim/blob/rolling/lua/keymappings.lua
+-- A lot of this is borrowed from 
+-- https://github.com/ChristianChiarulli/LunarVim/blob/rolling/lua/keymappings.lua
+
 local function register_mappings(mappings, default_options)
   for mode, mode_mappings in pairs(mappings) do
     for _, mapping in pairs(mode_mappings) do
@@ -65,9 +67,6 @@ local mappings = {
 
 register_mappings(mappings, { silent = true, noremap = true })
 
-vim.cmd 'inoremap <expr> <c-j> ("\\<C-n>")'
-vim.cmd 'inoremap <expr> <c-k> ("\\<C-p>")'
+-- S for search and replace in buffer
+vim.cmd 'nnoremap S :%s//gi<Left><Left><Left>'
 
-    -- S for search and replace in buffer
-
---nnoremap S :%s//gi<Left><Left><Left>

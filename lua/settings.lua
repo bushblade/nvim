@@ -26,3 +26,5 @@ vim.g.mapleader = ' '
 vim.g.tokyonight_style = 'night'
 vim.cmd[[colorscheme tokyonight]]
 
+vim.cmd[[au TextYankPost * silent! lua vim.highlight.on_yank()]]
+
