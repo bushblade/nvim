@@ -34,3 +34,9 @@ Prettier for html, css, JavaScript etc
 ```bash
 npm i -g prettier
 ```
+
+lua-fmt
+
+```bash
+npm i -g lua-fmt
+```
