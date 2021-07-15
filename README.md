@@ -54,5 +54,6 @@ npm i -g lua-fmt
 - Show documentation - lspsaga?
 - spelling
 - eslint
+- See what [nvim-lsp-ts-utils](https://github.com/jose-elias-alvarez/nvim-lsp-ts-utils) can offer
 
 [This init.lua is super helpful](https://gist.github.com/benfrain/97f2b91087121b2d4ba0dcc4202d252f)
