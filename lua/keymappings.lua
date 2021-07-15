@@ -18,8 +18,6 @@ local mappings = {
     {"<C-j>", "<C-\\><C-N><C-w>j"},
     {"<C-k>", "<C-\\><C-N><C-w>k"},
     {"<C-l>", "<C-\\><C-N><C-w>l"}
-
-    -- Work with vim-close-tag to indent on enter
   },
   n = {
     -- Normal mode
