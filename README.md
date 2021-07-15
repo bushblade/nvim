@@ -27,6 +27,12 @@ Lua available in Arch/Manjaro repos
 sudo pacman -S lua-language-server
 ```
 
+Use VS Code Language server for CSS
+
+```bash
+npm i -g vscode-langservers-extracted
+```
+
 ## Install formatters
 
 Prettier for html, css, JavaScript etc
@@ -45,9 +51,8 @@ npm i -g lua-fmt
 
 - Emmett
 - Auto imports - compe should be able to do this
-- Show documentation
+- Show documentation - lspsaga?
 - spelling
 - eslint
-- css language server
 
 [This init.lua is super helpful](https://gist.github.com/benfrain/97f2b91087121b2d4ba0dcc4202d252f)
