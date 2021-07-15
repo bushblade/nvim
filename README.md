@@ -49,7 +49,7 @@ npm i -g lua-fmt
 
 ## TODO
 
-- Emmett
+- Emmett [maybe with aca/emmet-ls](https://github.com/aca/emmet-ls)
 - Auto imports - compe should be able to do this
 - Show documentation - lspsaga?
 - spelling

@@ -1,4 +1,5 @@
 local nvim_lsp = require("lspconfig")
+local configs = require("lspconfig/configs")
 
 nvim_lsp.tsserver.setup {
   filetypes = {"javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx"},
@@ -41,3 +42,18 @@ nvim_lsp.html.setup {
     }
   }
 }
+
+-- configs.emmet_ls = {
+--   default_config = {
+--     cmd = {"emmet-ls", "--stdio"},
+--     filetypes = {"html", "css"},
+--     root_dir = function(fname)
+--       return vim.loop.cwd()
+--     end,
+--     settings = {}
+--   }
+-- }
+
+-- configs.emmet_ls.setup {
+--   capabilities = capabilities
+-- }

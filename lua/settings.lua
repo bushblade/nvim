@@ -19,6 +19,7 @@ vim.opt.numberwidth = 5 -- wider gutter
 vim.opt.linebreak = true -- don't break words on wrap
 vim.opt.spelllang = "en"
 vim.opt.smartindent = true
+vim.opt.completeopt = "menuone,noselect" -- nvim-compe
 
 vim.g.netrw_banner = 0
 vim.g.netrw_liststyle = 3
