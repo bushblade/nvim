@@ -40,5 +40,6 @@ return require("packer").startup(
     use "alvan/vim-closetag"
     use "jiangmiao/auto-pairs"
     use "mhartington/formatter.nvim"
+    use "airblade/vim-gitgutter"
   end
 )
