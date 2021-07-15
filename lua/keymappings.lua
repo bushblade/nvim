@@ -35,7 +35,7 @@ local mappings = {
     {"<C-Right>", ":vertical resize +2<CR>", {silent = true}},
     -- Telescope
     -- Ctrl + p fuzzy files
-    {"<C-p>", ":Telescope find_files<cr>"},
+    {"<C-p>", [[<cmd> lua require"telescope.builtin".find_files({ hidden = true })<CR>]]},
     {"<leader>ff", ":Telescope find_files<cr>"},
     {"<leader>fb", ":Telescope buffers<cr>"},
     {"<leader>b", ":Telescope buffers<cr>"},
