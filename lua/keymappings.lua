@@ -21,6 +21,8 @@ local mappings = {
     { "<C-j>", "<C-\\><C-N><C-w>j" },
     { "<C-k>", "<C-\\><C-N><C-w>k" },
     { "<C-l>", "<C-\\><C-N><C-w>l" },
+
+    -- Work with vim-close-tag to indent on enter
   },
   n = { -- Normal mode
     -- Better window movement
@@ -44,6 +46,9 @@ local mappings = {
     { "<leader>fs", ":Telescope live_grep<cr>" },
     { "<leader>s", ":Telescope live_grep<cr>" },
     { "<leader>e", ":Telescope file_browser<cr>" },
+
+    -- Escape clears highlight after search
+    { "<esc>", ":noh<cr><esc>" }
 
   },
   t = { -- Terminal mode

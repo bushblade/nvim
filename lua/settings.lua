@@ -21,6 +21,9 @@ vim.g.netrw_liststyle = 3
 
 vim.g.mapleader = ' '
 
+-- close tags
+vim.g.closetag_filenames = '*.html,*.xhtml,*.phtml,*.php,*.jsx,*.js,*.tsx,*.vue'
+
 
 -- set colour scheme
 vim.g.tokyonight_style = 'night'

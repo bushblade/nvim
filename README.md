@@ -21,7 +21,7 @@ typescript for ts, js, jsx, tsx available from npm
 npm install -g typescript typescript-language-server
 ```
 
-Lua availabel in Arch/Manjaro repos
+Lua available in Arch/Manjaro repos
 
 ```bash
 sudo pacman -S lua-language-server
