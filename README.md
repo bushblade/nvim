@@ -40,3 +40,14 @@ lua-fmt
 ```bash
 npm i -g lua-fmt
 ```
+
+## TODO
+
+- Emmett
+- Auto imports - compe should be able to do this
+- Show documentation
+- spelling
+- eslint
+- css language server
+
+[This init.lua is super helpful](https://gist.github.com/benfrain/97f2b91087121b2d4ba0dcc4202d252f)
