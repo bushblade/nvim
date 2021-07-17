@@ -1,4 +1,3 @@
-
 -- Prettier function for formatter
 local prettier = function()
   return {
@@ -14,10 +13,12 @@ require("formatter").setup(
     filetype = {
       javascript = {prettier},
       typescript = {prettier},
+      json = {prettier},
       html = {prettier},
       css = {prettier},
       scss = {prettier},
       markdown = {prettier},
+      vue = {prettier},
       lua = {
         -- luafmt
         function()
@@ -37,7 +38,7 @@ vim.api.nvim_exec(
   [[
 augroup FormatAutogroup
   autocmd!
-  autocmd BufWritePost *.js,*.ts,*.css,*.scss,*.md,*.html,*.lua : FormatWrite
+  autocmd BufWritePost *.js,*.ts,*.css,*.scss,*.md,*.html,*.lua,.*json,*.vue : FormatWrite
 augroup END
 ]],
   true
