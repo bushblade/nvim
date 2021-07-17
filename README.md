@@ -56,5 +56,6 @@ npm i -g lua-fmt
 - eslint
 - See what [nvim-lsp-ts-utils](https://github.com/jose-elias-alvarez/nvim-lsp-ts-utils) can offer
 - Styled components highlighting [related to this issue](https://github.com/nvim-treesitter/nvim-treesitter/issues/1111)
+- Vue LSP
 
 [This init.lua is super helpful](https://gist.github.com/benfrain/97f2b91087121b2d4ba0dcc4202d252f)

@@ -12,6 +12,12 @@ return require("packer").startup(
       requires = {{"nvim-lua/popup.nvim"}, {"nvim-lua/plenary.nvim"}}
     }
 
+    -- TS utils
+    use {
+      "jose-elias-alvarez/nvim-lsp-ts-utils",
+      requires = {{"jose-elias-alvarez/null-ls.nvim"}, {"nvim-lua/plenary.nvim"}}
+    }
+
     -- Theme
     use "folke/tokyonight.nvim"
 
@@ -32,10 +38,9 @@ return require("packer").startup(
 
     -- tpope
     use "tpope/vim-fugitive"
-    use "tpope/vim-surround" -- has some issues?
+    use "tpope/vim-surround"
     use "tpope/vim-commentary"
 
-    --use 'justinmk/vim-sneak' -- maybe try hop instead?
     use "knubie/vim-kitty-navigator"
     use "alvan/vim-closetag"
     use "jiangmiao/auto-pairs"
