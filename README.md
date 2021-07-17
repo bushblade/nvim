@@ -62,12 +62,13 @@ npm i -g lua-fmt
 ## TODO
 
 - Emmett [maybe with aca/emmet-ls](https://github.com/aca/emmet-ls)
-- Auto imports - compe should be able to do this
+- Auto imports - compe should be able to do this but not working?
 - Show documentation - lspsaga?
 - spelling
 - ~~eslint~~ solved with 👇
 - See what [nvim-lsp-ts-utils](https://github.com/jose-elias-alvarez/nvim-lsp-ts-utils) can offer
 - Styled components highlighting [related to this issue](https://github.com/nvim-treesitter/nvim-treesitter/issues/1111)
+- cleanup lsp-settings.lua, sub modules
 
 ## Some useful links to help me get this working
 

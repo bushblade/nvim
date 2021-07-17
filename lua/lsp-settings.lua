@@ -32,7 +32,7 @@ nvim_lsp.tsserver.setup {
     ts_utils.setup {
       debug = false,
       disable_commands = false,
-      enable_import_on_completion = true,
+      enable_import_on_completion = true, -- I don't think this is working
       -- import all
       import_all_timeout = 5000, -- ms
       import_all_priorities = {
@@ -46,7 +46,7 @@ nvim_lsp.tsserver.setup {
       -- eslint
       eslint_enable_code_actions = true,
       eslint_enable_disable_comments = true,
-      eslint_bin = "eslint_d",
+      eslint_bin = "eslint_d", -- use eslint_d rather than eslint for performance
       eslint_config_fallback = nil,
       eslint_enable_diagnostics = true,
       -- formatting
