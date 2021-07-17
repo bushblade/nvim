@@ -33,6 +33,12 @@ Use VS Code Language server for CSS
 npm i -g vscode-langservers-extracted
 ```
 
+Vue Js
+
+```bash
+npm install -g vls
+```
+
 ## eslint_d for linting
 
 ```

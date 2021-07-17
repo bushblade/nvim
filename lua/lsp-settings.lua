@@ -1,5 +1,8 @@
 local nvim_lsp = require("lspconfig")
 local configs = require("lspconfig/configs")
+--Enable (broadcasting) snippet capability for completion
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 -- enable null-ls integration (optional)
 require("null-ls").setup {}
@@ -68,9 +71,8 @@ nvim_lsp.tsserver.setup {
   end
 }
 
---Enable (broadcasting) snippet capability for completion
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = true
+-- Vue JS --------------------------------------
+require "lspconfig".vuels.setup {}
 
 -- CSS -------------------------------------
 
