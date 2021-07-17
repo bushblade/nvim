@@ -59,7 +59,7 @@ npm i -g lua-fmt
 - Auto imports - compe should be able to do this
 - Show documentation - lspsaga?
 - spelling
-- ~~eslint~~
+- ~~eslint~~ solved with 👇
 - See what [nvim-lsp-ts-utils](https://github.com/jose-elias-alvarez/nvim-lsp-ts-utils) can offer
 - Styled components highlighting [related to this issue](https://github.com/nvim-treesitter/nvim-treesitter/issues/1111)
 - Vue LSP
