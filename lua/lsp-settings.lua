@@ -4,8 +4,16 @@ local configs = require("lspconfig/configs")
 -- enable null-ls integration (optional)
 require("null-ls").setup {}
 
+-- JavaScript and TypeScript -------------------------------
 nvim_lsp.tsserver.setup {
-  filetypes = {"javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx"},
+  filetypes = {
+    "javascript",
+    "javascriptreact",
+    "javascript.jsx",
+    "typescript",
+    "typescriptreact",
+    "typescript.tsx"
+  },
   -- I needed this to work on plain .js files
   root_dir = function()
     return vim.loop.cwd()
@@ -64,6 +72,8 @@ nvim_lsp.tsserver.setup {
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
+-- CSS -------------------------------------
+
 nvim_lsp.cssls.setup(
   {
     capabilities = capabilities,
@@ -82,6 +92,8 @@ nvim_lsp.cssls.setup(
     }
   }
 )
+
+-- HTML --------------------------------------
 
 nvim_lsp.html.setup {
   capabilities = capabilities,
@@ -111,10 +123,45 @@ nvim_lsp.html.setup {
 --   capabilities = capabilities
 -- }
 
+-- Customization and appearance -----------------------------------------
 -- change gutter diagnostic symbols
 local signs = {Error = " ", Warning = " ", Hint = " ", Information = " "}
 
 for type, icon in pairs(signs) do
   local hl = "LspDiagnosticsSign" .. type
   vim.fn.sign_define(hl, {text = icon, texthl = hl, numhl = ""})
+end
+
+-- Show source in diagnostics
+vim.lsp.handlers["textDocument/publishDiagnostics"] = function(_, _, params, client_id, _)
+  local config = {
+    -- your config
+    underline = true,
+    virtual_text = {
+      prefix = "",
+      spacing = 4
+    },
+    signs = true,
+    update_in_insert = false
+  }
+  local uri = params.uri
+  local bufnr = vim.uri_to_bufnr(uri)
+
+  if not bufnr then
+    return
+  end
+
+  local diagnostics = params.diagnostics
+
+  for i, v in ipairs(diagnostics) do
+    diagnostics[i].message = string.format("%s: %s", v.source, v.message)
+  end
+
+  vim.lsp.diagnostic.save(diagnostics, bufnr, client_id)
+
+  if not vim.api.nvim_buf_is_loaded(bufnr) then
+    return
+  end
+
+  vim.lsp.diagnostic.display(diagnostics, bufnr, client_id, config)
 end
