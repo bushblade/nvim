@@ -68,7 +68,6 @@ npm i -g lua-fmt
 - ~~eslint~~ solved with 👇
 - See what [nvim-lsp-ts-utils](https://github.com/jose-elias-alvarez/nvim-lsp-ts-utils) can offer
 - Styled components highlighting [related to this issue](https://github.com/nvim-treesitter/nvim-treesitter/issues/1111)
-- Vue LSP
 
 ## Some useful links to help me get this working
 
