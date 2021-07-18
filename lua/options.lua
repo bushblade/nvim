@@ -21,6 +21,11 @@ vim.opt.spelllang = "en"
 vim.opt.smartindent = true
 vim.opt.completeopt = "menuone,noselect" -- nvim-compe
 vim.opt.signcolumn = "yes" -- always show the signcolumn
+vim.opt.termguicolors = true
+-- spelling
+-- vim.opt.spell = true
+vim.opt.spelllang = "en_gb"
+vim.opt.mousemodel = "popup"
 
 vim.g.netrw_banner = 0
 vim.g.netrw_liststyle = 3
