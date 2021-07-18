@@ -20,6 +20,7 @@ vim.opt.linebreak = true -- don't break words on wrap
 vim.opt.spelllang = "en"
 vim.opt.smartindent = true
 vim.opt.completeopt = "menuone,noselect" -- nvim-compe
+vim.opt.signcolumn = "yes" -- always show the signcolumn
 
 vim.g.netrw_banner = 0
 vim.g.netrw_liststyle = 3
@@ -31,11 +32,10 @@ vim.g.closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.jsx,*.js,*.tsx,*.vue"
 
 -- set colour scheme
 vim.g.tokyonight_style = "night"
-vim.g.tokyonight_italic_functions = true
-vim.g.tokyonight_sidebars = { "qf", "vista_kind", "terminal", "packer" }
+vim.g.tokyonight_sidebars = {"qf", "vista_kind", "terminal", "packer"}
 
 -- Change the "hint" color to the "orange" color, and make the "error" color bright red
-vim.g.tokyonight_colors = { hint = "orange", error = "#ff0000" }
+vim.g.tokyonight_colors = {hint = "orange", error = "#ff0000"}
 vim.cmd [[colorscheme tokyonight]]
 
 -- highlight on yank
