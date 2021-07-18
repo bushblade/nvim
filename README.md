@@ -15,10 +15,11 @@ git clone https://github.com/wbthomason/packer.nvim\
 
 ## Install language servers
 
-typescript for ts, js, jsx, tsx available from npm
+Most available via npm
 
 ```bash
-npm install -g typescript typescript-language-server
+npm install -g typescript typescript-language-server vscode-langservers-extracted vls eslint_d
+
 ```
 
 Lua available in Arch/Manjaro repos
@@ -27,36 +28,10 @@ Lua available in Arch/Manjaro repos
 sudo pacman -S lua-language-server
 ```
 
-Use VS Code Language server for CSS
-
-```bash
-npm i -g vscode-langservers-extracted
-```
-
-Vue Js
-
-```bash
-npm install -g vls
-```
-
-## eslint_d for linting
-
-```
-npm i -g eslint_d
-```
-
 ## Install formatters
 
-Prettier for html, css, JavaScript etc
-
 ```bash
-npm i -g prettier
-```
-
-lua-fmt
-
-```bash
-npm i -g lua-fmt
+npm i -g prettier lua-fmt
 ```
 
 ## TODO
@@ -65,10 +40,9 @@ npm i -g lua-fmt
 - Auto imports - compe should be able to do this but not working?
 - Show documentation - lspsaga?
 - spelling
-- ~~eslint~~ solved with 👇
-- See what [nvim-lsp-ts-utils](https://github.com/jose-elias-alvarez/nvim-lsp-ts-utils) can offer
 - Styled components highlighting [related to this issue](https://github.com/nvim-treesitter/nvim-treesitter/issues/1111)
 - cleanup lsp-settings.lua, sub modules
+- Syntax highlighting on fish files not working
 
 ## Some useful links to help me get this working
 
