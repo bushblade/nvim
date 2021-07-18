@@ -2,7 +2,7 @@
 
 A minimal set up for Nvim using native LSP with some sane defaults and settings.
 
-Uses the latest >=0.5 Neovim
+Uses the latest 0.5+ Neovim
 
 Clone the repository into ~/.config/nvim
 
