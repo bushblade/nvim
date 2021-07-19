@@ -55,5 +55,11 @@ return require("packer").startup(
         require "hop".setup {keys = "etovxqpdygfblzhckisuran"}
       end
     }
+
+    -- snippets
+    use {
+      "SirVer/ultisnips",
+      requires = {{"honza/vim-snippets"}}
+    }
   end
 )
