@@ -43,7 +43,12 @@ local mappings = {
     -- Escape clears highlight after search
     {"<esc>", ":noh<cr><esc>"},
     -- hop words
-    {"f", ":HopWord<cr>"}
+    {"f", ":HopWord<cr>"},
+    -- ts_utils
+    {"gs", ":TSLspOrganize<CR>"},
+    {"qq", ":TSLspFixCurrent<CR>"},
+    {"gr", ":TSLspRenameFile<CR>"},
+    {"gi", ":TSLspImportAll<CR>"}
   },
   t = {
     -- Terminal mode

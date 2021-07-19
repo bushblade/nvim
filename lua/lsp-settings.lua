@@ -30,7 +30,7 @@ nvim_lsp.tsserver.setup {
 
     -- defaults
     ts_utils.setup {
-      debug = false,
+      debug = true,
       disable_commands = false,
       enable_import_on_completion = true, -- I don't think this is working
       -- import all
@@ -48,18 +48,15 @@ nvim_lsp.tsserver.setup {
       eslint_enable_disable_comments = true,
       eslint_bin = "eslint_d", -- use eslint_d rather than eslint for performance
       eslint_config_fallback = nil,
-      eslint_enable_diagnostics = true
+      eslint_enable_diagnostics = true,
+      -- update imports on file move
+      update_imports_on_move = false,
+      require_confirmation_on_move = false,
+      watch_dir = nil
     }
 
     -- required to fix code action ranges
     ts_utils.setup_client(client)
-
-    -- no default maps, so you may want to define some here
-    local opts = {silent = true}
-    vim.api.nvim_buf_set_keymap(bufnr, "n", "gs", ":TSLspOrganize<CR>", opts)
-    vim.api.nvim_buf_set_keymap(bufnr, "n", "qq", ":TSLspFixCurrent<CR>", opts)
-    vim.api.nvim_buf_set_keymap(bufnr, "n", "gr", ":TSLspRenameFile<CR>", opts)
-    vim.api.nvim_buf_set_keymap(bufnr, "n", "gi", ":TSLspImportAll<CR>", opts)
   end
 }
 
@@ -136,7 +133,7 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = function(_, _, params, cli
       spacing = 4
     },
     signs = true,
-    update_in_insert = true
+    update_in_insert = false
   }
   local uri = params.uri
   local bufnr = vim.uri_to_bufnr(uri)
