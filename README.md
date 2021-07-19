@@ -36,13 +36,14 @@ npm i -g prettier lua-fmt
 
 ## TODO
 
-- Emmett [maybe with aca/emmet-ls](https://github.com/aca/emmet-ls)
-- Auto imports - compe should be able to do this but not working?
-- Show documentation - lspsaga?
+- Emmett [maybe with aca/emmet-ls](https://github.com/aca/emmet-ls) can't get
+  this to complete
+- Show documentation - lspsaga? But not too fussed about this
 - ~~spelling~~ use built in spell
 - Styled components highlighting [related to this issue](https://github.com/nvim-treesitter/nvim-treesitter/issues/1111)
 - clean up lsp-settings.lua, sub modules
 - Syntax highlighting on fish files not working
+- Only use eslint in projects that have eslint installed
 
 ## Some useful links to help me get this working
 
