@@ -48,15 +48,7 @@ nvim_lsp.tsserver.setup {
       eslint_enable_disable_comments = true,
       eslint_bin = "eslint_d", -- use eslint_d rather than eslint for performance
       eslint_config_fallback = nil,
-      eslint_enable_diagnostics = true,
-      -- formatting
-      enable_formatting = false,
-      formatter = "prettier",
-      formatter_config_fallback = nil,
-      -- update imports on file move
-      update_imports_on_move = true,
-      require_confirmation_on_move = true,
-      watch_dir = nil
+      eslint_enable_diagnostics = true
     }
 
     -- required to fix code action ranges
@@ -140,11 +132,11 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = function(_, _, params, cli
     -- your config
     underline = true,
     virtual_text = {
-      prefix = "",
+      prefix = "🤯",
       spacing = 4
     },
     signs = true,
-    update_in_insert = false
+    update_in_insert = true
   }
   local uri = params.uri
   local bufnr = vim.uri_to_bufnr(uri)
