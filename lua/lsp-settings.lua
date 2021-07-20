@@ -5,7 +5,8 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 -- enable null-ls integration (optional)
-require("null-ls").setup {}
+require("null-ls").config {}
+require("lspconfig")["null-ls"].setup {}
 
 -- JavaScript and TypeScript -------------------------------
 nvim_lsp.tsserver.setup {
@@ -17,6 +18,7 @@ nvim_lsp.tsserver.setup {
     "typescriptreact",
     "typescript.tsx"
   },
+  cmd = {"typescript-language-server", "--stdio"},
   -- I needed this to work on plain .js files
   root_dir = function()
     return vim.loop.cwd()
