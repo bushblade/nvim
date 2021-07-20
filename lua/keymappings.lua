@@ -74,4 +74,5 @@ local mappings = {
 register_mappings(mappings, {silent = true, noremap = true})
 
 -- S for search and replace in buffer
+-- TODO move this to above
 vim.cmd "nnoremap S :%s//gi<Left><Left><Left>"
