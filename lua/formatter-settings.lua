@@ -11,6 +11,8 @@ require("formatter").setup(
   {
     logging = false,
     filetype = {
+      typescriptreact = {prettier},
+      javacriptreact = {prettier},
       javascript = {prettier},
       typescript = {prettier},
       json = {prettier},
