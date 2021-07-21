@@ -22,6 +22,7 @@ vim.opt.smartindent = true
 vim.opt.completeopt = "menuone,noselect" -- nvim-compe
 vim.opt.signcolumn = "yes" -- always show the signcolumn
 vim.opt.termguicolors = true
+-- vim.opt.title = true
 -- spelling
 -- vim.opt.spell = true
 vim.opt.spelllang = "en_gb"

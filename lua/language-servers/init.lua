@@ -8,6 +8,7 @@ require("language-servers/css")
 require("language-servers/html")
 require("language-servers/luals")
 require("language-servers/python")
+require("language-servers/json")
 
 -- Customization and appearance -----------------------------------------
 -- change gutter diagnostic symbols
