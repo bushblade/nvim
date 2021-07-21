@@ -44,7 +44,9 @@ local mappings = {
     {"<esc>", ":noh<cr><esc>"},
     -- hop words
     {"f", ":HopWord<cr>"},
+    {"F", ":HopLine<cr>"},
     -- ts_utils
+    -- TODO these should only be active on TS/JS files
     {"gs", ":TSLspOrganize<CR>"},
     {"qq", ":TSLspFixCurrent<CR>"},
     {"gr", ":TSLspRenameFile<CR>"},
