@@ -4,6 +4,9 @@ require("options")
 require("luaLine-settings")
 require("treesitter-settings")
 require("keymappings")
-require("lsp-settings")
+require("language-servers")
 require("formatter-settings")
 require("telescope-settings")
+
+-- run some vim script from lua
+vim.cmd([[command! Hello lua print('Hello')]])

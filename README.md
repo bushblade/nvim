@@ -61,4 +61,4 @@ npm i -g prettier lua-fmt
 
 [Lua for Programmers](https://ebens.me/post/lua-for-programmers-part-1/)
 
-[LSP config](https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md#tsserver)
+[LSP config](https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md)

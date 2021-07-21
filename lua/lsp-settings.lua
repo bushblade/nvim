@@ -1,5 +1,6 @@
 local nvim_lsp = require("lspconfig")
-local configs = require("lspconfig/configs")
+-- local configs = require("lspconfig/configs")
+
 --Enable (broadcasting) snippet capability for completion
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
@@ -8,6 +9,7 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 require("null-ls").config {}
 require("lspconfig")["null-ls"].setup {}
 
+-- TODO clean up this part of the module
 -- JavaScript and TypeScript -------------------------------
 nvim_lsp.tsserver.setup {
   filetypes = {
@@ -25,6 +27,7 @@ nvim_lsp.tsserver.setup {
   end,
   -- nvim-lsp-ts-utils settings below
   on_attach = function(client, bufnr)
+    -- set up go to definition keybindings
     local opts = {noremap = true, silent = true}
     local function buf_set_keymap(...)
       vim.api.nvim_buf_set_keymap(bufnr, ...)
@@ -36,8 +39,9 @@ nvim_lsp.tsserver.setup {
     buf_set_keymap("n", "gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>", opts)
     buf_set_keymap("n", "gd", "<Cmd>lua vim.lsp.buf.definition()<CR>", opts)
     buf_set_keymap("n", "K", "<Cmd>lua vim.lsp.buf.hover()<CR>", opts)
-    buf_set_keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
     buf_set_keymap("n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
+    buf_set_keymap("n", "[d", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", opts)
+    buf_set_keymap("n", "]d", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", opts)
 
     -- disable tsserver formatting if you plan on formatting via null-ls
     client.resolved_capabilities.document_formatting = false
