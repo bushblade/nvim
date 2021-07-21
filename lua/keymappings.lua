@@ -39,7 +39,7 @@ local mappings = {
     {"<leader>b", ":Telescope buffers<cr>"},
     {"<leader>fs", ":Telescope live_grep<cr>"},
     {"<leader>s", ":Telescope live_grep<cr>"},
-    {"<leader>e", ":Telescope file_browser<cr>"},
+    {"<leader>e", [[<cmd> lua require"telescope.builtin".file_browser({ hidden = true })<CR>]]},
     -- Escape clears highlight after search
     {"<esc>", ":noh<cr><esc>"},
     -- hop words
