@@ -2,11 +2,12 @@
 -- null-ls for tsutils plugin
 require("null-ls").config {}
 require("lspconfig")["null-ls"].setup {}
-require("language-servers.typescript")
-require("language-servers.vue")
-require("language-servers.css")
-require("language-servers.html")
-require("language-servers.luals")
+require("language-servers/typescript")
+require("language-servers/vue")
+require("language-servers/css")
+require("language-servers/html")
+require("language-servers/luals")
+require("language-servers/python")
 
 -- Customization and appearance -----------------------------------------
 -- change gutter diagnostic symbols
