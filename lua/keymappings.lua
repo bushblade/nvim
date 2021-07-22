@@ -39,7 +39,7 @@ local mappings = {
     {"<leader>b", ":Telescope buffers<cr>"},
     {"<leader>fs", ":Telescope live_grep<cr>"},
     {"<leader>s", ":Telescope live_grep<cr>"},
-    {"<leader>e", [[<cmd> lua require"telescope.builtin".file_browser({ hidden = true })<CR>]]},
+    -- {"<leader>e", [[<cmd> lua require"telescope.builtin".file_browser({ hidden = true })<CR>]]},
     -- Escape clears highlight after search
     {"<esc>", ":noh<cr><esc>"},
     -- hop words
@@ -50,7 +50,9 @@ local mappings = {
     {"gs", ":TSLspOrganize<CR>"},
     {"qq", ":TSLspFixCurrent<CR>"},
     {"gr", ":TSLspRenameFile<CR>"},
-    {"gi", ":TSLspImportAll<CR>"}
+    {"gi", ":TSLspImportAll<CR>"},
+    -- NvimTree
+    {"<leader>e", ":NvimTreeToggle<CR>"}
   },
   t = {
     -- Terminal mode

@@ -1,5 +1,6 @@
 vim.opt.relativenumber = true
 vim.opt.cursorline = true -- show the cursor line
+vim.opt.hidden = true
 vim.opt.cursorcolumn = true -- show the cursor column
 vim.opt.mouse = "a" -- enable mouse
 vim.opt.clipboard = "unnamedplus" -- use system clipboard
@@ -38,8 +39,9 @@ vim.g.closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.jsx,*.js,*.tsx,*.vue"
 
 -- set colour scheme
 vim.g.tokyonight_style = "night"
-vim.g.tokyonight_sidebars = {"qf", "vista_kind", "terminal", "packer"}
+-- vim.g.tokyonight_sidebars = {"qf", "vista_kind", "terminal", "packer"}
 vim.g.tokyonight_transparent = true
+vim.g.tokyonight_dark_sidebar = false
 
 -- Change the "hint" color to the "orange" color, and make the "error" color bright red
 vim.g.tokyonight_colors = {hint = "orange", error = "#ff0000"}
