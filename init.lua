@@ -1,12 +1,20 @@
-require("load-plugins")
-require("compe-settings")
+-- basic settings and options
 require("options")
-require("luaLine-settings")
-require("treesitter-settings")
-require("keymappings")
+
+-- load all the plugins
+require("load-plugins")
+
+-- set up language servers
 require("language-servers")
+
+-- set up treesitter
+require("treesitter-settings")
+
+-- configure plugins
+require("compe-settings")
+require("luaLine-settings")
 require("formatter-settings")
 require("telescope-settings")
 
--- run some vim script from lua
-vim.cmd([[command! Hello lua print('Hello')]])
+-- keymappings
+require("keymappings")
