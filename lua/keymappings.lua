@@ -17,7 +17,10 @@ local mappings = {
     {"<C-h>", "<C-\\><C-N><C-w>h"},
     {"<C-j>", "<C-\\><C-N><C-w>j"},
     {"<C-k>", "<C-\\><C-N><C-w>k"},
-    {"<C-l>", "<C-\\><C-N><C-w>l"}
+    {"<C-l>", "<C-\\><C-N><C-w>l"},
+    -- moving text
+    {"<C-j>", "<esc>:m .+1<CR>=="},
+    {"<C-k>", "<esc>:m .-2<CR>=="}
   },
   n = {
     -- Normal mode
@@ -45,7 +48,12 @@ local mappings = {
     {"f", ":HopWord<cr>"},
     {"F", ":HopLine<cr>"},
     -- NvimTree
-    {"<leader>e", ":NvimTreeToggle<CR>"}
+    {"<leader>e", ":NvimTreeToggle<CR>"},
+    -- yank to end of line on Y
+    {"Y", "y$"},
+    -- moving text
+    {"<leader>k", ":m .-2<CR>=="},
+    {"<leader>j", ":m .+1<CR>=="}
   },
   t = {
     -- Terminal mode
@@ -64,7 +72,10 @@ local mappings = {
     {"<", "<gv"},
     {">", ">gv"},
     -- hop words
-    {"f", "<cmd>lua require'hop'.hint_words()<cr>"}
+    {"f", "<cmd>lua require'hop'.hint_words()<cr>"},
+    -- moving text
+    {"J", ":m '>+1<CR>gv=gv"},
+    {"K", ":m '<-2<CR>gv=gv"}
   },
   x = {}
 }
