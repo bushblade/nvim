@@ -53,7 +53,9 @@ local mappings = {
     {"Y", "y$"},
     -- moving text
     {"<leader>k", ":m .-2<CR>=="},
-    {"<leader>j", ":m .+1<CR>=="}
+    {"<leader>j", ":m .+1<CR>=="},
+    -- Toggle Trouble view
+    {"<leader>t", ":TroubleToggle<CR>"}
   },
   t = {
     -- Terminal mode

@@ -71,5 +71,13 @@ return require("packer").startup(
     use "JoosepAlviste/nvim-ts-context-commentstring"
 
     use {"p00f/nvim-ts-rainbow"}
+
+    use {
+      "folke/trouble.nvim",
+      requires = "kyazdani42/nvim-web-devicons",
+      config = function()
+        require("trouble").setup {}
+      end
+    }
   end
 )
