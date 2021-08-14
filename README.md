@@ -57,8 +57,6 @@ npm i -g prettier lua-fmt
 
 [Ui Customization docs](https://github.com/neovim/nvim-lspconfig/wiki/UI-customization#change-diagnostic-symbols-in-the-sign-column-gutter)
 
-[Nvim Lua guide](https://github.com/nanotee/nvim-lua-guide/)
-
 [Lua for Programmers](https://ebens.me/post/lua-for-programmers-part-1/)
 
 [LSP config](https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md)
