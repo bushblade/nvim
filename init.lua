@@ -15,6 +15,7 @@ require("compe-settings")
 require("luaLine-settings")
 require("formatter-settings")
 require("telescope-settings")
+require("whichkey-settings")
 
 -- keymappings
 require("keymappings")

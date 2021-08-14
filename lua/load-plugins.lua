@@ -79,5 +79,7 @@ return require("packer").startup(
         require("trouble").setup {}
       end
     }
+
+    use "folke/which-key.nvim"
   end
 )

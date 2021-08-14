@@ -28,6 +28,8 @@ vim.opt.termguicolors = true
 -- vim.opt.spell = true
 vim.opt.spelllang = "en_gb"
 vim.opt.mousemodel = "popup"
+-- timeout for whichkey
+vim.opt.timeoutlen = 500
 
 vim.g.netrw_banner = 0
 vim.g.netrw_liststyle = 3
