@@ -69,5 +69,7 @@ return require("packer").startup(
     }
 
     use "JoosepAlviste/nvim-ts-context-commentstring"
+
+    use {"p00f/nvim-ts-rainbow"}
   end
 )
