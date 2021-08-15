@@ -26,8 +26,8 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = function(_, _, params, cli
     -- see :h on_publish_diagnostics
     underline = true,
     virtual_text = {
-      prefix = "🤯",
-      spacing = 1
+      prefix = " ",
+      spacing = 2
     },
     signs = true,
     update_in_insert = false
@@ -57,5 +57,5 @@ end
 -- Show diagnostics automatically in hover window
 -- You will likely want to reduce updatetime which affects CursorHold
 -- note: this setting is global and should be set only once
-vim.o.updatetime = 250
-vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.lsp.diagnostic.show_line_diagnostics({focusable=false})]]
+-- vim.o.updatetime = 250
+-- vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.lsp.diagnostic.show_line_diagnostics({focusable=false})]]

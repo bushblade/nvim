@@ -18,9 +18,6 @@ return require("packer").startup(
       requires = {{"jose-elias-alvarez/null-ls.nvim"}, {"nvim-lua/plenary.nvim"}}
     }
 
-    -- Theme
-    use "folke/tokyonight.nvim"
-
     -- Treesitter
     use {
       "nvim-treesitter/nvim-treesitter",
@@ -72,6 +69,11 @@ return require("packer").startup(
 
     use {"p00f/nvim-ts-rainbow"}
 
+    -- Folke plugins
+    -- Theme
+    use "folke/tokyonight.nvim"
+
+    -- Trouble
     use {
       "folke/trouble.nvim",
       requires = "kyazdani42/nvim-web-devicons",
@@ -80,6 +82,7 @@ return require("packer").startup(
       end
     }
 
+    -- WhichKey
     use "folke/which-key.nvim"
   end
 )

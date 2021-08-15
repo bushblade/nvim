@@ -55,7 +55,9 @@ local mappings = {
     {"<leader>k", ":m .-2<CR>=="},
     {"<leader>j", ":m .+1<CR>=="},
     -- Toggle Trouble view
-    {"<leader>t", ":TroubleToggle<CR>"}
+    {"<leader>t", ":TroubleToggle<CR>"},
+    -- Launch WhichKey
+    {"<leader>w", ":WhichKey<CR>"}
   },
   t = {
     -- Terminal mode
