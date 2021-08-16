@@ -43,6 +43,7 @@ return require("packer").startup(
     use "jiangmiao/auto-pairs"
     use "mhartington/formatter.nvim"
     use "airblade/vim-gitgutter"
+    use "leafOfTree/vim-matchtag"
 
     use {
       "phaazon/hop.nvim",
@@ -67,8 +68,6 @@ return require("packer").startup(
 
     use "JoosepAlviste/nvim-ts-context-commentstring"
 
-    use {"p00f/nvim-ts-rainbow"}
-
     -- Folke plugins
     -- Theme
     use "folke/tokyonight.nvim"
@@ -84,5 +83,14 @@ return require("packer").startup(
 
     -- WhichKey
     use "folke/which-key.nvim"
+
+    -- Todo comments
+    use {
+      "folke/todo-comments.nvim",
+      requires = "nvim-lua/plenary.nvim",
+      config = function()
+        require("todo-comments").setup {}
+      end
+    }
   end
 )
