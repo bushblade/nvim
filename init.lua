@@ -16,6 +16,7 @@ require("luaLine-settings")
 require("formatter-settings")
 require("telescope-settings")
 require("whichkey-settings")
+require("lspkind-settings")
 
 -- keymappings
 require("keymappings")
