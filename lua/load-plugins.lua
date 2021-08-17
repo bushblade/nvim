@@ -68,6 +68,7 @@ return require("packer").startup(
 
     use "JoosepAlviste/nvim-ts-context-commentstring"
 
+    -- icons in completion
     use "onsails/lspkind-nvim"
 
     -- Folke plugins

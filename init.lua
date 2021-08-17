@@ -5,7 +5,7 @@ require("options")
 require("load-plugins")
 
 -- set up language servers
-require("language-servers")
+require("ls")
 
 -- set up treesitter
 require("treesitter-settings")
@@ -17,7 +17,10 @@ require("formatter-settings")
 require("telescope-settings")
 require("whichkey-settings")
 require("lspkind-settings")
-require("nvim-tree-options")
+require("nvim-tree-settings")
+require("theme-settings")
+require("matchtag-settings")
+require("neoscroll-settings")
 
 -- keymappings
 require("keymappings")

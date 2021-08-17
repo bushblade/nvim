@@ -39,12 +39,6 @@ vim.g.mapleader = " "
 -- close tags
 vim.g.closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.jsx,*.js,*.tsx,*.vue"
 
--- set colour scheme
-vim.g.tokyonight_style = "night"
--- vim.g.tokyonight_sidebars = {"qf", "vista_kind", "terminal", "packer"}
-vim.g.tokyonight_transparent = true
-vim.g.tokyonight_dark_sidebar = false
-
 -- Change the "hint" color to the "orange" color, and make the "error" color bright red
 vim.g.tokyonight_colors = {hint = "orange", error = "#ff0000"}
 vim.cmd [[colorscheme tokyonight]]
@@ -55,7 +49,3 @@ vim.cmd [[au TextYankPost * silent! lua vim.highlight.on_yank()]]
 -- Vertically center document when entering insert mode
 vim.cmd [[autocmd InsertEnter * norm zz]]
 
--- vim-matchtag
-vim.g.vim_matchtag_enable_by_default = 1
-vim.g.vim_matchtag_files = "*.html,*.xml,*.js,*.jsx,*.vue,*.svelte,*.jsp,*.tsx"
-vim.g.vim_matchtag_highlight_cursor_on = 1
