@@ -59,3 +59,11 @@ vim.cmd [[autocmd InsertEnter * norm zz]]
 vim.g.vim_matchtag_enable_by_default = 1
 vim.g.vim_matchtag_files = "*.html,*.xml,*.js,*.jsx,*.vue,*.svelte,*.jsp,*.tsx"
 vim.g.vim_matchtag_highlight_cursor_on = 1
+
+-- nvim-tree options
+vim.g.nvim_tree_ignore = {".git", "node_modules", ".cache", "*.d.ts"}
+vim.g.nvim_tree_follow = 1
+vim.g.nvim_tree_indent_markers = 1
+vim.g.nvim_tree_git_hl = 1
+vim.g.nvim_tree_highlight_opened_files = 1
+vim.g.nvim_tree_lsp_diagnostics = 1
