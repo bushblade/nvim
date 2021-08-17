@@ -68,6 +68,8 @@ return require("packer").startup(
 
     use "JoosepAlviste/nvim-ts-context-commentstring"
 
+    use "onsails/lspkind-nvim"
+
     -- Folke plugins
     -- Theme
     use "folke/tokyonight.nvim"
@@ -85,6 +87,12 @@ return require("packer").startup(
     use "folke/which-key.nvim"
 
     -- Todo comments
+    -- TODO:
+    -- FIX:
+    -- HACK:
+    -- PERF:
+    -- NOTE:
+    -- WARN:
     use {
       "folke/todo-comments.nvim",
       requires = "nvim-lua/plenary.nvim",
@@ -92,5 +100,8 @@ return require("packer").startup(
         require("todo-comments").setup {}
       end
     }
+
+    -- Smooth Scrolling
+    use {"karb94/neoscroll.nvim"}
   end
 )
