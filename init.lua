@@ -17,6 +17,7 @@ require("formatter-settings")
 require("telescope-settings")
 require("whichkey-settings")
 require("lspkind-settings")
+require("nvim-tree-options")
 
 -- keymappings
 require("keymappings")
