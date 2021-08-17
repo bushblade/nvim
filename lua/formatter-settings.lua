@@ -35,7 +35,7 @@ require("formatter").setup(
   }
 )
 
--- Runs Prettier on save
+-- Runs Formmater on save
 vim.api.nvim_exec(
   [[
 augroup FormatAutogroup
