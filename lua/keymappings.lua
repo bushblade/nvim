@@ -57,7 +57,9 @@ local mappings = {
     -- Toggle Trouble view
     {"<leader>t", ":TroubleToggle<CR>"},
     -- Launch WhichKey
-    {"<leader>w", ":WhichKey<CR>"}
+    {"<leader>w", ":WhichKey<CR>"},
+    -- show code actions,
+    {"<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>"}
   },
   t = {
     -- Terminal mode

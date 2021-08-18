@@ -39,13 +39,8 @@ vim.g.mapleader = " "
 -- close tags
 vim.g.closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.jsx,*.js,*.tsx,*.vue"
 
--- Change the "hint" color to the "orange" color, and make the "error" color bright red
-vim.g.tokyonight_colors = {hint = "orange", error = "#ff0000"}
-vim.cmd [[colorscheme tokyonight]]
-
 -- highlight on yank
 vim.cmd [[au TextYankPost * silent! lua vim.highlight.on_yank()]]
 
 -- Vertically center document when entering insert mode
 vim.cmd [[autocmd InsertEnter * norm zz]]
-
