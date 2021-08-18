@@ -1,6 +1,6 @@
 # Leaving the CoC behind.
 
-A minimal set up for Nvim using native LSP with some sane defaults and settings.
+My config up for Nvim using native LSP with some sane defaults and settings.
 
 Uses the latest 0.5+ Neovim
 
@@ -38,12 +38,7 @@ npm i -g prettier lua-fmt
 
 - Emmett [maybe with aca/emmet-ls](https://github.com/aca/emmet-ls) can't get
   this to complete
-- Show documentation - lspsaga? But not too fussed about this
-- ~~spelling~~ use built in spell
 - Styled components highlighting [related to this issue](https://github.com/nvim-treesitter/nvim-treesitter/issues/1111)
-- clean up lsp-settings.lua, sub modules
-- Syntax highlighting on fish files not working
-- Only use eslint in projects that have eslint installed
 
 ## Some useful links to help me get this working
 
