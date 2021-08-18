@@ -104,5 +104,13 @@ return require("packer").startup(
 
     -- Smooth Scrolling
     use {"karb94/neoscroll.nvim"}
+
+    -- neoclip
+    use {
+      "AckslD/nvim-neoclip.lua",
+      config = function()
+        require("neoclip").setup()
+      end
+    }
   end
 )

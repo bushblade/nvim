@@ -38,10 +38,14 @@ local mappings = {
     -- Ctrl + p fuzzy files
     {"<C-p>", [[<cmd> lua require"telescope.builtin".find_files({ hidden = true })<CR>]]},
     {"<leader>ff", ":Telescope find_files<cr>"},
+    {"<leader>fe", ":Telescope file_browser<cr>"},
     {"<leader>fb", ":Telescope buffers<cr>"},
     {"<leader>b", ":Telescope buffers<cr>"},
     {"<leader>fs", ":Telescope live_grep<cr>"},
     {"<leader>s", ":Telescope live_grep<cr>"},
+    {"<leader>fc", ":Telescope lsp_code_actions<cr>"},
+    {"<leader>ft", ":Telescope<cr>"},
+    {"<leader>fy", ":Telescope neoclip<cr>"},
     -- Escape clears highlight after search
     {"<esc>", ":noh<cr><esc>"},
     -- hop words
