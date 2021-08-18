@@ -12,6 +12,19 @@ return require("packer").startup(
       requires = {{"nvim-lua/popup.nvim"}, {"nvim-lua/plenary.nvim"}}
     }
 
+    -- Telescope extensions
+
+    -- Emoji
+    use "xiyaowong/telescope-emoji.nvim"
+
+    -- neoclip
+    use {
+      "AckslD/nvim-neoclip.lua",
+      config = function()
+        require("neoclip").setup()
+      end
+    }
+
     -- TS utils
     use {
       "jose-elias-alvarez/nvim-lsp-ts-utils",
@@ -104,13 +117,5 @@ return require("packer").startup(
 
     -- Smooth Scrolling
     use {"karb94/neoscroll.nvim"}
-
-    -- neoclip
-    use {
-      "AckslD/nvim-neoclip.lua",
-      config = function()
-        require("neoclip").setup()
-      end
-    }
   end
 )

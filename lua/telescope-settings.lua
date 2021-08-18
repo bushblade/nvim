@@ -1,5 +1,6 @@
 -- most of this is default settings
 local telescope = require("telescope")
+
 telescope.setup {
   defaults = {
     vimgrep_arguments = {
@@ -45,4 +46,7 @@ telescope.setup {
   }
 }
 
+-- Load Telescope extensions
+
 telescope.load_extension("neoclip")
+telescope.load_extension("emoji")

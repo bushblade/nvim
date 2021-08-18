@@ -46,6 +46,7 @@ local mappings = {
     {"<leader>fc", ":Telescope lsp_code_actions<cr>"},
     {"<leader>ft", ":Telescope<cr>"},
     {"<leader>fy", ":Telescope neoclip<cr>"},
+    {"<leader>fe", ":Telescope emoji search<cr>"},
     -- Escape clears highlight after search
     {"<esc>", ":noh<cr><esc>"},
     -- hop words
