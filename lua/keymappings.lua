@@ -64,7 +64,14 @@ local mappings = {
     -- Launch WhichKey
     {"<leader>w", ":WhichKey<CR>"},
     -- show code actions,
-    {"<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>"}
+    {"<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>"},
+    -- lsp mappings
+    {"K", "<Cmd>lua vim.lsp.buf.hover()<CR>"},
+    {"<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>"},
+    {"[d", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>"},
+    {"]d", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>"},
+    {"gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>"},
+    {"gd", "<Cmd>lua vim.lsp.buf.definition()<CR>"}
   },
   t = {
     -- Terminal mode
