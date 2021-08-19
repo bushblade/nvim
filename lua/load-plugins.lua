@@ -101,12 +101,6 @@ return require("packer").startup(
     use "folke/which-key.nvim"
 
     -- Todo comments
-    -- TODO:
-    -- FIX:
-    -- HACK:
-    -- PERF:
-    -- NOTE:
-    -- WARN:
     use {
       "folke/todo-comments.nvim",
       requires = "nvim-lua/plenary.nvim",
