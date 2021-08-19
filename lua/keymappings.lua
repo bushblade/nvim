@@ -47,6 +47,7 @@ local mappings = {
     {"<leader>ft", ":Telescope<cr>"},
     {"<leader>fy", ":Telescope neoclip<cr>"},
     {"<leader>fe", ":Telescope emoji search<cr>"},
+    {"<leader>fn", ":TodoTelescope<cr>"},
     -- Escape clears highlight after search
     {"<esc>", ":noh<cr><esc>"},
     -- hop words
@@ -71,7 +72,8 @@ local mappings = {
     {"[d", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>"},
     {"]d", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>"},
     {"gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>"},
-    {"gd", "<Cmd>lua vim.lsp.buf.definition()<CR>"}
+    {"gd", "<Cmd>lua vim.lsp.buf.definition()<CR>"},
+    {"gr", "<Cmd>lua vim.lsp.buf.references()<CR>"}
   },
   t = {
     -- Terminal mode
