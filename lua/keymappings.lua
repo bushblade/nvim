@@ -73,7 +73,7 @@ local mappings = {
     {"]d", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>"},
     {"gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>"},
     {"gd", "<Cmd>lua vim.lsp.buf.definition()<CR>"},
-    {"gr", "<Cmd>lua vim.lsp.buf.references()<CR>"}
+    {"gR", "<Cmd>lua vim.lsp.buf.references()<CR>"}
   },
   t = {
     -- Terminal mode
