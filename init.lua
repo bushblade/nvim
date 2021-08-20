@@ -21,6 +21,7 @@ require("nvim-tree-settings")
 require("theme-settings")
 require("matchtag-settings")
 require("neoscroll-settings")
+require("colorizer-settings")
 
 -- keymappings
 require("keymappings")
