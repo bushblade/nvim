@@ -55,11 +55,12 @@ wk.setup {
   }
 }
 
+-- register key bindings with <leader> prefix
 wk.register(
   {
     f = {
       -- mostly Telescope bindings
-      name = "Telescope",
+      name = "Find with Telescope",
       f = {[[<cmd> lua require"telescope.builtin".find_files({ hidden = true })<CR>]], "Find File"},
       e = {":Telescope emoji search<cr>", "Find Emoji"},
       b = {":Telescope buffers<cr>", "Find Buffer"},
