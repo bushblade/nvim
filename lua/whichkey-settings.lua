@@ -1,4 +1,6 @@
-require("which-key").setup {
+local wk = require("which-key")
+
+wk.setup {
   plugins = {
     marks = true, -- shows a list of your marks on ' and `
     registers = true, -- shows your registers on " in NORMAL or <C-r> in INSERT mode
@@ -52,3 +54,43 @@ require("which-key").setup {
     v = {"j", "k"}
   }
 }
+
+wk.register(
+  {
+    f = {
+      -- mostly Telescope bindings
+      name = "Telescope",
+      f = {[[<cmd> lua require"telescope.builtin".find_files({ hidden = true })<CR>]], "Find File"},
+      e = {":Telescope emoji search<cr>", "Find Emoji"},
+      b = {":Telescope buffers<cr>", "Find Buffer"},
+      n = {":TodoTelescope<cr>", "Find Notes"},
+      t = {":Telescope builtin<cr>", "Telescope builtin"},
+      s = {":Telescope live_grep<cr>", "Search In Files"},
+      c = {":Telescope lsp_code_actions<cr>", "Code Actions"},
+      r = {"<cmd>Telescope lsp_references<cr>", "Find References"}
+    },
+    h = {
+      name = "Git Gutter",
+      p = "Preview Hunk",
+      s = "Stage Hunk",
+      u = "Undo Changes"
+    },
+    e = {
+      ":NvimTreeToggle<CR>",
+      "File Tree"
+    },
+    -- trouble bindings
+    t = {
+      name = "Trouble",
+      t = {":TroubleToggle<CR>", "Toggle"},
+      w = {":Trouble lsp_workspace_diagnostics<CR>", "Workspace Diagnostics"},
+      l = {":Trouble loclist<CR>", "List project troubles"}, -- NOTE: not sure what this one does?
+      r = {":Trouble lsp_references<CR>", "References"},
+      d = {":Trouble lsp_definitions<CR>", "Definitions"},
+      q = {":Trouble quickfix<CR>", "Quickfix"}
+    },
+    c = {"<cmd>lua vim.lsp.buf.code_action()<CR>", "Code Actions"},
+    w = {":WhichKey<CR>", "WhichKey"}
+  },
+  {prefix = "<leader>"}
+)

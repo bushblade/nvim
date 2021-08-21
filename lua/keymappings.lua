@@ -8,6 +8,8 @@ local function register_mappings(mappings, default_options)
   end
 end
 
+-- NOTE: <leader> prefixed mappings are in whichkey-settings.lua
+
 local mappings = {
   i = {
     -- Insert mode
@@ -37,35 +39,12 @@ local mappings = {
     -- Telescope
     -- Ctrl + p fuzzy files
     {"<C-p>", [[<cmd> lua require"telescope.builtin".find_files({ hidden = true })<CR>]]},
-    {"<leader>ff", ":Telescope find_files<cr>"},
-    {"<leader>fe", ":Telescope file_browser<cr>"},
-    {"<leader>fb", ":Telescope buffers<cr>"},
-    {"<leader>b", ":Telescope buffers<cr>"},
-    {"<leader>fs", ":Telescope live_grep<cr>"},
-    {"<leader>s", ":Telescope live_grep<cr>"},
-    {"<leader>fc", ":Telescope lsp_code_actions<cr>"},
-    {"<leader>ft", ":Telescope<cr>"},
-    {"<leader>fy", ":Telescope neoclip<cr>"},
-    {"<leader>fe", ":Telescope emoji search<cr>"},
-    {"<leader>fn", ":TodoTelescope<cr>"},
-    -- Escape clears highlight after search
     {"<esc>", ":noh<cr><esc>"},
     -- hop words
     {"f", ":HopWord<cr>"},
     {"F", ":HopLine<cr>"},
-    -- NvimTree
-    {"<leader>e", ":NvimTreeToggle<CR>"},
     -- yank to end of line on Y
     {"Y", "y$"},
-    -- moving text
-    {"<leader>k", ":m .-2<CR>=="},
-    {"<leader>j", ":m .+1<CR>=="},
-    -- Toggle Trouble view
-    {"<leader>t", ":TroubleToggle<CR>"},
-    -- Launch WhichKey
-    {"<leader>w", ":WhichKey<CR>"},
-    -- show code actions,
-    {"<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>"},
     -- lsp mappings
     {"K", "<Cmd>lua vim.lsp.buf.hover()<CR>"},
     {"<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>"},
