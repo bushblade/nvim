@@ -37,9 +37,9 @@ local mappings = {
     {"<C-Down>", ":resize +2<CR>", {silent = true}},
     {"<C-Left>", ":vertical resize -2<CR>", {silent = true}},
     {"<C-Right>", ":vertical resize +2<CR>", {silent = true}},
-    -- Telescope
     -- Ctrl + p fuzzy files
     {"<C-p>", [[<cmd> lua require"telescope.builtin".find_files({ hidden = true })<CR>]]},
+    -- escape clears highlighting
     {"<esc>", ":noh<cr><esc>"},
     -- hop words
     {"f", ":HopWord<cr>"},

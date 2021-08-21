@@ -76,10 +76,7 @@ wk.register(
       s = "Stage Hunk",
       u = "Undo Changes"
     },
-    e = {
-      ":NvimTreeToggle<CR>",
-      "File Tree"
-    },
+    e = {":NvimTreeToggle<CR>", "File Tree"},
     -- trouble bindings
     t = {
       name = "Trouble",
@@ -88,10 +85,21 @@ wk.register(
       l = {":Trouble loclist<CR>", "List project troubles"}, -- NOTE: not sure what this one does?
       r = {":Trouble lsp_references<CR>", "References"},
       d = {":Trouble lsp_definitions<CR>", "Definitions"},
-      q = {":Trouble quickfix<CR>", "Quickfix"}
+      q = {":Trouble quickfix<CR>", "Quickfix"},
+      n = {":TodoLocList<CR>", "Notes"}
     },
     c = {"<cmd>lua vim.lsp.buf.code_action()<CR>", "Code Actions"},
+    d = {"<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>", "Line Diagnostics"},
     w = {":WhichKey<CR>", "WhichKey"}
   },
   {prefix = "<leader>"}
+)
+
+wk.register(
+  {
+    name = "Go to",
+    d = "Go to definition",
+    D = "Go to declaration"
+  },
+  {prefix = "g"}
 )
