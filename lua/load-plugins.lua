@@ -13,7 +13,6 @@ return require("packer").startup(
     }
 
     -- Telescope extensions
-
     -- Emoji
     use "xiyaowong/telescope-emoji.nvim"
 
@@ -53,7 +52,7 @@ return require("packer").startup(
 
     use "knubie/vim-kitty-navigator"
     use "alvan/vim-closetag"
-    use "jiangmiao/auto-pairs"
+    use "jiangmiao/auto-pairs" -- NOTE: would like nvim-autopairs but that doesn't work on all file types
     use "mhartington/formatter.nvim"
     use "airblade/vim-gitgutter"
     use "leafOfTree/vim-matchtag"
@@ -62,7 +61,6 @@ return require("packer").startup(
       "phaazon/hop.nvim",
       as = "hop",
       config = function()
-        -- you can configure Hop the way you like here; see :h hop-config
         require "hop".setup {keys = "etovxqpdygfblzhckisuran"}
       end
     }

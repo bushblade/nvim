@@ -34,13 +34,13 @@ sudo pacman -S lua-language-server pyright
 npm i -g prettier lua-fmt
 ```
 
-## TODO
+## TODO:
 
 - Emmett [maybe with aca/emmet-ls](https://github.com/aca/emmet-ls) can't get
   this to complete
 - Styled components highlighting [related to this issue](https://github.com/nvim-treesitter/nvim-treesitter/issues/1111)
 
-## Some useful links to help me get this working
+## Resources and inspiration
 
 [Nvim Lua guide](https://github.com/nanotee/nvim-lua-guide)
 
@@ -55,3 +55,5 @@ npm i -g prettier lua-fmt
 [Lua for Programmers](https://ebens.me/post/lua-for-programmers-part-1/)
 
 [LSP config](https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md)
+
+[Awesome list of plugins](https://github.com/rockerBOO/awesome-neovim)
