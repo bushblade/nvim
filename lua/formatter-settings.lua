@@ -12,7 +12,7 @@ require("formatter").setup(
     logging = false,
     filetype = {
       typescriptreact = {prettier},
-      javacriptreact = {prettier},
+      javascriptreact = {prettier},
       javascript = {prettier},
       typescript = {prettier},
       json = {prettier},
