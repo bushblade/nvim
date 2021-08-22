@@ -68,7 +68,9 @@ wk.register(
       t = {":Telescope builtin<cr>", "Telescope builtin"},
       s = {":Telescope live_grep<cr>", "Search In Files"},
       c = {":Telescope lsp_code_actions<cr>", "Code Actions"},
-      r = {"<cmd>Telescope lsp_references<cr>", "Find References"}
+      r = {":Telescope lsp_references<cr>", "Find References"},
+      w = {":Telescope lsp_workspace_diagnostics<cr>", "Workspace Diagnostics"},
+      D = {":Telescope lsp_document_diagnostics<cr>", "Document Diagnostics"}
     },
     h = {
       name = "Git Gutter",
@@ -81,12 +83,13 @@ wk.register(
     t = {
       name = "Trouble",
       t = {":TroubleToggle<CR>", "Toggle"},
-      w = {":Trouble lsp_workspace_diagnostics<CR>", "Workspace Diagnostics"},
       l = {":Trouble loclist<CR>", "List project troubles"}, -- NOTE: not sure what this one does?
       r = {":Trouble lsp_references<CR>", "References"},
       d = {":Trouble lsp_definitions<CR>", "Definitions"},
       q = {":Trouble quickfix<CR>", "Quickfix"},
-      n = {":TodoLocList<CR>", "Notes"}
+      n = {":TodoLocList<CR>", "Notes"},
+      w = {":Trouble lsp_workspace_diagnostics<CR>", "Workspace Diagnostics"},
+      D = {":Trouble lsp_document_diagnostics<CR>", "Document Diagnostics"}
     },
     c = {"<cmd>lua vim.lsp.buf.code_action()<CR>", "Code Actions"},
     d = {"<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>", "Line Diagnostics"},
