@@ -49,5 +49,4 @@ telescope.setup {
 
 -- Load Telescope extensions
 
-telescope.load_extension("neoclip")
 telescope.load_extension("emoji")

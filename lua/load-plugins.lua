@@ -16,14 +16,6 @@ return require("packer").startup(
     -- Emoji
     use "xiyaowong/telescope-emoji.nvim"
 
-    -- neoclip
-    use {
-      "AckslD/nvim-neoclip.lua",
-      config = function()
-        require("neoclip").setup()
-      end
-    }
-
     -- TS utils
     use {
       "jose-elias-alvarez/nvim-lsp-ts-utils",
