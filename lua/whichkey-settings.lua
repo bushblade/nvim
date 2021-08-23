@@ -87,10 +87,11 @@ wk.register(
       r = {":Trouble lsp_references<CR>", "References"},
       d = {":Trouble lsp_definitions<CR>", "Definitions"},
       q = {":Trouble quickfix<CR>", "Quickfix"},
-      n = {":TodoLocList<CR>", "Notes"},
+      T = {":TodoTrouble<CR>", "Todos"},
       w = {":Trouble lsp_workspace_diagnostics<CR>", "Workspace Diagnostics"},
       D = {":Trouble lsp_document_diagnostics<CR>", "Document Diagnostics"}
     },
+    T = {":TodoLocList<CR>", "Todos list"},
     c = {"<cmd>lua vim.lsp.buf.code_action()<CR>", "Code Actions"},
     d = {"<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>", "Line Diagnostics"},
     w = {":WhichKey<CR>", "WhichKey"}
