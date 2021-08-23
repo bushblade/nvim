@@ -44,3 +44,6 @@ vim.cmd [[au TextYankPost * silent! lua vim.highlight.on_yank()]]
 
 -- Vertically center document when entering insert mode
 vim.cmd [[autocmd InsertEnter * norm zz]]
+
+-- Stops Ultisnips preventing <tab> selection in compe
+vim.g.UltiSnipsExpandTrigger = "<nop>"
