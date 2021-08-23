@@ -40,6 +40,7 @@ npm i -g prettier lua-fmt
   this to complete
 - Styled components highlighting [related to this issue](https://github.com/nvim-treesitter/nvim-treesitter/issues/1111)
 - Add full list of plugins
+- Keep an eye on [coq_nvim](https://github.com/ms-jpq/coq_nvim) and [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) for completion alternative to nvim-compe
 
 ## Resources and inspiration
 
