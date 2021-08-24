@@ -47,3 +47,6 @@ vim.cmd [[autocmd InsertEnter * norm zz]]
 
 -- Stops Ultisnips preventing <tab> selection in compe
 vim.g.UltiSnipsExpandTrigger = "<nop>"
+
+vim.g.UltisnipsJumpForwardTrigger = "<C-j>"
+vim.g.UltisnipsJumpBackwardTrigger = "<C-k>"
