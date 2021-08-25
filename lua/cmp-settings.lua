@@ -1,7 +1,17 @@
 local cmp = require("cmp")
 local lspkind = require("lspkind")
 local luasnip = require("luasnip")
-require("luasnip/loaders/from_vscode").lazy_load() -- neded this to show snippets
+-- require("luasnip/loaders/from_vscode").lazy_load() -- needed this to show snippets
+
+-- FIX: not showing html snippets in javascript and javascriptreact
+luasnip.snippets = {
+  html = {}
+}
+luasnip.snippets.javascript = luasnip.snippets.html
+luasnip.snippets.javascriptreact = luasnip.snippets.html
+
+require("luasnip/loaders/from_vscode").load({include = {"javascript", "javascriptreact"}})
+require("luasnip/loaders/from_vscode").lazy_load()
 
 local t = function(str)
   return vim.api.nvim_replace_termcodes(str, true, true, true)
@@ -24,7 +34,7 @@ cmp.setup {
   },
   snippet = {
     expand = function(args)
-      require "luasnip".lsp_expand(args.body)
+      luasnip.lsp_expand(args.body)
     end
   },
   -- You must set mapping if you want.
