@@ -11,7 +11,7 @@ require("ls")
 require("treesitter-settings")
 
 -- configure plugins
-require("compe-settings")
+require("cmp-settings")
 require("luaLine-settings")
 require("formatter-settings")
 require("telescope-settings")

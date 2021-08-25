@@ -31,7 +31,15 @@ cmp.setup {
         select = true
       }
     ),
-    ["<Tab>"] = cmp.mapping(cmp.mapping.select_next_item(), {"i", "s"})
+    ["<Tab>"] = function(fallback)
+      if vim.fn.pumvisible() == 1 then
+        vim.fn.feedkeys(vim.api.nvim_replace_termcodes("<C-n>", true, true, true), "n")
+      elseif vim.fn["vsnip#available"]() == 1 then
+        vim.fn.feedkeys(vim.api.nvim_replace_termcodes("<Plug>(vsnip-expand-or-jump)", true, true, true), "")
+      else
+        fallback()
+      end
+    end
   },
   -- You should specify your *installed* sources.
   sources = {
@@ -39,15 +47,9 @@ cmp.setup {
     -- {name = "ultisnips"},
     {name = "nvim_lsp"},
     {name = "path"},
-    {name = "nvim_lua"}, -- FIX: should only enable this in lua
     {name = "vsnip"}
   }
 }
 
--- vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
--- vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
--- vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
--- vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
-
--- vim.api.nvim_set_keymap("i", "<C-Space>", "compe#complete()", {noremap = true, silent = true, expr = true})
--- vim.api.nvim_set_keymap("i", "<CR>", "compe#confirm('<CR>')", {noremap = true, silent = true, expr = true})
+-- only enable nvim_lsp in lua files
+vim.cmd [[ autocmd FileType lua lua require'cmp'.setup.buffer { sources = { { name = 'buffer' },{ name = 'nvim_lua'},{name = "nvim_lsp"}},} ]]
