@@ -62,7 +62,7 @@ return require("packer").startup(
 
     use "knubie/vim-kitty-navigator"
     use "windwp/nvim-ts-autotag"
-    use "jiangmiao/auto-pairs" -- NOTE: would like nvim-autopairs but that doesn't work on all file types
+    use "jiangmiao/auto-pairs" -- NOTE: try steelsojka/pears.nvim for lua alternative
     use "mhartington/formatter.nvim"
     use "airblade/vim-gitgutter"
     use "leafOfTree/vim-matchtag"
