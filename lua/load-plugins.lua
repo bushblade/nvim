@@ -50,7 +50,9 @@ return require("packer").startup(
     -- snippets
     use {
       "L3MON4D3/LuaSnip",
-      requires = {"rafamadriz/friendly-snippets"}
+      requires = {
+        "rafamadriz/friendly-snippets"
+      }
     }
 
     -- tpope
@@ -59,7 +61,7 @@ return require("packer").startup(
     use "tpope/vim-commentary"
 
     use "knubie/vim-kitty-navigator"
-    use "alvan/vim-closetag"
+    use "windwp/nvim-ts-autotag"
     use "jiangmiao/auto-pairs" -- NOTE: would like nvim-autopairs but that doesn't work on all file types
     use "mhartington/formatter.nvim"
     use "airblade/vim-gitgutter"
