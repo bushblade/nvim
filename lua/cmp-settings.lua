@@ -1,6 +1,15 @@
 local cmp = require("cmp")
 local lspkind = require("lspkind")
 
+local t = function(str)
+  return vim.api.nvim_replace_termcodes(str, true, true, true)
+end
+
+local check_back_space = function()
+  local col = vim.fn.col "." - 1
+  return col == 0 or vim.fn.getline("."):sub(col, col):match "%s" ~= nil
+end
+
 cmp.setup {
   completion = {
     completeopt = "menu,menuone,noinsert"
@@ -31,15 +40,42 @@ cmp.setup {
         select = true
       }
     ),
-    ["<Tab>"] = function(fallback)
-      if vim.fn.pumvisible() == 1 then
-        vim.fn.feedkeys(vim.api.nvim_replace_termcodes("<C-n>", true, true, true), "n")
-      elseif vim.fn["vsnip#available"]() == 1 then
-        vim.fn.feedkeys(vim.api.nvim_replace_termcodes("<Plug>(vsnip-expand-or-jump)", true, true, true), "")
-      else
-        fallback()
-      end
-    end
+    ["<tab>"] = cmp.mapping(
+      function(fallback)
+        print "tab pressed"
+        print(vim.fn["vsnip#jumpable"](-1))
+        if vim.fn.pumvisible() == 1 then
+          vim.fn.feedkeys(t("<C-n>"), "n") -- this works
+        elseif vim.fn["vsnip#jumpable"](-1) == 1 then
+          print "jumpable"
+          vim.fn.feedkeys(t("<Plug>vsnip-expand-or-jump"), "") -- this doesn't work
+        elseif check_back_space() then
+          vim.fn.feedkeys(t("<tab>"), "n")
+        else
+          print "fallback" -- this always runs
+          fallback()
+        end
+      end,
+      {
+        "i",
+        "s"
+      }
+    ),
+    ["<S-tab>"] = cmp.mapping(
+      function(fallback)
+        if vim.fn.pumvisible() == 1 then
+          vim.fn.feedkeys(t("<C-p>"), "n")
+        elseif vim.fn["vsnip#jumpable"](-1) then
+          vim.fn.feedkeys(t("<Plug>vsnip-jump-prev"), "")
+        else
+          fallback()
+        end
+      end,
+      {
+        "i",
+        "s"
+      }
+    )
   },
   -- You should specify your *installed* sources.
   sources = {

@@ -38,6 +38,7 @@ vim.g.mapleader = " "
 
 -- close tags
 vim.g.closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.jsx,*.js,*.tsx,*.vue"
+vim.g.closetag_filetypes = "html,javascript,javascriptreact,vue,typescript,typescriptreact"
 
 -- highlight on yank
 vim.cmd [[au TextYankPost * silent! lua vim.highlight.on_yank()]]
@@ -45,8 +46,7 @@ vim.cmd [[au TextYankPost * silent! lua vim.highlight.on_yank()]]
 -- Vertically center document when entering insert mode
 vim.cmd [[autocmd InsertEnter * norm zz]]
 
--- Stops Ultisnips preventing <tab> selection in compe
-vim.g.UltiSnipsExpandTrigger = "<nop>"
-
-vim.g.UltisnipsJumpForwardTrigger = "<C-j>"
-vim.g.UltisnipsJumpBackwardTrigger = "<C-k>"
+-- vim.g.vsnip_filetypes = {}
+-- vim.g.vsnip_filetypes.javascriptreact = "javascript"
+-- vim.g.vsnip_filetypes.typescriptreact = "typescript"
+-- vim.g.vsnip_filetypes.html = "javascriptreact"
