@@ -43,13 +43,13 @@ return require("packer").startup(
         "hrsh7th/cmp-nvim-lsp",
         "hrsh7th/cmp-path",
         "hrsh7th/cmp-nvim-lua",
-        "hrsh7th/cmp-vsnip"
+        "saadparwaiz1/cmp_luasnip"
       }
     }
 
     -- snippets
     use {
-      "hrsh7th/vim-vsnip",
+      "L3MON4D3/LuaSnip",
       requires = {"rafamadriz/friendly-snippets"}
     }
 

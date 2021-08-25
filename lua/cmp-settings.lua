@@ -1,5 +1,7 @@
 local cmp = require("cmp")
 local lspkind = require("lspkind")
+local luasnip = require("luasnip")
+require("luasnip/loaders/from_vscode").lazy_load() -- neded this to show snippets
 
 local t = function(str)
   return vim.api.nvim_replace_termcodes(str, true, true, true)
@@ -22,8 +24,7 @@ cmp.setup {
   },
   snippet = {
     expand = function(args)
-      -- You must install `vim-vsnip` if you use the following as-is.
-      vim.fn["vsnip#anonymous"](args.body)
+      require "luasnip".lsp_expand(args.body)
     end
   },
   -- You must set mapping if you want.
@@ -42,17 +43,13 @@ cmp.setup {
     ),
     ["<tab>"] = cmp.mapping(
       function(fallback)
-        print "tab pressed"
-        print(vim.fn["vsnip#jumpable"](-1))
         if vim.fn.pumvisible() == 1 then
-          vim.fn.feedkeys(t("<C-n>"), "n") -- this works
-        elseif vim.fn["vsnip#jumpable"](-1) == 1 then
-          print "jumpable"
-          vim.fn.feedkeys(t("<Plug>vsnip-expand-or-jump"), "") -- this doesn't work
+          vim.fn.feedkeys(t("<C-n>"), "n")
+        elseif luasnip.expand_or_jumpable() then
+          vim.fn.feedkeys(t("<Plug>luasnip-expand-or-jump"), "")
         elseif check_back_space() then
           vim.fn.feedkeys(t("<tab>"), "n")
         else
-          print "fallback" -- this always runs
           fallback()
         end
       end,
@@ -65,8 +62,8 @@ cmp.setup {
       function(fallback)
         if vim.fn.pumvisible() == 1 then
           vim.fn.feedkeys(t("<C-p>"), "n")
-        elseif vim.fn["vsnip#jumpable"](-1) then
-          vim.fn.feedkeys(t("<Plug>vsnip-jump-prev"), "")
+        elseif luasnip.jumpable(-1) then
+          vim.fn.feedkeys(t("<Plug>luasnip-jump-prev"), "")
         else
           fallback()
         end
@@ -80,10 +77,10 @@ cmp.setup {
   -- You should specify your *installed* sources.
   sources = {
     {name = "buffer"},
-    -- {name = "ultisnips"},
     {name = "nvim_lsp"},
     {name = "path"},
-    {name = "vsnip"}
+    {name = "vsnip"},
+    {name = "luasnip"}
   }
 }
 
