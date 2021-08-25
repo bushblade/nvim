@@ -35,7 +35,23 @@ return require("packer").startup(
     }
 
     -- Autocomplete
-    use "hrsh7th/nvim-compe"
+    use {
+      "hrsh7th/nvim-cmp",
+      requires = {
+        "hrsh7th/cmp-buffer",
+        "hrsh7th/cmp-nvim-lua",
+        "hrsh7th/cmp-nvim-lsp",
+        "hrsh7th/cmp-path",
+        "hrsh7th/cmp-nvim-lua",
+        "hrsh7th/cmp-vsnip"
+      }
+    }
+
+    -- snippets
+    use {
+      "hrsh7th/vim-vsnip",
+      requires = {"rafamadriz/friendly-snippets"}
+    }
 
     -- tpope
     use "tpope/vim-fugitive"
@@ -55,12 +71,6 @@ return require("packer").startup(
       config = function()
         require "hop".setup {keys = "etovxqpdygfblzhckisuran"}
       end
-    }
-
-    -- snippets
-    use {
-      "SirVer/ultisnips",
-      requires = {{"honza/vim-snippets"}}
     }
 
     -- file tree
