@@ -40,7 +40,7 @@ cmp.setup {
     {name = "nvim_lsp"},
     {name = "path"},
     {name = "nvim_lua"}, -- FIX: should only enable this in lua
-    {name = "vsnip"} -- FIX: not working
+    {name = "vsnip"}
   }
 }
 
