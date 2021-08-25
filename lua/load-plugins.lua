@@ -109,9 +109,6 @@ return require("packer").startup(
       end
     }
 
-    -- Smooth Scrolling
-    use {"karb94/neoscroll.nvim"}
-
     -- Colorizer
     use "norcalli/nvim-colorizer.lua"
 
