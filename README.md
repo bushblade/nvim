@@ -40,13 +40,23 @@ sudo pacman -S lua-language-server pyright
 npm i -g prettier lua-fmt
 ```
 
+## Launch Nvim
+
+On the first run of nvim be sure to install plugins.
+
+`:PackerInstall`
+
+Then compile loader file.
+
+`:PackerCompile`
+
 ## TODO:
 
 - Emmett [maybe with aca/emmet-ls](https://github.com/aca/emmet-ls) can't get
   this to complete
 - Styled components highlighting [related to this issue](https://github.com/nvim-treesitter/nvim-treesitter/issues/1111)
 - Add full list of plugins
-- Keep an eye on [coq_nvim](https://github.com/ms-jpq/coq_nvim) and [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) for completion alternative to nvim-compe
+- Keep an eye on [coq_nvim](https://github.com/ms-jpq/coq_nvim) for completion.
 
 ## Resources and inspiration
 
