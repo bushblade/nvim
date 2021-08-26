@@ -51,7 +51,7 @@ require("lspconfig").tsserver.setup {
       eslint_enable_code_actions = true,
       eslint_enable_disable_comments = true,
       eslint_bin = "eslint_d", -- use eslint_d rather than eslint for performance
-      eslint_config_fallback = vim.loop.os_homedir() .. ".eslintrc.json",
+      eslint_config_fallback = vim.loop.os_homedir() .. "/.eslintrc.json",
       eslint_enable_diagnostics = true,
       -- update imports on file move
       update_imports_on_move = false,
