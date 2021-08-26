@@ -22,7 +22,13 @@ npm install -g typescript typescript-language-server vscode-langservers-extracte
 
 ```
 
-Lua and Pyright available in Arch/Manjaro repos
+### eslint config
+
+eslint will fallback to a config file in your home directory if no local config
+file is found. So if you don't want to always configure on a per project basis
+then create a .eslintrc.json in your home directory.
+
+### Lua and Pyright available in Arch/Manjaro repos
 
 ```bash
 sudo pacman -S lua-language-server pyright
@@ -59,3 +65,5 @@ npm i -g prettier lua-fmt
 [LSP config](https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md)
 
 [Awesome list of plugins](https://github.com/rockerBOO/awesome-neovim)
+
+[Plugin Finder](https://neovimcraft.com/)
