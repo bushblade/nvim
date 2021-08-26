@@ -113,5 +113,7 @@ return require("packer").startup(
 
     -- Colorizer
     use "norcalli/nvim-colorizer.lua"
+
+    use "kevinoid/vim-jsonc"
   end
 )
