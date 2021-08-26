@@ -22,7 +22,8 @@ telescope.setup {
     layout_config = {
       preview_width = 0.6,
       horizontal = {
-        mirror = false
+        mirror = false,
+        preview_cutoff = 100
       },
       vertical = {
         mirror = false
