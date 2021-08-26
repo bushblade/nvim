@@ -70,7 +70,8 @@ wk.register(
       c = {":Telescope lsp_code_actions<cr>", "Code Actions"},
       r = {":Telescope lsp_references<cr>", "Find References"},
       w = {":Telescope lsp_workspace_diagnostics<cr>", "Workspace Diagnostics"},
-      D = {":Telescope lsp_document_diagnostics<cr>", "Document Diagnostics"}
+      D = {":Telescope lsp_document_diagnostics<cr>", "Document Diagnostics"},
+      m = {":Telescope marks<CR>", "Marks"}
     },
     h = {
       name = "Git Gutter",
