@@ -38,12 +38,11 @@ return require("packer").startup(
     use {
       "hrsh7th/nvim-cmp",
       requires = {
-        "hrsh7th/cmp-buffer",
-        "hrsh7th/cmp-nvim-lua",
-        "hrsh7th/cmp-nvim-lsp",
-        "hrsh7th/cmp-path",
-        "hrsh7th/cmp-nvim-lua",
-        "saadparwaiz1/cmp_luasnip"
+        "hrsh7th/cmp-buffer", -- buffer completions
+        "hrsh7th/cmp-nvim-lua", -- nvim config completions
+        "hrsh7th/cmp-nvim-lsp", -- lsp completions
+        "hrsh7th/cmp-path", -- file path completions
+        "saadparwaiz1/cmp_luasnip" -- snippets completions
       }
     }
 
@@ -61,7 +60,7 @@ return require("packer").startup(
     use "tpope/vim-commentary"
 
     use "knubie/vim-kitty-navigator"
-    use "windwp/nvim-ts-autotag"
+    use "windwp/nvim-ts-autotag" -- auto close and rename tags
     use "jiangmiao/auto-pairs" -- NOTE: try steelsojka/pears.nvim for lua alternative
     use "mhartington/formatter.nvim"
     use "airblade/vim-gitgutter"
@@ -114,6 +113,7 @@ return require("packer").startup(
     -- Colorizer
     use "norcalli/nvim-colorizer.lua"
 
+    -- jsonc file type for json - comments in json
     use "kevinoid/vim-jsonc"
   end
 )
