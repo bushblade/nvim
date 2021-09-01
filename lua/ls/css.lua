@@ -3,15 +3,7 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 local css_settings = {
   validate = true,
-  lint = {
-    cssConflict = "warning",
-    invalidApply = "error",
-    invalidConfigPath = "error",
-    invalidScreen = "error",
-    invalidTailwindDirective = "error",
-    invalidVariant = "error",
-    recommendedVariantOrder = "warning"
-  }
+  lint = {}
 }
 
 local is_tailwind = vim.fn.filereadable("tailwind.config.js")
