@@ -18,7 +18,8 @@ git clone https://github.com/wbthomason/packer.nvim\
 Most available via npm
 
 ```bash
-npm install -g typescript typescript-language-server vscode-langservers-extracted vls eslint_d
+npm install -g typescript typescript-language-server vscode-langservers-extracted vls eslint_d @tailwindcss/language-server
+
 
 ```
 
