@@ -8,7 +8,10 @@ require("lspconfig").cssls.setup(
     filetypes = {"css", "scss", "less"},
     settings = {
       css = {
-        validate = true
+        validate = true,
+        lint = {
+          unknownAtRules = "ignore"
+        }
       },
       less = {
         validate = true
