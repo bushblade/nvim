@@ -3,11 +3,13 @@ require("bufferline").setup {
     offsets = {
       {
         filetype = "NvimTree",
-        text = "File Explorer",
+        -- text = "File Explorer",
         highlight = "Directory",
         text_align = "left"
       }
     },
-    diagnostics = "nvim_lsp"
+    diagnostics = "nvim_lsp",
+    max_name_length = 22,
+    tab_size = 22
   }
 }

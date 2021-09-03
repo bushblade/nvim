@@ -56,7 +56,9 @@ local mappings = {
     {"gR", "<Cmd>lua vim.lsp.buf.references()<CR>"},
     -- bufferline
     {"H", ":BufferLineCyclePrev<CR>"},
-    {"L", ":BufferLineCycleNext<CR>"}
+    {"L", ":BufferLineCycleNext<CR>"},
+    {"<C-h>", ":BufferLineMovePrev<CR>"},
+    {"<C-l>", ":BufferLineMoveNext<CR>"}
   },
   t = {
     -- Terminal mode
