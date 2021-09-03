@@ -96,7 +96,9 @@ wk.register(
     c = {"<cmd>lua vim.lsp.buf.code_action()<CR>", "Code Actions"},
     d = {"<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>", "Line Diagnostics"},
     w = {":WhichKey<CR>", "WhichKey"},
-    s = {":lua vim.o.spell = not vim.o.spell<cr>", "Toggle spell check"}
+    s = {":lua vim.o.spell = not vim.o.spell<cr>", "Toggle spell check"},
+    b = {":BufferLinePick<CR>", "Pick BufferLine"},
+    q = {":BufferLinePickClose<CR>", "Pick Buffer to close"}
   },
   {prefix = "<leader>"}
 )

@@ -115,5 +115,7 @@ return require("packer").startup(
 
     -- jsonc file type for json - comments in json
     use "kevinoid/vim-jsonc"
+
+    use {"akinsho/bufferline.nvim", requires = "kyazdani42/nvim-web-devicons"}
   end
 )

@@ -21,6 +21,7 @@ require("nvim-tree-settings")
 require("theme-settings")
 require("matchtag-settings")
 require("colorizer-settings")
+require("bufferline-settings")
 
 -- keymappings
 require("keymappings")

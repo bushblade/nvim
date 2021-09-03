@@ -53,7 +53,10 @@ local mappings = {
     {"]d", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>"},
     {"gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>"},
     {"gd", "<Cmd>lua vim.lsp.buf.definition()<CR>"},
-    {"gR", "<Cmd>lua vim.lsp.buf.references()<CR>"}
+    {"gR", "<Cmd>lua vim.lsp.buf.references()<CR>"},
+    -- bufferline
+    {"H", ":BufferLineCyclePrev<CR>"},
+    {"L", ":BufferLineCycleNext<CR>"}
   },
   t = {
     -- Terminal mode
