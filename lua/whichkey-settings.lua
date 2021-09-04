@@ -71,7 +71,9 @@ wk.register(
       r = {":Telescope lsp_references<cr>", "Find References"},
       w = {":Telescope lsp_workspace_diagnostics<cr>", "Workspace Diagnostics"},
       D = {":Telescope lsp_document_diagnostics<cr>", "Document Diagnostics"},
-      m = {":Telescope marks<CR>", "Marks"}
+      m = {":Telescope marks<CR>", "Marks"},
+      k = {":Telescope keymaps<CR>", "Key mappings"},
+      M = {":Telescope man_pages<CR>", "Man pages"}
     },
     h = {
       name = "Git Gutter",
