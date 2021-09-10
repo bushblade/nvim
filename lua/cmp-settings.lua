@@ -23,9 +23,6 @@ local check_back_space = function()
 end
 
 cmp.setup {
-  completion = {
-    completeopt = "menu,menuone,noinsert"
-  },
   formatting = {
     format = function(entry, vim_item)
       -- fancy icons and a name of kind
