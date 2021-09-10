@@ -62,8 +62,13 @@ return require("packer").startup(
     use "knubie/vim-kitty-navigator"
     use "windwp/nvim-ts-autotag" -- auto close and rename tags
     use "jiangmiao/auto-pairs" -- NOTE: try steelsojka/pears.nvim for lua alternative
+
+    -- Formatting
     use "mhartington/formatter.nvim"
+
     use "airblade/vim-gitgutter"
+
+    -- hightlight matching tag in html,jsx etc.
     use "leafOfTree/vim-matchtag"
 
     use {
@@ -116,6 +121,7 @@ return require("packer").startup(
     -- jsonc file type for json - comments in json
     use "kevinoid/vim-jsonc"
 
+    -- bufferline for buffers in 'tabs'
     use {"akinsho/bufferline.nvim", requires = "kyazdani42/nvim-web-devicons"}
   end
 )
