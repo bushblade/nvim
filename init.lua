@@ -22,6 +22,8 @@ require("theme-settings")
 require("matchtag-settings")
 require("colorizer-settings")
 require("bufferline-settings")
+require("spectre-settings")
+require("autopairs-settings")
 
 -- keymappings
 require("keymappings")

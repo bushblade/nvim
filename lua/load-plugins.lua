@@ -60,8 +60,11 @@ return require("packer").startup(
     use "tpope/vim-commentary"
 
     use "knubie/vim-kitty-navigator"
+
+    -- windwp
     use "windwp/nvim-ts-autotag" -- auto close and rename tags
-    use "jiangmiao/auto-pairs" -- NOTE: try steelsojka/pears.nvim for lua alternative
+    use "windwp/nvim-autopairs"
+    use "windwp/nvim-spectre" -- Spectre for find and replace
 
     -- Formatting
     use "mhartington/formatter.nvim"
@@ -123,8 +126,5 @@ return require("packer").startup(
 
     -- bufferline for buffers in 'tabs'
     use {"akinsho/bufferline.nvim", requires = "kyazdani42/nvim-web-devicons"}
-
-    -- Spectre for find and replace
-    use "windwp/nvim-spectre"
   end
 )
