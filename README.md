@@ -1,6 +1,7 @@
 # Leaving the CoC behind.
 
-My config up for Nvim using native LSP with some sane defaults and settings.
+My config for Nvim using native LSP with some sane defaults and settings, mainly
+aimed at web development.
 
 Uses the latest 0.5+ Neovim
 
