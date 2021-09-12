@@ -123,5 +123,8 @@ return require("packer").startup(
 
     -- bufferline for buffers in 'tabs'
     use {"akinsho/bufferline.nvim", requires = "kyazdani42/nvim-web-devicons"}
+
+    -- Spectre for find and replace
+    use "windwp/nvim-spectre"
   end
 )

@@ -100,7 +100,12 @@ wk.register(
     w = {":WhichKey<CR>", "WhichKey"},
     s = {":lua vim.o.spell = not vim.o.spell<cr>", "Toggle spell check"},
     b = {":BufferLinePick<CR>", "Pick BufferLine"},
-    q = {":BufferLinePickClose<CR>", "Pick Buffer to close"}
+    q = {":BufferLinePickClose<CR>", "Pick Buffer to close"},
+    S = {
+      name = "Spectre - find and replace",
+      s = {":lua require('spectre').open_visual()<CR>", "Open Spectre"},
+      w = {":lua require('spectre').open_visual({select_word=true})<CR>", "Search for word under cursor"}
+    }
   },
   {prefix = "<leader>"}
 )
