@@ -1,1 +1,1 @@
-require("spectre").setup {}
+require("spectre").setup({})

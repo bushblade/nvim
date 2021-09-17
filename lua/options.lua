@@ -42,7 +42,21 @@ vim.g.closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.jsx,*.js,*.tsx,*.vue"
 vim.g.closetag_filetypes = "html,javascript,javascriptreact,vue,typescript,typescriptreact"
 
 -- highlight on yank
-vim.cmd [[au TextYankPost * silent! lua vim.highlight.on_yank()]]
+vim.cmd([[au TextYankPost * silent! lua vim.highlight.on_yank()]])
 
 -- Vertically center document when entering insert mode
-vim.cmd [[autocmd InsertEnter * norm zz]]
+vim.cmd([[autocmd InsertEnter * norm zz]])
+
+-- Give me some fenced codeblock goodness
+vim.g.markdown_fenced_languages = {
+	"html",
+	"javascript",
+	"javascriptreact",
+	"typescript",
+	"json",
+	"css",
+	"scss",
+	"lua",
+	"vim",
+	"bash",
+}

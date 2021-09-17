@@ -38,8 +38,16 @@ sudo pacman -S lua-language-server pyright
 
 ## Install formatters
 
+prettier with npm
+
 ```bash
-npm i -g prettier lua-fmt
+npm i -g prettier
+```
+
+[ stylua ](https://github.com/JohnnyMorganz/StyLua) is in the AUR
+
+```bash
+pamac install stylua
 ```
 
 ## Launch Nvim
