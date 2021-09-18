@@ -36,7 +36,7 @@ require("formatter").setup({
       function()
         return {
           exe = "autopep8",
-          args = {},
+          args = { "--in-place" },
           stdin = false,
         }
       end,
