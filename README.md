@@ -50,6 +50,12 @@ npm i -g prettier
 pamac install stylua
 ```
 
+[autopep8](https://pypi.org/project/autopep8/) for python
+
+```bash
+sudo pacman -S autopep8
+```
+
 ## Launch Nvim
 
 On the first run of nvim be sure to install plugins.
