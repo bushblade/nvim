@@ -7,7 +7,6 @@ local prettier = function()
   }
 end
 
--- TODO: add formatter for Python
 require("formatter").setup({
   logging = false,
   filetype = {
