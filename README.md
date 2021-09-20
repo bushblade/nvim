@@ -121,6 +121,8 @@ Then compile loader file.
   filetype
 - [akinsho/bufferline.nvim](https://github.com/akinsho/bufferline.nvim) Buffers
   in tabs
+- [ahmedkhalf/project.nvim](https://github.com/ahmedkhalf/project.nvim) Project
+  manager
 
 ## TODO:
 

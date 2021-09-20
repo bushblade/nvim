@@ -49,14 +49,18 @@ vim.cmd([[autocmd InsertEnter * norm zz]])
 
 -- Give me some fenced codeblock goodness
 vim.g.markdown_fenced_languages = {
-	"html",
-	"javascript",
-	"javascriptreact",
-	"typescript",
-	"json",
-	"css",
-	"scss",
-	"lua",
-	"vim",
-	"bash",
+  "html",
+  "javascript",
+  "javascriptreact",
+  "typescript",
+  "json",
+  "css",
+  "scss",
+  "lua",
+  "vim",
+  "bash",
 }
+
+-- projects.nvim
+vim.g.nvim_tree_update_cwd = 1
+vim.g.nvim_tree_respect_buf_cwd = 1
