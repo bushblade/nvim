@@ -4,6 +4,9 @@ vim.g.nvim_tree_git_hl = 1
 vim.g.nvim_tree_highlight_opened_files = 1
 -- vim.g.nvim_tree_gitignore = 1
 
+-- projects.nvim needs this setting
+vim.g.nvim_tree_respect_buf_cwd = 1
+
 -- icons
 vim.g.nvim_tree_icons = {
   lsp = {
@@ -17,7 +20,9 @@ vim.g.nvim_tree_icons = {
 require("nvim-tree").setup({
   auto_close = true,
   lsp_diagnostics = true,
+  update_cwd = true,
   update_focused_file = {
     enable = true,
+    update_cwd = true,
   },
 })
