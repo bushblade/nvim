@@ -37,10 +37,6 @@ vim.g.netrw_liststyle = 3
 
 vim.g.mapleader = " "
 
--- close tags
-vim.g.closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.jsx,*.js,*.tsx,*.vue"
-vim.g.closetag_filetypes = "html,javascript,javascriptreact,vue,typescript,typescriptreact"
-
 -- highlight on yank
 vim.cmd([[au TextYankPost * silent! lua vim.highlight.on_yank()]])
 
