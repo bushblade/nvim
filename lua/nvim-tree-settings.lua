@@ -8,10 +8,14 @@ vim.g.nvim_tree_gitignore = 1
 
 -- icons
 vim.g.nvim_tree_icons = {
-	lsp = {
-		hint = " ",
-		info = " ",
-		warning = " ",
-		error = " ",
-	},
+  lsp = {
+    hint = " ",
+    info = " ",
+    warning = " ",
+    error = " ",
+  },
 }
+
+require("nvim-tree").setup({
+  auto_close = true,
+})
