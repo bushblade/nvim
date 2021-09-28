@@ -101,6 +101,7 @@ wk.register({
   s = { ":lua vim.o.spell = not vim.o.spell<cr>", "Toggle spell check" },
   b = { ":BufferLinePick<CR>", "Pick BufferLine" },
   q = { ":BufferLinePickClose<CR>", "Pick Buffer to close" },
+  r = { ":lua vim.lsp.buf.rename()<CR>", "Rename" },
   S = {
     name = "Spectre - find and replace",
     s = { ":lua require('spectre').open_visual()<CR>", "Open Spectre" },
