@@ -133,5 +133,10 @@ return require("packer").startup({
         require("project_nvim").setup({})
       end,
     })
+
+    use({
+      "weilbith/nvim-code-action-menu",
+      cmd = "CodeActionMenu",
+    })
   end,
 })

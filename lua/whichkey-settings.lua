@@ -95,7 +95,7 @@ wk.register({
     D = { ":Trouble lsp_document_diagnostics<CR>", "Document Diagnostics" },
   },
   T = { ":TodoLocList<CR>", "Todos list" },
-  c = { "<cmd>lua vim.lsp.buf.code_action()<CR>", "Code Actions" },
+  c = { ":CodeActionMenu<CR>", "Code Actions" },
   d = { "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>", "Line Diagnostics" },
   w = { ":WhichKey<CR>", "WhichKey" },
   s = { ":lua vim.o.spell = not vim.o.spell<cr>", "Toggle spell check" },
