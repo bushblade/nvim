@@ -43,9 +43,9 @@ require("lspconfig").tsserver.setup({
       eslint_enable_code_actions = true,
       eslint_enable_disable_comments = true,
       eslint_bin = "eslint_d",
-      eslint_enable_diagnostics = false,
+      eslint_enable_diagnostics = true,
       eslint_opts = {},
-      -- eslint_config_fallback = vim.loop.os_homedir() .. "/.eslintrc.json",
+      eslint_config_fallback = vim.loop.os_homedir() .. "/.eslintrc.json",
 
       -- formatting
       enable_formatting = false,
@@ -53,7 +53,7 @@ require("lspconfig").tsserver.setup({
       formatter_opts = {},
 
       -- update imports on file move
-      update_imports_on_move = false,
+      update_imports_on_move = true,
       require_confirmation_on_move = false,
       watch_dir = nil,
 
