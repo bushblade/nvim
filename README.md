@@ -66,8 +66,6 @@ Then compile loader file.
   manager
 - [neovim/nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) - LSP
 - [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) - Fuzzy find anything
-- [jose-elias-alvarez/nvim-lsp-ts-utils](https://github.com/jose-elias-alvarez/nvim-lsp-ts-utils) TypesCript/Javascript utilities
-- [jose-elias-alvarez/null-ls.nvim](https://github.com/jose-elias-alvarez/null-ls.nvim) Works with above for eslint integration
 - [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) Language parsing for highlighting and more
 - [hoob3rt/lualine.nvim](https://github.com/hoob3rt/lualine.nvim) Status line
 - [kyazdani42/nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons) Icons
