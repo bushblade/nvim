@@ -19,16 +19,10 @@ git clone https://github.com/wbthomason/packer.nvim\
 Most available via npm
 
 ```bash
-npm install -g typescript typescript-language-server vscode-langservers-extracted vls eslint_d @tailwindcss/language-server
+npm install -g typescript typescript-language-server vscode-langservers-extracted vls @tailwindcss/language-server
 
 
 ```
-
-### eslint config
-
-eslint will fallback to a config file in your home directory if no local config
-file is found. So if you don't want to always configure on a per project basis
-then create a .eslintrc.json in your home directory.
 
 ### Lua and Pyright available in Arch/Manjaro repos
 
