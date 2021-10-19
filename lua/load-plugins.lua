@@ -16,12 +16,6 @@ return require("packer").startup({
     -- Emoji
     use("xiyaowong/telescope-emoji.nvim")
 
-    -- TS utils
-    use({
-      "jose-elias-alvarez/nvim-lsp-ts-utils",
-      requires = { { "jose-elias-alvarez/null-ls.nvim" }, { "nvim-lua/plenary.nvim" } },
-    })
-
     -- Treesitter
     use({
       "nvim-treesitter/nvim-treesitter",

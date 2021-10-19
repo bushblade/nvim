@@ -80,11 +80,12 @@ cmp.setup({
     }),
   },
   -- You should specify your *installed* sources.
+  -- order of sources sets priority
   sources = {
-    { name = "buffer" },
-    { name = "nvim_lsp" },
-    { name = "path" },
     { name = "luasnip" },
+    { name = "nvim_lsp" },
+    { name = "buffer" },
+    { name = "path" },
   },
 })
 
