@@ -1,5 +1,4 @@
 -- require all language server modules
--- null-ls for tsutils plugin
 require("ls.typescript")
 require("ls.eslint")
 require("ls.vue")
