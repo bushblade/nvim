@@ -28,7 +28,7 @@ cmp.setup({
       vim_item.menu = ({
         buffer = "[Buffer]",
         nvim_lsp = "[LSP]",
-        luasnip = "[LuaSnip]",
+        luasnip = "[Snip]",
         nvim_lua = "[Lua]",
         latex_symbols = "[Latex]",
       })[entry.source.name]
@@ -86,6 +86,10 @@ cmp.setup({
     { name = "nvim_lsp" },
     { name = "buffer" },
     { name = "path" },
+  },
+  experimental = {
+    native_menu = false,
+    ghost_text = true,
   },
 })
 
