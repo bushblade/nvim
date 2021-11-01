@@ -127,9 +127,6 @@ Then compile loader file.
 [Nvim Lua guide](https://github.com/nanotee/nvim-lua-guide)
 
 [This init.lua is super helpful minimal setup](https://gist.github.com/benfrain/97f2b91087121b2d4ba0dcc4202d252f)
-
-[Getting Eslint working](https://jose-elias-alvarez.medium.com/configuring-neovims-lsp-client-for-typescript-development-5789d58ea9c)
-
 [Lunar Vim for inspiration](https://github.com/ChristianChiarulli/LunarVim)
 
 [Ui Customization docs](https://github.com/neovim/nvim-lspconfig/wiki/UI-customization#change-diagnostic-symbols-in-the-sign-column-gutter)
