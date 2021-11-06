@@ -32,7 +32,7 @@ telescope.setup({
     file_sorter = require("telescope.sorters").get_fuzzy_file,
     file_ignore_patterns = { ".git/", "node_modules/", "env/" }, -- ignore git
     generic_sorter = require("telescope.sorters").get_generic_fuzzy_sorter,
-    winblend = 0,
+    winblend = 20,
     border = {},
     borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
     color_devicons = true,

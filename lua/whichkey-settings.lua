@@ -32,8 +32,9 @@ wk.setup({
   window = {
     border = "single", -- none, single, double, shadow
     position = "bottom", -- bottom, top
-    margin = { 1, 0, 1, 0 }, -- extra window margin [top, right, bottom, left]
+    margin = { 0, 0, 0, 0 }, -- extra window margin [top, right, bottom, left]
     padding = { 2, 2, 2, 2 }, -- extra window padding [top, right, bottom, left]
+    winblend = 10,
   },
   layout = {
     height = { min = 4, max = 25 }, -- min and max height of the columns

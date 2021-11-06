@@ -4,5 +4,7 @@ vim.cmd([[colorscheme tokyonight]])
 -- set colour scheme
 vim.g.tokyonight_style = "night"
 -- vim.g.tokyonight_sidebars = {"qf", "vista_kind", "terminal", "packer"}
-vim.g.tokyonight_transparent = true
+-- vim.g.tokyonight_transparent = true
 vim.g.tokyonight_dark_sidebar = false
+vim.g.tokyonight_transparent_sidebar = true
+vim.g.tokyonight_lualine_bold = true
