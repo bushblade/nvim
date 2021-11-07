@@ -22,7 +22,7 @@ wk.setup({
   },
   -- add operators that will trigger motion and text object completion
   -- to enable all native operators, set the preset / operators plugin above
-  operators = { GP = "Comments" },
+  operators = { gc = "Comments" },
   key_labels = {},
   icons = {
     breadcrumb = "»", -- symbol used in the command line area that shows your active key combo
