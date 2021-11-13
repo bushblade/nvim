@@ -132,5 +132,7 @@ return require("packer").startup({
       "weilbith/nvim-code-action-menu",
       cmd = "CodeActionMenu",
     })
+
+    use("rcarriga/nvim-notify")
   end,
 })
