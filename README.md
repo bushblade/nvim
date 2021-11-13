@@ -115,6 +115,9 @@ Then compile loader file.
   in tabs
 - [ahmedkhalf/project.nvim](https://github.com/ahmedkhalf/project.nvim) Project
   manager
+- [weilbith/nvim-code-action-menu](https://github.com/ahmedkhalf/weilbith/nvim-code-action-menu) Better code actions
+- [rcarriga/nvim-notify](https://github.com/ahmedkhalf/rcarriga/nvim-notify)
+  Fancy notifications and notification history in Telescope
 
 ## TODO:
 
