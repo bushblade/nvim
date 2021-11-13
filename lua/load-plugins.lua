@@ -128,11 +128,13 @@ return require("packer").startup({
       end,
     })
 
+    -- better code action menu
     use({
       "weilbith/nvim-code-action-menu",
       cmd = "CodeActionMenu",
     })
 
+    -- fancy notifications and telescope notification history
     use("rcarriga/nvim-notify")
   end,
 })
