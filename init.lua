@@ -24,7 +24,6 @@ require("colorizer-settings")
 require("bufferline-settings")
 require("spectre-settings")
 require("autopairs-settings")
-require("notify-settings")
 
 -- keymappings
 require("keymappings")
