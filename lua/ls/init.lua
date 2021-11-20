@@ -8,6 +8,7 @@ require("ls.luals")
 require("ls.python")
 require("ls.json")
 require("ls.tailwind")
+require("ls.yaml")
 
 -- Customization and appearance -----------------------------------------
 -- change gutter diagnostic symbols
