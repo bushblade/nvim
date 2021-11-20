@@ -41,6 +41,16 @@ require("formatter").setup({
         }
       end,
     },
+    yaml = {
+      -- yamlfmt
+      function()
+        return {
+          exe = "yamlfmt",
+          args = { "-w" },
+          stdin = false,
+        }
+      end,
+    },
   },
 })
 

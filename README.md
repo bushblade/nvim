@@ -50,6 +50,12 @@ pamac install stylua
 sudo pacman -S autopep8
 ```
 
+[yamlfmt](https://pypi.org/project/yamlfmt/) for yaml available with pip
+
+```bash
+sudo pip install yamlfmt
+```
+
 ## Launch Nvim
 
 On the first run of nvim be sure to install plugins.
