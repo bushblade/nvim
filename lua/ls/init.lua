@@ -9,6 +9,7 @@ require("ls.python")
 require("ls.json")
 require("ls.tailwind")
 require("ls.yaml")
+require("ls.prisma")
 
 -- Customization and appearance -----------------------------------------
 -- change gutter diagnostic symbols
