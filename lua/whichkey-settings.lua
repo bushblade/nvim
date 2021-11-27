@@ -109,6 +109,12 @@ wk.register({
     w = { ":lua require('spectre').open_visual({select_word=true})<CR>", "Search for word under cursor" },
   },
   p = { ":Telescope projects<CR>", "Projects" },
+  L = {
+    name = "LSP",
+    f = { "<cmd>lua vim.lsp.buf.formatting()<CR>", "Format File" },
+    d = { "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>", "Line Diagnostics" },
+    r = { ":lua vim.lsp.buf.rename()<CR>", "Rename" },
+  },
 }, {
   prefix = "<leader>",
 })
