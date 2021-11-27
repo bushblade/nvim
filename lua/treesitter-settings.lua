@@ -9,4 +9,7 @@ require("nvim-treesitter.configs").setup({
     disable = { "html" }, -- FIX: disabled for now https://github.com/nvim-treesitter/nvim-treesitter/issues/1788
   },
   autotag = { enable = true },
+  indent = {
+    enable = true,
+  },
 })
