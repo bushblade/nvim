@@ -42,6 +42,8 @@ vim.g.netrw_liststyle = 3
 
 vim.g.mapleader = " "
 
+vim.cmd([[set inccommand=nosplit]])
+
 -- highlight on yank
 vim.cmd([[au TextYankPost * silent! lua vim.highlight.on_yank()]])
 
