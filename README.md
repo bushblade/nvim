@@ -142,7 +142,7 @@ Then compile loader file.
 
 [Lua for Programmers](https://ebens.me/post/lua-for-programmers-part-1/)
 
-[LSP config](https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md)
+[LSP config](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md)
 
 [Awesome list of plugins](https://github.com/rockerBOO/awesome-neovim)
 
