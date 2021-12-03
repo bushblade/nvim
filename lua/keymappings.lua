@@ -57,6 +57,8 @@ local mappings = {
     -- bufferline
     { "H", ":BufferLineCyclePrev<CR>" },
     { "L", ":BufferLineCycleNext<CR>" },
+    -- seerchbox.nvim
+    { "S", "<cmd>lua require('searchbox').replace({confirm = 'menu'})<CR>" },
   },
   t = {
     -- Terminal mode
@@ -86,7 +88,7 @@ local mappings = {
 register_mappings(mappings, { silent = true, noremap = true })
 
 -- S for search and replace in buffer
-vim.cmd("nnoremap S :%s//gi<Left><Left><Left>")
+-- vim.cmd("nnoremap S :%s//gi<Left><Left><Left>")
 
 -- hop in motion
 local actions = { "d", "c", "<", ">", "y" }

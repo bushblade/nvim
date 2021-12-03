@@ -122,6 +122,8 @@ Then compile loader file.
 - [ahmedkhalf/project.nvim](https://github.com/ahmedkhalf/project.nvim) Project
   manager
 - [weilbith/nvim-code-action-menu](https://github.com/ahmedkhalf/weilbith/nvim-code-action-menu) Better code actions
+- [VonHeikemen/searchbox.nvim](https://github.com/VonHeikemen/searchbox.nvim)
+  Search and replace box
 
 ## TODO:
 

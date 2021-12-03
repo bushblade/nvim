@@ -133,5 +133,12 @@ return require("packer").startup({
       "weilbith/nvim-code-action-menu",
       cmd = "CodeActionMenu",
     })
+
+    use({
+      "VonHeikemen/searchbox.nvim",
+      requires = {
+        { "MunifTanjim/nui.nvim" },
+      },
+    })
   end,
 })
