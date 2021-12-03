@@ -86,7 +86,7 @@ local mappings = {
 register_mappings(mappings, { silent = true, noremap = true })
 
 -- S for search and replace in buffer
-vim.cmd("nnoremap S :%s//gi<Left><Left><Left>")
+vim.cmd("nnoremap S :%s/")
 
 -- hop in motion
 local actions = { "d", "c", "<", ">", "y" }
