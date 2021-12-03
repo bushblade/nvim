@@ -123,10 +123,6 @@ Then compile loader file.
   manager
 - [weilbith/nvim-code-action-menu](https://github.com/ahmedkhalf/weilbith/nvim-code-action-menu) Better code actions
 
-## TODO:
-
-- Styled components highlighting [related to this issue](https://github.com/nvim-treesitter/nvim-treesitter/issues/1111)
-
 ## Resources and inspiration
 
 [Nvim Lua guide](https://github.com/nanotee/nvim-lua-guide)
