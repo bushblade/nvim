@@ -10,6 +10,7 @@ require("ls.json")
 require("ls.tailwind")
 require("ls.yaml")
 require("ls.prisma")
+require("ls.emmet")
 
 -- Customization and appearance -----------------------------------------
 -- change gutter diagnostic symbols
