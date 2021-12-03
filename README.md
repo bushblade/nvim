@@ -19,7 +19,7 @@ git clone https://github.com/wbthomason/packer.nvim\
 Most available via npm
 
 ```bash
-npm install -g typescript typescript-language-server vscode-langservers-extracted vls @tailwindcss/language-server yaml-language-server @prisma/language-server
+npm install -g typescript typescript-language-server vscode-langservers-extracted vls @tailwindcss/language-server yaml-language-server @prisma/language-server emmet-ls
 
 
 ```
@@ -127,8 +127,6 @@ Then compile loader file.
 
 ## TODO:
 
-- Emmett [maybe with aca/emmet-ls](https://github.com/aca/emmet-ls) can't get
-  this to complete
 - Styled components highlighting [related to this issue](https://github.com/nvim-treesitter/nvim-treesitter/issues/1111)
 
 ## Resources and inspiration
