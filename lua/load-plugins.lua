@@ -51,8 +51,12 @@ return require("packer").startup({
     -- tpope
     use("tpope/vim-fugitive")
     use("tpope/vim-surround")
-    use("tpope/vim-commentary")
 
+    -- commenting
+    use("JoosepAlviste/nvim-ts-context-commentstring")
+    use("terrortylor/nvim-comment")
+
+    -- move between kitty windows
     use("knubie/vim-kitty-navigator")
 
     -- windwp
@@ -81,8 +85,6 @@ return require("packer").startup({
       "kyazdani42/nvim-tree.lua",
       requires = { "kyazdani42/nvim-web-devicons" },
     })
-
-    use("JoosepAlviste/nvim-ts-context-commentstring")
 
     -- icons in completion
     use("onsails/lspkind-nvim")

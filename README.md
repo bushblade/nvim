@@ -84,7 +84,7 @@ Then compile loader file.
 - [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive) Git tools
 - [tpope/vim-surround](https://github.com/tpope/vim-surround) Surroundings
   pairs mappings
-- [tpope/vim-commentary](https://github.com/tpope/vim-commentary) Vim style
+- [terrortylor/nvim-comment](https://github.com/tpope/vim-commentary) Vim style
   commenting
 - [knubie/vim-kitty-navigator](https://github.com/knubie/vim-kitty-navigator)
   Move between Nvim and Kitty splits
