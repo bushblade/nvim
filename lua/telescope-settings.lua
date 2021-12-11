@@ -50,4 +50,3 @@ telescope.setup({
 -- Load Telescope extensions
 
 telescope.load_extension("emoji")
-telescope.load_extension("projects")
