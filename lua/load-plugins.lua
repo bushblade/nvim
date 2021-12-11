@@ -123,13 +123,6 @@ return require("packer").startup({
     -- bufferline for buffers in 'tabs'
     use({ "akinsho/bufferline.nvim", requires = "kyazdani42/nvim-web-devicons" })
 
-    use({
-      "ahmedkhalf/project.nvim",
-      config = function()
-        require("project_nvim").setup({})
-      end,
-    })
-
     -- better code action menu
     use({
       "weilbith/nvim-code-action-menu",

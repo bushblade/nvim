@@ -74,7 +74,6 @@ wk.register({
     m = { ":Telescope marks<CR>", "Marks" },
     k = { ":Telescope keymaps<CR>", "Key mappings" },
     M = { ":Telescope man_pages<CR>", "Man pages" },
-    p = { ":Telescope projects<CR>", "Projects" },
   },
   h = {
     name = "Git Gutter",
@@ -108,7 +107,6 @@ wk.register({
     s = { ":lua require('spectre').open_visual()<CR>", "Open Spectre" },
     w = { ":lua require('spectre').open_visual({select_word=true})<CR>", "Search for word under cursor" },
   },
-  p = { ":Telescope projects<CR>", "Projects" },
   L = {
     name = "LSP",
     f = { "<cmd>lua vim.lsp.buf.formatting()<CR>", "Format File" },
