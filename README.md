@@ -19,7 +19,7 @@ git clone https://github.com/wbthomason/packer.nvim\
 Most available via npm
 
 ```bash
-npm install -g typescript typescript-language-server vscode-langservers-extracted vls @tailwindcss/language-server yaml-language-server @prisma/language-server emmet-ls
+npm install -g typescript typescript-language-server vscode-langservers-extracted vls @tailwindcss/language-server yaml-language-server @prisma/language-server emmet-ls neovim
 
 
 ```
@@ -84,7 +84,7 @@ Then compile loader file.
 - [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive) Git tools
 - [tpope/vim-surround](https://github.com/tpope/vim-surround) Surroundings
   pairs mappings
-- [terrortylor/nvim-comment](https://github.com/tpope/vim-commentary) Vim style
+- [numToStr/Comment.nvim](https://github.com/numToStr/Comment.nvim) Vim style
   commenting
 - [knubie/vim-kitty-navigator](https://github.com/knubie/vim-kitty-navigator)
   Move between Nvim and Kitty splits
