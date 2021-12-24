@@ -21,13 +21,12 @@ for type, icon in pairs(signs) do
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
 
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+vim.diagnostic.config({
   virtual_text = {
-    prefix = " ",
-    spacing = 2,
-    source = "always", -- Or "if_many"
+    source = "if_many",
+    prefix = " ", -- Could be '●', '▎', 'x'
   },
-  signs = true,
-  underline = true,
-  update_in_insert = false,
+  float = {
+    source = "always",
+  },
 })
