@@ -77,7 +77,16 @@ Then compile loader file.
 - [kyazdani42/nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons) Icons
 - [hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp) Auto completions,
   suggestions and imports
-- [L3MON4D3/LuaSnip](https://github.com/L3MON4D3/LuaSnip) Snippets
+
+  Source completetion included:
+
+  - [ hrsh7th/cmp-cmdline ](https://github.com/hrsh7th/cmp-cmdline) command line
+  - [ hrsh7th/cmp-buffer ](https://github.com/hrsh7th/cmp-buffer) buffer completions
+  - [ hrsh7th/cmp-nvim-lua ](https://github.com/hrsh7th/cmp-nvim-lua) nvim config completions
+  - [ hrsh7th/cmp-nvim-lsp ](https://github.com/hrsh7th/cmp-nvim-lsp) lsp completions
+  - [ hrsh7th/cmp-path ](https://github.com/hrsh7th/cmp-path) file path completions
+  - [ saadparwaiz1/cmp_luasnip ](https://github.com/saadparwaiz1/cmp_luasnip) snippets completions
+  - [L3MON4D3/LuaSnip](https://github.com/L3MON4D3/LuaSnip) Snippets
 
   - [rafamadriz/friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
 
