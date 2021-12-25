@@ -87,13 +87,29 @@ cmp.setup({
     { name = "buffer" },
     { name = "path" },
   },
-  experimental = {
+  --[[ experimental = {
     native_menu = false,
     ghost_text = true,
-  },
+  }, ]]
 })
 
 -- only enable nvim_lsp in lua files
 vim.cmd(
   [[ autocmd FileType lua lua require'cmp'.setup.buffer { sources = { { name = 'buffer' },{ name = 'nvim_lua'},{name = "nvim_lsp"}},} ]]
 )
+
+-- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
+cmp.setup.cmdline("/", {
+  sources = {
+    { name = "buffer" },
+  },
+})
+
+-- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
+cmp.setup.cmdline(":", {
+  sources = cmp.config.sources({
+    { name = "path" },
+  }, {
+    { name = "cmdline" },
+  }),
+})

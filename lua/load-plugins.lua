@@ -32,6 +32,7 @@ return require("packer").startup({
     use({
       "hrsh7th/nvim-cmp",
       requires = {
+        "hrsh7th/cmp-cmdline", -- command line
         "hrsh7th/cmp-buffer", -- buffer completions
         "hrsh7th/cmp-nvim-lua", -- nvim config completions
         "hrsh7th/cmp-nvim-lsp", -- lsp completions
