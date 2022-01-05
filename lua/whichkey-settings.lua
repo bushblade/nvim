@@ -96,7 +96,7 @@ wk.register({
   },
   T = { ":TodoLocList<CR>", "Todos list" },
   c = { ":CodeActionMenu<CR>", "Code Actions" },
-  d = { "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>", "Line Diagnostics" },
+  d = { "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics({ border = 'single' })<CR>", "Line Diagnostics" },
   w = { ":WhichKey<CR>", "WhichKey" },
   s = { ":lua vim.o.spell = not vim.o.spell<cr>", "Toggle spell check" },
   b = { ":BufferLinePick<CR>", "Pick BufferLine" },
