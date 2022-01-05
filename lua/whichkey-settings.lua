@@ -107,7 +107,7 @@ wk.register({
     s = { ":lua require('spectre').open_visual()<CR>", "Open Spectre" },
     w = { ":lua require('spectre').open_visual({select_word=true})<CR>", "Search for word under cursor" },
   },
-  L = {
+  l = {
     name = "LSP",
     f = { "<cmd>lua vim.lsp.buf.formatting()<CR>", "Format File" },
     d = { "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>", "Line Diagnostics" },
