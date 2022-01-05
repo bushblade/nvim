@@ -49,8 +49,8 @@ local mappings = {
 		-- lsp mappings
 		{ "K", "<Cmd>lua vim.lsp.buf.hover()<CR>" },
 		{ "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>" },
-		{ "[d", "<cmd>lua vim.lsp.diagnostic.goto_prev({ float = { border = 'single' }})<CR>" },
-		{ "]d", "<cmd>lua vim.lsp.diagnostic.goto_next({ float = { border = 'single' }})<CR>" },
+		{ "[d", "<cmd>lua vim.lsp.diagnostic.goto_prev({ float = { border = 'rounded' }})<CR>" },
+		{ "]d", "<cmd>lua vim.lsp.diagnostic.goto_next({ float = { border = 'rounded' }})<CR>" },
 		{ "gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>" },
 		{ "gd", "<Cmd>lua vim.lsp.buf.definition()<CR>" },
 		{ "gR", "<Cmd>lua vim.lsp.buf.references()<CR>" },
