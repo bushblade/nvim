@@ -129,5 +129,8 @@ return require("packer").startup({
       "weilbith/nvim-code-action-menu",
       cmd = "CodeActionMenu",
     })
+
+    -- firebase rules
+    use("delphinus/vim-firestore")
   end,
 })

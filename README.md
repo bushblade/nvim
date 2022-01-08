@@ -129,6 +129,8 @@ Then compile loader file.
 - [akinsho/bufferline.nvim](https://github.com/akinsho/bufferline.nvim) Buffers
   in tabs
 - [weilbith/nvim-code-action-menu](https://github.com/ahmedkhalf/weilbith/nvim-code-action-menu) Better code actions
+- [delphinus/vim-firestore](https://github.com/delphinus/vim-firestore) Syntax
+  highlighting and completion for Firebase rules
 
 ## Resources and inspiration
 
