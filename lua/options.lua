@@ -32,6 +32,10 @@ vim.opt.mousemodel = "popup"
 -- timeout for whichkey
 vim.opt.timeoutlen = 500
 
+vim.opt.foldmethod = "indent"
+vim.opt.foldlevelstart = 2
+vim.opt.foldnestmax = 2
+
 -- Neovide settings
 vim.opt.guifont = "Fira Code Nerd Font"
 vim.g.neovide_transparency = 0.9
