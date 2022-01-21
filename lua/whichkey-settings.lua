@@ -113,6 +113,7 @@ wk.register({
 		d = { "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>", "Line Diagnostics" },
 		r = { ":lua vim.lsp.buf.rename()<CR>", "Rename" },
 		R = { "<cmd> lua vim.lsp.buf.references()<CR>", "List references" },
+    c = {"<cmd> lua vim.lsp.buf.code_action()<CR>", "Code actions"}
 	},
 }, {
 	prefix = "<leader>",
