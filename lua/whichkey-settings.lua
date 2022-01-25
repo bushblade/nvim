@@ -85,7 +85,6 @@ wk.register({
   t = {
     name = "Trouble",
     t = { ":TroubleToggle<CR>", "Toggle" },
-    l = { ":Trouble loclist<CR>", "List project troubles" }, -- NOTE: not sure what this one does?
     r = { ":Trouble lsp_references<CR>", "References" },
     d = { ":Trouble lsp_definitions<CR>", "Definitions" },
     q = { ":Trouble quickfix<CR>", "Quickfix" },
