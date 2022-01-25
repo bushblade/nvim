@@ -41,7 +41,7 @@ require("formatter").setup({
         }
       end,
     },
-    yaml = {
+    --[[ yaml = {
       -- yamlfmt
       function()
         return {
@@ -50,7 +50,7 @@ require("formatter").setup({
           stdin = false,
         }
       end,
-    },
+    }, ]]
   },
 })
 
