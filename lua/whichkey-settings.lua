@@ -94,7 +94,7 @@ wk.register({
   },
   T = { ":TodoLocList<CR>", "Todos list" },
   c = { ":CodeActionMenu<CR>", "Code Actions" },
-  d = { "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics({ border = 'rounded' })<CR>", "Line Diagnostics" },
+  d = { "<cmd>lua vim.diagnostic.open_float({ border = 'rounded' })<CR>", "Line Diagnostics" },
   w = { ":WhichKey<CR>", "WhichKey" },
   s = { ":lua vim.o.spell = not vim.o.spell<cr>", "Toggle spell check" },
   b = { ":BufferLinePick<CR>", "Pick BufferLine" },
@@ -108,7 +108,7 @@ wk.register({
   l = {
     name = "LSP",
     f = { "<cmd>lua vim.lsp.buf.formatting()<CR>", "Format File" },
-    d = { "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>", "Line Diagnostics" },
+    d = { "<cmd>lua vim.diagnostic.open_float({ border = 'rounded' })<CR>", "Line Diagnostics" },
     r = { ":lua vim.lsp.buf.rename()<CR>", "Rename" },
     R = { "<cmd> lua vim.lsp.buf.references()<CR>", "List references" },
     c = { "<cmd>lua vim.lsp.buf.code_action()<CR>", "Code actions" },
