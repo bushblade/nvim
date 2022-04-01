@@ -12,10 +12,6 @@ return require("packer").startup({
       requires = { { "nvim-lua/popup.nvim" }, { "nvim-lua/plenary.nvim" } },
     })
 
-    -- Telescope extensions
-    -- Emoji
-    use("xiyaowong/telescope-emoji.nvim")
-
     -- Treesitter
     use({
       "nvim-treesitter/nvim-treesitter",
