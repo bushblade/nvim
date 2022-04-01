@@ -12,6 +12,7 @@ require("ls.yaml")
 require("ls.prisma")
 require("ls.emmet")
 require("ls.gql")
+require("ls.rust")
 
 -- Customization and appearance -----------------------------------------
 -- change gutter diagnostic symbols
