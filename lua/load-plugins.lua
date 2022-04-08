@@ -118,7 +118,7 @@ return require("packer").startup({
     use("kevinoid/vim-jsonc")
 
     -- bufferline for buffers in 'tabs'
-    use({ "akinsho/bufferline.nvim", requires = "kyazdani42/nvim-web-devicons" })
+    use({ "akinsho/bufferline.nvim", tag = "*", requires = "kyazdani42/nvim-web-devicons" })
 
     -- better code action menu
     use({
@@ -128,5 +128,11 @@ return require("packer").startup({
 
     -- firebase rules
     use("delphinus/vim-firestore")
+
+    -- sessions
+    use({
+      "jedrzejboczar/possession.nvim",
+      requires = { "nvim-lua/plenary.nvim" },
+    })
   end,
 })
