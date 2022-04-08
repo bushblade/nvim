@@ -112,6 +112,13 @@ wk.register({
     R = { "<cmd> lua vim.lsp.buf.references()<CR>", "List references" },
     c = { "<cmd>lua vim.lsp.buf.code_action()<CR>", "Code actions" },
   },
+  a = {
+    name = "Auto Sessions",
+    S = { ":SaveSession<cr>", "Save session" },
+    s = { ":SearchSession<cr>", "Search sessions" },
+    d = { ":DeleteSession<cr>", "Delete session" },
+    r = { ":RestoreSession<cr>", "Restore session" },
+  },
 }, {
   prefix = "<leader>",
 })

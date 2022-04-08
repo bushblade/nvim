@@ -130,6 +130,8 @@ Then compile loader file.
 - [weilbith/nvim-code-action-menu](https://github.com/ahmedkhalf/weilbith/nvim-code-action-menu) Better code actions
 - [delphinus/vim-firestore](https://github.com/delphinus/vim-firestore) Syntax
   highlighting and completion for Firebase rules
+- [rmagatti/auto-session](https://github.com/rmagatti/auto-session) Session
+  management
 
 ## Resources and inspiration
 
