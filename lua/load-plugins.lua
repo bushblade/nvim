@@ -130,9 +130,5 @@ return require("packer").startup({
     use("delphinus/vim-firestore")
 
     -- sessions
-    use({
-      "jedrzejboczar/possession.nvim",
-      requires = { "nvim-lua/plenary.nvim" },
-    })
   end,
 })
