@@ -126,6 +126,7 @@ wk.register({
 
 wk.register({
   name = "Go to",
-  d = "Go to definition",
-  D = "Go to declaration",
+  d = "Definition",
+  D = "Declaration",
+  r = "References",
 }, { prefix = "g" })
