@@ -1,5 +1,3 @@
--- vim.g.nvim_tree_ignore = { ".git", "node_modules", ".cache", "*.d.ts" }
-vim.g.nvim_tree_indent_markers = 1
 vim.g.nvim_tree_git_hl = 1
 vim.g.nvim_tree_highlight_opened_files = 1
 
@@ -20,5 +18,15 @@ require("nvim-tree").setup({
   },
   filters = {
     custom = { ".git" },
+  },
+  renderer = {
+    indent_markers = {
+      enable = true,
+      icons = {
+        corner = "└ ",
+        edge = "│ ",
+        none = "  ",
+      },
+    },
   },
 })
