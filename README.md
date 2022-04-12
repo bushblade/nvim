@@ -132,6 +132,8 @@ Then compile loader file.
   highlighting and completion for Firebase rules
 - [rmagatti/auto-session](https://github.com/rmagatti/auto-session) Session
   management
+- [andweeb/presence.nvim](https://github.com/andweeb/presence.nvim) Rich
+  presence in Discord
 
 ## Resources and inspiration
 
