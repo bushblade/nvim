@@ -91,8 +91,11 @@ cmp.setup({
 		-- native_menu = false,
 		ghost_text = true,
 	},
-	documentation = {
-		border = "rounded",
+	-- documentation = {
+	-- 	border = "rounded",
+	-- },
+	window = {
+		documentation = cmp.config.window.bordered(),
 	},
 })
 
