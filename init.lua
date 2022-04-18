@@ -24,7 +24,7 @@ require("colorizer-settings")
 require("bufferline-settings")
 require("spectre-settings")
 require("autopairs-settings")
-require("nvim-comment-settings")
+-- require("nvim-comment-settings")
 require("presence-settings")
 
 -- keymappings

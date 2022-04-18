@@ -19,7 +19,7 @@ require("lspkind").setup({
 	-- override preset symbols
 	--
 	-- default: {}
-	symbol_map = {
+	symbols = {
 		Text = "",
 		Method = "",
 		Function = "",
