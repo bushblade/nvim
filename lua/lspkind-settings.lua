@@ -1,7 +1,7 @@
-require("lspkind").setup({
+require("lspkind").init({
   mode = "symbol_text",
   preset = "codicons",
-  symbols = {
+  symbol_map = {
     Text = "",
     Method = "",
     Function = "",
