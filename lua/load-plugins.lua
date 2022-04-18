@@ -51,7 +51,7 @@ return require("packer").startup({
 
 		-- commenting
 		use("JoosepAlviste/nvim-ts-context-commentstring")
-		-- use("numToStr/Comment.nvim")
+		use({ "numToStr/Comment.nvim", tag = "v0.6" })
 
 		-- move between kitty windows
 		use("knubie/vim-kitty-navigator")
