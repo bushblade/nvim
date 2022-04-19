@@ -26,7 +26,6 @@ cmp.setup({
       luasnip.lsp_expand(args.body)
     end,
   },
-  -- You must set mapping if you want.
   mapping = {
     ["<C-p>"] = cmp.mapping.select_prev_item(),
     ["<C-n>"] = cmp.mapping.select_next_item(),
@@ -65,7 +64,6 @@ cmp.setup({
       "s",
     }),
   },
-  -- You should specify your *installed* sources.
   -- order of sources sets priority
   sources = {
     { name = "luasnip" },
@@ -77,9 +75,6 @@ cmp.setup({
     -- native_menu = false,
     ghost_text = true,
   },
-  -- documentation = {
-  -- 	border = "rounded",
-  -- },
   window = {
     documentation = cmp.config.window.bordered(),
   },
