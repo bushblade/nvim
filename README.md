@@ -1,13 +1,22 @@
 # Leaving the CoC behind.
 
-My config for Nvim using native LSP with some sane defaults and settings, mainly
+![Screenshot](./screenshot2.png)
+[kitty terminal](https://sw.kovidgoyal.net/kitty/) with [TokyoNight](https://sw.kovidgoyal.net/kitty/) terminal theme and [Victor Mono](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/VictorMono) nerd font.
+
+**My config for Nvim using native LSP with some sane defaults and settings**, mainly
 aimed at web development.
 
-Uses the latest 0.5+ Neovim
+Uses the latest 0.6+ Neovim
 
-Clone the repository into ~/.config/nvim
+## Clone the repository into ~/.config/nvim
 
-Install [ Packer ](https://github.com/wbthomason/packer.nvim)
+```bash
+git clone https://github.com/bushblade/nvim.git ~/.config/nvim
+```
+
+## Install Packer
+
+[ Packer Neovim plugin manager ](https://github.com/wbthomason/packer.nvim)
 
 ```bash
 git clone https://github.com/wbthomason/packer.nvim\
