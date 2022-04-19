@@ -1,6 +1,6 @@
 # Leaving the CoC behind.
 
-![Screenshot](./screenshot2.png)
+![Screenshot](https://res.cloudinary.com/bushblade/image/upload/v1650398285/nvim-screenshot.webp)
 [kitty terminal](https://sw.kovidgoyal.net/kitty/) with [TokyoNight](https://sw.kovidgoyal.net/kitty/) terminal theme and [Victor Mono](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/VictorMono) nerd font.
 
 **My config for Nvim using native LSP with some sane defaults and settings**, mainly
