@@ -6,6 +6,7 @@ require("lualine").setup({
     section_separators = { left = "", right = "" },
     disabled_filetypes = {},
     theme = "tokyonight",
+    globalstatus = true
   },
   sections = {
     lualine_a = { "mode" },
