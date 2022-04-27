@@ -4,9 +4,9 @@
 [kitty terminal](https://sw.kovidgoyal.net/kitty/) with [TokyoNight](https://sw.kovidgoyal.net/kitty/) terminal theme and [Victor Mono](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/VictorMono) nerd font.
 
 **My config for Nvim using native LSP with some sane defaults and settings**, mainly
-aimed at web development.
+aimed at web development but ready to go with Python, Rust, Golang and Lua.
 
-Uses the latest 0.6+ Neovim
+Uses the latest 0.7+ Neovim
 
 ## Clone the repository into ~/.config/nvim
 
