@@ -35,7 +35,7 @@ npm install -g typescript typescript-language-server vscode-langservers-extracte
 ### Lua, Pyright and rust-analyzer available in Arch/Manjaro repos
 
 ```bash
-sudo pacman -S lua-language-server pyright rust-analyzer
+sudo pacman -S lua-language-server pyright rust-analyzer gopls
 ```
 
 ## Install formatters
