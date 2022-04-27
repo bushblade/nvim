@@ -23,11 +23,12 @@ require("formatter").setup({
 		markdown = { prettier },
 		vue = { prettier },
 		go = {
+			-- goimport
 			function()
 				return {
-					ext = "gofmt",
-					args = { "-w" },
-					stdin = true,
+					exe = "gofmt",
+					args = { "-w", vim.api.nvim_buf_get_name(0) },
+					stdin = false,
 				}
 			end,
 		},
