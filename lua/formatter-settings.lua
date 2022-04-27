@@ -27,7 +27,7 @@ require("formatter").setup({
 			function()
 				return {
 					exe = "gofmt",
-					args = { "-w", vim.api.nvim_buf_get_name(0) },
+					args = { "-w" },
 					stdin = false,
 				}
 			end,
