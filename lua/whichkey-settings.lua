@@ -103,8 +103,8 @@ wk.register({
     name = "Bufferline",
     b = { ":BufferLinePick<CR>", "Pick" },
     q = { ":BufferLinePickClose<CR>", "Pick to close" },
-    r = { ":BufferLineCloseRight<CR>", "Close all to right" },
-    l = { ":BufferLineCloseLeft<CR>", "Close all to left" },
+    l = { ":BufferLineCloseRight<CR>", "Close all to right" },
+    h = { ":BufferLineCloseLeft<CR>", "Close all to left" },
     p = { ":BufferLineTogglePin<CR>", "Toggle pin" },
   },
   S = {
