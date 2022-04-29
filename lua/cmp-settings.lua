@@ -64,13 +64,12 @@ cmp.setup({
       "s",
     }),
   },
-  -- order of sources sets priority
-  sources = {
-    { name = "luasnip" },
+  sources = cmp.config.sources({
     { name = "nvim_lsp" },
     { name = "buffer" },
+    { name = "luasnip" },
     { name = "path" },
-  },
+  }),
   experimental = {
     -- native_menu = false,
     ghost_text = true,
