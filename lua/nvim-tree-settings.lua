@@ -16,9 +16,9 @@ require("nvim-tree").setup({
     enable = true,
     update_cwd = true,
   },
-  filters = {
-    custom = { ".git" },
-  },
+  -- filters = {
+  --   custom = { ".git" },
+  -- },
   renderer = {
     indent_markers = {
       enable = true,
