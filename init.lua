@@ -26,6 +26,7 @@ require("spectre-settings")
 require("autopairs-settings")
 require("Comment-settings")
 require("presence-settings")
+require("dashboard-settings")
 
 -- keymappings
 require("keymappings")
