@@ -143,6 +143,7 @@ Then compile loader file.
   management
 - [andweeb/presence.nvim](https://github.com/andweeb/presence.nvim) Rich
   presence in Discord
+- [goolord/alpha-nvim](https://github.com/goolord/alpha-nvim) Dashboard
 
 ## Resources and inspiration
 
