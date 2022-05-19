@@ -153,5 +153,12 @@ return require("packer").startup({
 
     -- Dashboard
     use("goolord/alpha-nvim")
+
+    -- Firenvim (vim in browser)
+    use({
+      'glacambre/firenvim',
+      run = function() vim.fn['firenvim#install'](0)
+      end
+    })
   end,
 })

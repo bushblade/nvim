@@ -74,17 +74,24 @@ Then compile loader file.
 
 `:PackerCompile`
 
+## Note: Firenvim
+
+Run this command to install firenvim in your browser
+
+```
+call firenvim#install(0)
+```
+
 ## Currently installed plugins
 
-- [wbthomason/packer.nvim](https://github.com/wbthomason/packer.nvim) - Plugin
-  manager
+- [wbthomason/packer.nvim](https://github.com/wbthomason/packer.nvim) - Plugin manager
 - [neovim/nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) - LSP
 - [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) - Fuzzy find anything
 - [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) Language parsing for highlighting and more
 - [hoob3rt/lualine.nvim](https://github.com/hoob3rt/lualine.nvim) Status line
 - [kyazdani42/nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons) Icons
-- [hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp) Auto completions,
-  suggestions and imports
+- [hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp) Auto completions, suggestions and imports
+- [glacambre/firenvim](https://github.com/glacambre/firenvim) Embed nvim in firefox or chrome
 
   Source completetion included:
 
