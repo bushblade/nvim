@@ -82,6 +82,15 @@ Run this command to install firenvim in your browser
 call firenvim#install(0)
 ```
 
+## Adding custom Snippets
+
+The conifg uses [ luasnip ](https://github.com/saadparwaiz1/cmp_luasnip) paired
+with [rafamadriz/friendly-snippets](https://github.com/rafamadriz/friendly-snippets) for VS Code style snippets.
+You can add your own snippets to the config [ snippets directory ](./snippets).
+You'll also need to edit the [snippets/package.json](./snippets/package.json) to
+be able to load your snippets in the correct filetype.
+One test snippet is included as an example.
+
 ## Currently installed plugins
 
 - [wbthomason/packer.nvim](https://github.com/wbthomason/packer.nvim) - Plugin manager

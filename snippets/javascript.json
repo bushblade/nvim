@@ -1,0 +1,6 @@
+{
+  "Testing Custom Snippets": {
+    "prefix": "testsnip",
+    "body": "const test = () => 'test'"
+  }
+}
