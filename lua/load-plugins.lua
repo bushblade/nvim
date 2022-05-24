@@ -77,6 +77,9 @@ return require("packer").startup({
       end,
     })
 
+    -- Undotree
+    use "mbbill/undotree"
+
     -- file tree
     use({
       "kyazdani42/nvim-tree.lua",
