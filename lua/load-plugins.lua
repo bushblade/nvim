@@ -78,7 +78,7 @@ return require("packer").startup({
     })
 
     -- Undotree
-    use "mbbill/undotree"
+    use("mbbill/undotree")
 
     -- file tree
     use({
@@ -159,9 +159,10 @@ return require("packer").startup({
 
     -- Firenvim (vim in browser)
     use({
-      'glacambre/firenvim',
-      run = function() vim.fn['firenvim#install'](0)
-      end
+      "glacambre/firenvim",
+      run = function()
+        vim.fn["firenvim#install"](0)
+      end,
     })
   end,
 })
