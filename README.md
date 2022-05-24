@@ -160,6 +160,7 @@ One test snippet is included as an example.
 - [andweeb/presence.nvim](https://github.com/andweeb/presence.nvim) Rich
   presence in Discord
 - [goolord/alpha-nvim](https://github.com/goolord/alpha-nvim) Dashboard
+- [mbbill/undotree](https://github.com/mbbill/undotree) Undotree
 
 ## Resources and inspiration
 
