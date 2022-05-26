@@ -38,7 +38,7 @@ npm install -g typescript typescript-language-server vscode-langservers-extracte
 sudo pacman -S lua-language-server pyright rust-analyzer gopls
 ```
 
-#### Alternative for MacOS, Ubuntu, etc.
+Alternative source for MacOS, Ubuntu, etc.
 
 ```bash
 brew install lua-language-server pyright rust-analyzer gopls
@@ -58,7 +58,7 @@ npm i -g prettier
 pamac install stylua
 ```
 
-#### Alternative for MacOS, Ubuntu, etc.
+#### Alternative source for MacOS, Ubuntu, etc.
 
 ```bash
 brew install stylua
@@ -70,7 +70,7 @@ brew install stylua
 sudo pacman -S autopep8
 ```
 
-#### Alternative for MacOS, Ubuntu, etc.
+#### Alternative source for MacOS, Ubuntu, etc.
 ```bash
 brew install autopep8
 ```
