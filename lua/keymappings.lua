@@ -58,18 +58,19 @@ local mappings = {
     {
       "[d",
       function()
-        vim.lsp.diagnostic.goto_prev(border_options)
+        vim.diagnostic.goto_prev(border_options)
       end,
     },
     {
       "]d",
       function()
-        vim.lsp.diagnostic.goto_next(border_options)
+        vim.diagnostic.goto_next(border_options)
       end,
     },
     { "gD", vim.lsp.buf.declaration },
     { "gd", vim.lsp.buf.definition },
     { "gr", vim.lsp.buf.references },
+    { "gi", vim.lsp.buf.implementation },
     -- bufferline
     { "H", ":BufferLineCyclePrev<CR>" },
     { "L", ":BufferLineCycleNext<CR>" },
