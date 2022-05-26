@@ -58,7 +58,7 @@ npm i -g prettier
 pamac install stylua
 ```
 
-#### Alternative source for MacOS, Ubuntu, etc.
+Alternative source for MacOS, Ubuntu, etc.
 
 ```bash
 brew install stylua
@@ -70,7 +70,7 @@ brew install stylua
 sudo pacman -S autopep8
 ```
 
-#### Alternative source for MacOS, Ubuntu, etc.
+Alternative source for MacOS, Ubuntu, etc.
 ```bash
 brew install autopep8
 ```
