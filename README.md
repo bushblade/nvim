@@ -32,7 +32,12 @@ npm install -g typescript typescript-language-server vscode-langservers-extracte
 
 ```
 
+> TIP: [No sudo on global npm install](https://github.com/sindresorhus/guides/blob/main/npm-global-without-sudo.md)
+
 ### Lua, Pyright and rust-analyzer available in Arch/Manjaro repos
+
+Check your package manager for availability if not on an Arch based distro -
+_brew, apt_ etc.
 
 ```bash
 sudo pacman -S lua-language-server pyright rust-analyzer gopls
@@ -52,11 +57,18 @@ npm i -g prettier
 pamac install stylua
 ```
 
-[autopep8](https://pypi.org/project/autopep8/) for python
+Check your package manager for availability if not on an Arch based distro -
+_brew, apt_ etc.
+
+[autopep8](https://pypi.org/project/autopep8/) for python is in Manjaro/Arch
+repos
 
 ```bash
 sudo pacman -S autopep8
 ```
+
+Check your package manager for availability if not on an Arch based distro -
+_brew, apt_ etc.
 
 [yamlfmt](https://pypi.org/project/yamlfmt/) for yaml available with pip
 
@@ -74,13 +86,16 @@ Then compile loader file.
 
 `:PackerCompile`
 
-## Note: Firenvim
+## Note: Installing Firenvim
 
-Run this command to install firenvim in your browser
+Run this command in nvim to install FireNvim in your browser.
 
 ```
-call firenvim#install(0)
+:call firenvim#install(0)
 ```
+
+or install the [FireFox extension](https://addons.mozilla.org/en-GB/firefox/addon/firenvim/)
+or the [Chrome extension](https://chrome.google.com/webstore/detail/firenvim/egpjdkipkomnmjhjmdamaniclmdlobbo?hl=en)
 
 ## Adding custom Snippets
 
