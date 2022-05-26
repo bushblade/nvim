@@ -8,7 +8,6 @@ table.insert(runtime_path, "lua/?/init.lua")
 -- https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md#sumneko_lua
 
 require("lspconfig").sumneko_lua.setup({
-  cmd = { "/usr/bin/lua-language-server", "-E", "/usr/bin/lua-language-server/main.lua" },
   settings = {
     Lua = {
       runtime = {

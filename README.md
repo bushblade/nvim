@@ -38,6 +38,12 @@ npm install -g typescript typescript-language-server vscode-langservers-extracte
 sudo pacman -S lua-language-server pyright rust-analyzer gopls
 ```
 
+or
+
+```bash
+brew install lua-language-server pyright rust-analyzer gopls
+```
+
 ## Install formatters
 
 prettier with npm
