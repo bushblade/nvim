@@ -99,8 +99,8 @@ One test snippet is included as an example.
 - [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) Language parsing for highlighting and more
 - [hoob3rt/lualine.nvim](https://github.com/hoob3rt/lualine.nvim) Status line
 - [kyazdani42/nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons) Icons
-- [hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp) Auto completions, suggestions and imports
 - [glacambre/firenvim](https://github.com/glacambre/firenvim) Embed nvim in firefox or chrome
+- [hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp) Auto completions, suggestions and imports
 
   Source completetion included:
 
@@ -179,7 +179,3 @@ One test snippet is included as an example.
 [Awesome list of plugins](https://github.com/rockerBOO/awesome-neovim)
 
 [Plugin Finder](https://neovimcraft.com/)
-
-### Plugins worth a look to add/keep an eye on
-
-[alpha-nvim](https://github.com/goolord/alpha-nvim) for dashboard.
