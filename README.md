@@ -38,6 +38,12 @@ npm install -g typescript typescript-language-server vscode-langservers-extracte
 sudo pacman -S lua-language-server pyright rust-analyzer gopls
 ```
 
+Alternative source for MacOS, Ubuntu, etc.
+
+```bash
+brew install lua-language-server pyright rust-analyzer gopls
+```
+
 ## Install formatters
 
 prettier with npm
@@ -52,10 +58,21 @@ npm i -g prettier
 pamac install stylua
 ```
 
+Alternative source for MacOS, Ubuntu, etc.
+
+```bash
+brew install stylua
+```
+
 [autopep8](https://pypi.org/project/autopep8/) for python
 
 ```bash
 sudo pacman -S autopep8
+```
+
+Alternative source for MacOS, Ubuntu, etc.
+```bash
+brew install autopep8
 ```
 
 [yamlfmt](https://pypi.org/project/yamlfmt/) for yaml available with pip
