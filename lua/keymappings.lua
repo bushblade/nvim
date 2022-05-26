@@ -14,7 +14,7 @@ end
 
 local border_options = { float = { border = "rounded" } }
 
--- NOTE: <leader> prefixed mappings are in whichkey-settings.lua
+-- NOTE<cmd> <leader> prefixed mappings are in whichkey-settings.lua
 
 local mappings = {
   i = {
@@ -28,8 +28,8 @@ local mappings = {
     { "<C-k>", "<C-\\><C-N><C-w>k" },
     { "<C-l>", "<C-\\><C-N><C-w>l" },
     -- moving text
-    { "<C-j>", "<esc>:m .+1<CR>==" },
-    { "<C-k>", "<esc>:m .-2<CR>==" },
+    { "<C-j>", "<esc><cmd>m .+1<CR>==" },
+    { "<C-k>", "<esc><cmd>m .-2<CR>==" },
   },
   n = {
     -- Normal mode
@@ -39,17 +39,17 @@ local mappings = {
     { "<C-k>", "<C-w>k", { silent = true } },
     { "<C-l>", "<C-w>l", { silent = true } },
     -- Resize with arrows
-    { "<C-Up>", ":resize -2<CR>", { silent = true } },
-    { "<C-Down>", ":resize +2<CR>", { silent = true } },
-    { "<C-Left>", ":vertical resize -2<CR>", { silent = true } },
-    { "<C-Right>", ":vertical resize +2<CR>", { silent = true } },
+    { "<C-Up>", "<cmd>resize -2<CR>", { silent = true } },
+    { "<C-Down>", "<cmd>resize +2<CR>", { silent = true } },
+    { "<C-Left>", "<cmd>vertical resize -2<CR>", { silent = true } },
+    { "<C-Right>", "<cmd>vertical resize +2<CR>", { silent = true } },
     -- Ctrl + p fuzzy files
     { "<C-p>", telescope_find_files },
     -- escape clears highlighting
-    { "<esc>", ":noh<cr><esc>" },
+    { "<esc>", "<cmd>noh<cr><esc>" },
     -- hop words
-    { "f", ":HopWord<cr>" },
-    { "F", ":HopLine<cr>" },
+    { "f", "<cmd>HopWord<cr>" },
+    { "F", "<cmd>HopLine<cr>" },
     -- yank to end of line on Y
     { "Y", "y$" },
     -- lsp mappings
@@ -72,8 +72,8 @@ local mappings = {
     { "gr", vim.lsp.buf.references },
     { "gi", vim.lsp.buf.implementation },
     -- bufferline
-    { "H", ":BufferLineCyclePrev<CR>" },
-    { "L", ":BufferLineCycleNext<CR>" },
+    { "H", "<cmd>BufferLineCyclePrev<CR>" },
+    { "L", "<cmd>BufferLineCycleNext<CR>" },
   },
   t = {
     -- Terminal mode
@@ -94,8 +94,8 @@ local mappings = {
     -- hop words
     { "f", require("hop").hint_words },
     -- moving text
-    { "J", ":m '>+1<CR>gv=gv" },
-    { "K", ":m '<-2<CR>gv=gv" },
+    { "J", "<cmd>m '>+1<CR>gv=gv" },
+    { "K", "<cmd>m '<-2<CR>gv=gv" },
   },
   x = {},
 }
@@ -103,7 +103,7 @@ local mappings = {
 register_mappings(mappings, { silent = true, noremap = true })
 
 -- S for search and replace in buffer
-vim.cmd("nnoremap S :%s/")
+vim.cmd("nnoremap S <cmd>%s/")
 
 -- hop in motion
 local actions = { "d", "c", "<", ">", "y" }
