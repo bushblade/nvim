@@ -81,7 +81,7 @@ wk.register({
     u = "Undo Changes",
   },
   e = { ":NvimTreeToggle<CR>", "File Tree" },
-  u = { ":UndotreeToggle<CR>", "Undotree" },
+  u = { ":UndotreeToggle<CR>:UndotreeFocus<CR>", "Undotree" },
   -- trouble bindings
   t = {
     name = "Trouble",
