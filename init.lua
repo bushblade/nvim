@@ -27,6 +27,7 @@ require("autopairs-settings")
 require("Comment-settings")
 require("presence-settings")
 require("dashboard-settings")
+require("undo-tree-settings")
 
 -- keymappings
 require("keymappings")
