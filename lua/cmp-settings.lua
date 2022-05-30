@@ -7,10 +7,11 @@ luasnip.filetype_extend("javascript", { "html" })
 luasnip.filetype_extend("javascriptreact", { "html" })
 luasnip.filetype_extend("typescriptreact", { "html" })
 
-require("luasnip/loaders/from_vscode").lazy_load()
+local loader = require("luasnip/loaders/from_vscode")
+loader.lazy_load()
 
 -- load snippets from path/of/your/nvim/config/my-cool-snippets
-require("luasnip.loaders.from_vscode").lazy_load({ paths = { "./snippets" } })
+loader.lazy_load({ paths = { "./snippets" } })
 
 local has_words_before = function()
   local line, col = unpack(vim.api.nvim_win_get_cursor(0))
