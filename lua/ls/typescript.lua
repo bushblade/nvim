@@ -1,4 +1,5 @@
 -- JavaScript and TypeScript -------------------------------
+local root_pattern = require("lspconfig").util.root_pattern
 
 require("lspconfig").tsserver.setup({
   filetypes = {
@@ -10,8 +11,12 @@ require("lspconfig").tsserver.setup({
     "typescript.tsx",
   },
   cmd = { "typescript-language-server", "--stdio" },
-  -- I needed this to work on plain .js files
   root_dir = function()
-    return vim.loop.cwd()
+    if root_pattern("deno.json", "deno.jsonc, denon.json") then
+      return false
+    else
+      -- I needed this to work on plain .js files
+      return vim.loop.cwd()
+    end
   end,
 })

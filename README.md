@@ -4,7 +4,7 @@
 [kitty terminal](https://sw.kovidgoyal.net/kitty/) with [TokyoNight](https://sw.kovidgoyal.net/kitty/) terminal theme and [Victor Mono](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/VictorMono) nerd font.
 
 **My config for Nvim using native LSP with some sane defaults and settings**, mainly
-aimed at web development but ready to go with Python, Rust, Golang and Lua.
+aimed at web development but ready to go with Python, Rust, Golang, Deno and Lua.
 
 Uses the latest 0.7+ Neovim
 
@@ -34,13 +34,13 @@ npm install -g typescript typescript-language-server vscode-langservers-extracte
 
 > TIP: [No sudo on global npm install](https://github.com/sindresorhus/guides/blob/main/npm-global-without-sudo.md)
 
-### Lua, Pyright and rust-analyzer available in Arch/Manjaro repos
+### Lua, Pyright, Deno and rust-analyzer available in Arch/Manjaro repos
 
 Check your package manager for availability if not on an Arch based distro -
 _brew, apt_ etc.
 
 ```bash
-sudo pacman -S lua-language-server pyright rust-analyzer gopls
+sudo pacman -S lua-language-server pyright deno rust-analyzer gopls
 ```
 
 ## Install formatters

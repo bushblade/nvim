@@ -14,6 +14,7 @@ require("ls.emmet")
 require("ls.gql")
 require("ls.rust")
 require("ls.go")
+require("ls.deno")
 
 -- Customization and appearance -----------------------------------------
 -- change gutter diagnostic symbols

@@ -67,4 +67,5 @@ vim.g.markdown_fenced_languages = {
   "lua",
   "vim",
   "bash",
+  "ts=typescript",
 }
