@@ -107,6 +107,7 @@ wk.register({
 		q = { "<cmd>BufferLinePickClose<CR>", "Pick to close" },
 		l = { "<cmd>BufferLineCloseRight<CR>", "Close all to right" },
 		h = { "<cmd>BufferLineCloseLeft<CR>", "Close all to left" },
+		a = {  "<cmd>BufferLineCloseLeft<CR><cmd>BufferLineCloseRight<CR>", "Close all but current"  },
 		p = { "<cmd>BufferLineTogglePin<CR>", "Toggle pin" },
 	},
 	S = {
