@@ -92,6 +92,7 @@ vim.api.nvim_create_autocmd("BufWritePost", {
     "*.gql",
     "*.graphql",
     "*.go",
+    "*.rust",
   },
   command = "FormatWrite",
 })
