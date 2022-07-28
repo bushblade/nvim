@@ -5,4 +5,5 @@ require("lspconfig").denols.setup({
     "typescript",
   },
   root_dir = root_pattern("deno.json", "deno.jsonc", "denon.json"),
+  single_file_support = false,
 })
