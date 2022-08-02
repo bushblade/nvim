@@ -1,4 +1,7 @@
 require("nvim-tree").setup({
+	view = {
+		adaptive_size = true,
+	},
 	diagnostics = {
 		enable = true,
 		icons = {
@@ -14,6 +17,11 @@ require("nvim-tree").setup({
 		update_cwd = true,
 	},
 	renderer = {
+		icons = {
+			show = {
+				folder_arrow = false,
+			},
+		},
 		highlight_git = true,
 		highlight_opened_files = "all",
 		indent_markers = {
