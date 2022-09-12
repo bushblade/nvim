@@ -97,7 +97,10 @@ local mappings = {
     { "J", "<cmd>m '>+1<CR>gv=gv" },
     { "K", "<cmd>m '<-2<CR>gv=gv" },
   },
-  x = {},
+  x = {
+    -- remap p to always paste from last yank
+    { "<leader>p", '"_dP' },
+  },
 }
 
 register_mappings(mappings, { silent = true, noremap = true })
