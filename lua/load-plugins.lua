@@ -81,10 +81,10 @@ return require("packer").startup({
     use("mbbill/undotree")
 
     -- file tree
-    use({
-      "kyazdani42/nvim-tree.lua",
-      requires = { "kyazdani42/nvim-web-devicons" },
-    })
+    use("kyazdani42/nvim-tree.lua")
+
+    -- icons
+    use("kyazdani42/nvim-web-devicons" )
 
     -- icons in completion
     use("onsails/lspkind-nvim")
