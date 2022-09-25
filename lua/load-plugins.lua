@@ -84,7 +84,7 @@ return require("packer").startup({
     use("kyazdani42/nvim-tree.lua")
 
     -- icons
-    use("kyazdani42/nvim-web-devicons" )
+    use("kyazdani42/nvim-web-devicons")
 
     -- icons in completion
     use("onsails/lspkind-nvim")
@@ -137,7 +137,7 @@ return require("packer").startup({
       "rmagatti/auto-session",
       config = function()
         require("auto-session").setup({
-          log_level = "info",
+          log_level = "error",
           auto_session_suppress_dirs = { "~/", "~/Projects" },
         })
       end,
