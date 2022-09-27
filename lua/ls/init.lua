@@ -19,7 +19,7 @@ require("ls.astro")
 
 -- Customization and appearance -----------------------------------------
 -- change gutter diagnostic symbols
-local signs = { Error = " ", Warning = " ", Hint = " ", Information = " " }
+local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 
 for type, icon in pairs(signs) do
   local hl = "DiagnosticSign" .. type
