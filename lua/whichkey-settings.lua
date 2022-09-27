@@ -66,7 +66,6 @@ wk.register({
     n = { "<cmd>TodoTelescope<cr>", "Find Notes" },
     t = { "<cmd>Telescope builtin<cr>", "Telescope builtin" },
     s = { "<cmd>Telescope live_grep<cr>", "Search In Files" },
-    c = { "<cmd>Telescope lsp_code_actions<cr>", "Code Actions" },
     r = { "<cmd>Telescope lsp_references<cr>", "Find References" },
     d = { "<cmd>Telescope diagnostics<cr>", "Document Diagnostics" },
     m = { "<cmd>Telescope marks<CR>", "Marks" },
