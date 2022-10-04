@@ -29,6 +29,7 @@ require("formatter").setup({
     markdown = { prettier },
     vue = { prettier },
     astro = { prettier },
+    yaml = { prettier },
     go = {
       -- goimport
       function()
@@ -67,16 +68,6 @@ require("formatter").setup({
         }
       end,
     },
-    --[[ yaml = {
-      -- yamlfmt
-      function()
-        return {
-          exe = "yamlfmt",
-          args = { "-w" },
-          stdin = false,
-        }
-      end,
-    }, ]]
   },
 })
 
