@@ -166,6 +166,8 @@ One test snippet is included as an example.
     presence in Discord
 34. [goolord/alpha-nvim](https://github.com/goolord/alpha-nvim) Dashboard
 35. [mbbill/undotree](https://github.com/mbbill/undotree) Undotree
+36. [folke/noice.nvim](https://github.com/folke/noice.nvim) Noice UI
+    improvements
 
 ## Resources and inspiration
 
