@@ -67,15 +67,6 @@ repos
 sudo pacman -S autopep8
 ```
 
-Check your package manager for availability if not on an Arch based distro -
-_brew, apt_ etc.
-
-[yamlfmt](https://pypi.org/project/yamlfmt/) for yaml available with pip
-
-```bash
-sudo pip install yamlfmt
-```
-
 ## Launch Nvim
 
 On the first run of nvim be sure to install plugins.
