@@ -1,6 +1,6 @@
 # Leaving the CoC behind.
 
-![Screenshot](https://res.cloudinary.com/bushblade/image/upload/v1650398285/nvim-screenshot.webp)
+![Screenshot](https://res.cloudinary.com/bushblade/image/upload/v1665252432/Nvim-Screenshot-02.webp)
 [kitty terminal](https://sw.kovidgoyal.net/kitty/) with [TokyoNight](https://sw.kovidgoyal.net/kitty/) terminal theme and [Victor Mono](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/VictorMono) nerd font.
 
 **My config for Nvim using native LSP with some sane defaults and settings**, mainly
@@ -94,7 +94,7 @@ One test snippet is included as an example.
 4. [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) Language parsing for highlighting and more
 5. [hoob3rt/lualine.nvim](https://github.com/hoob3rt/lualine.nvim) Status line
 6. [kyazdani42/nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons) Icons
-8. [hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp) Auto completions, suggestions and imports
+7. [hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp) Auto completions, suggestions and imports
 
    Source completion includes:
 
@@ -107,54 +107,54 @@ One test snippet is included as an example.
    7. [L3MON4D3/LuaSnip](https://github.com/L3MON4D3/LuaSnip) Snippets
    8. [rafamadriz/friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
 
-9. [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive) Git tools
-10. [tpope/vim-surround](https://github.com/tpope/vim-surround) Surroundings
-    pairs mappings
-11. [numToStr/Comment.nvim](https://github.com/numToStr/Comment.nvim) Vim style
+8. [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive) Git tools
+9. [tpope/vim-surround](https://github.com/tpope/vim-surround) Surroundings
+   pairs mappings
+10. [numToStr/Comment.nvim](https://github.com/numToStr/Comment.nvim) Vim style
     commenting
-12. [knubie/vim-kitty-navigator](https://github.com/knubie/vim-kitty-navigator)
+11. [knubie/vim-kitty-navigator](https://github.com/knubie/vim-kitty-navigator)
     Move between Nvim and Kitty splits
-13. [windwp/nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag) HTML/JSX
+12. [windwp/nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag) HTML/JSX
     auto tags
-14. [windwp/nvim-autopairs](https://github.com/windwp/nvim-autopairs) Auto bracket
+13. [windwp/nvim-autopairs](https://github.com/windwp/nvim-autopairs) Auto bracket
     and quote pairs
-15. [windwp/nvim-spectre](https://github.com/windwp/nvim-spectre) Project wide
+14. [windwp/nvim-spectre](https://github.com/windwp/nvim-spectre) Project wide
     find and replace
-16. [mhartington/formatter.nvim](https://github.com/mhartington/formatter.nvim)
+15. [mhartington/formatter.nvim](https://github.com/mhartington/formatter.nvim)
     Formatting
-17. [airblade/vim-gitgutter](https://github.com/airblade/vim-gitgutter) Git status
+16. [airblade/vim-gitgutter](https://github.com/airblade/vim-gitgutter) Git status
     in the sign column
-18. [leafOfTree/vim-matchtag](https://github.com/leafOfTree/vim-matchtag)
+17. [leafOfTree/vim-matchtag](https://github.com/leafOfTree/vim-matchtag)
     Highlight matching tag in HTML/JSX
-19. [phaazon/hop.nvim](https://github.com/phaazon/hop.nvim) Jump anywhwere in
+18. [phaazon/hop.nvim](https://github.com/phaazon/hop.nvim) Jump anywhwere in
     your code
-20. [kyazdani42/nvim-tree.lua](https://github.com/kyazdani42/nvim-tree.lua) File
+19. [kyazdani42/nvim-tree.lua](https://github.com/kyazdani42/nvim-tree.lua) File
     tree
-21. [JoosepAlviste/nvim-ts-context-commentstring](https://github.com/JoosepAlviste/nvim-ts-context-commentstring) Better commenting based on file type
-22. [onsails/lspkind-nvim](https://github.com/onsails/lspkind-nvim) Icons in
+20. [JoosepAlviste/nvim-ts-context-commentstring](https://github.com/JoosepAlviste/nvim-ts-context-commentstring) Better commenting based on file type
+21. [onsails/lspkind-nvim](https://github.com/onsails/lspkind-nvim) Icons in
     completion
-23. [folke/tokyonight.nvim](https://github.com/folke/tokyonight.nvim) Theme
-24. [folke/trouble.nvim](https://github.com/folke/trouble.nvim) Show the problems
+22. [folke/tokyonight.nvim](https://github.com/folke/tokyonight.nvim) Theme
+23. [folke/trouble.nvim](https://github.com/folke/trouble.nvim) Show the problems
     in your code
-25. [folke/which-key.nvim](https://github.com/folke/which-key.nvim) Keymap helper
-26. [folke/todo-comments.nvim](https://github.com/folke/todo-comments.nvim)
+24. [folke/which-key.nvim](https://github.com/folke/which-key.nvim) Keymap helper
+25. [folke/todo-comments.nvim](https://github.com/folke/todo-comments.nvim)
     Highlight and search project todos and notes
-27. [norcalli/nvim-colorizer.lua](https://github.com/norcalli/nvim-colorizer.lua)
+26. [norcalli/nvim-colorizer.lua](https://github.com/norcalli/nvim-colorizer.lua)
     Display the colour of your hex/rgb/hsl value
-28. [kevinoid/vim-jsonc](https://github.com/kevinoid/vim-jsonc) Comments in json
+27. [kevinoid/vim-jsonc](https://github.com/kevinoid/vim-jsonc) Comments in json
     filetype
-29. [akinsho/bufferline.nvim](https://github.com/akinsho/bufferline.nvim) Buffers
+28. [akinsho/bufferline.nvim](https://github.com/akinsho/bufferline.nvim) Buffers
     in tabs
-30. [weilbith/nvim-code-action-menu](https://github.com/ahmedkhalf/weilbith/nvim-code-action-menu) Better code actions
-31. [delphinus/vim-firestore](https://github.com/delphinus/vim-firestore) Syntax
+29. [weilbith/nvim-code-action-menu](https://github.com/ahmedkhalf/weilbith/nvim-code-action-menu) Better code actions
+30. [delphinus/vim-firestore](https://github.com/delphinus/vim-firestore) Syntax
     highlighting and completion for Firebase rules
-32. [rmagatti/auto-session](https://github.com/rmagatti/auto-session) Session
+31. [rmagatti/auto-session](https://github.com/rmagatti/auto-session) Session
     management
-33. [andweeb/presence.nvim](https://github.com/andweeb/presence.nvim) Rich
+32. [andweeb/presence.nvim](https://github.com/andweeb/presence.nvim) Rich
     presence in Discord
-34. [goolord/alpha-nvim](https://github.com/goolord/alpha-nvim) Dashboard
-35. [mbbill/undotree](https://github.com/mbbill/undotree) Undotree
-36. [folke/noice.nvim](https://github.com/folke/noice.nvim) Noice UI
+33. [goolord/alpha-nvim](https://github.com/goolord/alpha-nvim) Dashboard
+34. [mbbill/undotree](https://github.com/mbbill/undotree) Undotree
+35. [folke/noice.nvim](https://github.com/folke/noice.nvim) Noice UI
     improvements
 
 ## Resources and inspiration
