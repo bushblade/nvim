@@ -77,17 +77,6 @@ Then compile loader file.
 
 `:PackerCompile`
 
-## Note: Installing Firenvim
-
-Run this command in nvim to install FireNvim in your browser.
-
-```
-:call firenvim#install(0)
-```
-
-or install the [FireFox extension](https://addons.mozilla.org/en-GB/firefox/addon/firenvim/)
-or the [Chrome extension](https://chrome.google.com/webstore/detail/firenvim/egpjdkipkomnmjhjmdamaniclmdlobbo?hl=en)
-
 ## Adding custom Snippets
 
 The conifg uses [ luasnip ](https://github.com/saadparwaiz1/cmp_luasnip) paired
@@ -105,7 +94,6 @@ One test snippet is included as an example.
 4. [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) Language parsing for highlighting and more
 5. [hoob3rt/lualine.nvim](https://github.com/hoob3rt/lualine.nvim) Status line
 6. [kyazdani42/nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons) Icons
-7. [glacambre/firenvim](https://github.com/glacambre/firenvim) Embed nvim in firefox or chrome
 8. [hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp) Auto completions, suggestions and imports
 
    Source completion includes:
