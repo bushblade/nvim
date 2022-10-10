@@ -2,7 +2,6 @@ local colors = require("tokyonight.colors").setup({})
 
 require("tokyonight").setup({
   style = "night",
-  -- NOTE: temporarily disabled as issues with notify
   transparent = true,
   styles = {
     sidebars = "transparent",

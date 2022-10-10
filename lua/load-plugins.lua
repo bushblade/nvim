@@ -119,9 +119,9 @@ return require("packer").startup({
       event = "VimEnter",
       config = function()
         require("noice").setup()
-        require("notify").setup({
-          background_colour = "#1a1b26",
-        })
+        -- require("notify").setup({
+        --   background_colour = "#1a1b26",
+        -- })
       end,
       requires = {
         "MunifTanjim/nui.nvim",
