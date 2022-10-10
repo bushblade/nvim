@@ -3,7 +3,6 @@ local lspkind = require("lspkind")
 local luasnip = require("luasnip")
 
 -- html snippets in javascript and javascriptreact
-luasnip.filetype_extend("javascript", { "html" })
 luasnip.filetype_extend("javascriptreact", { "html" })
 luasnip.filetype_extend("typescriptreact", { "html" })
 
