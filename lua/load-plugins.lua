@@ -118,10 +118,17 @@ return require("packer").startup({
       "folke/noice.nvim",
       event = "VimEnter",
       config = function()
-        require("noice").setup()
-        -- require("notify").setup({
-        --   background_colour = "#1a1b26",
-        -- })
+        require("notify").setup({
+          background_colour = "#1a1b26",
+        })
+        require("noice").setup({
+          routes = {
+            {
+              view = "notify",
+              filter = { event = "msg_showmode" },
+            },
+          },
+        })
       end,
       requires = {
         "MunifTanjim/nui.nvim",
