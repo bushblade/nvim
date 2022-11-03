@@ -3,6 +3,9 @@ return require("packer").startup({
     -- Packer can manage itself
     use("wbthomason/packer.nvim")
 
+    -- Tmux navigator
+    use("christoomey/vim-tmux-navigator")
+
     -- lsp
     use("neovim/nvim-lspconfig")
 
