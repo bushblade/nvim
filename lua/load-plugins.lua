@@ -4,7 +4,7 @@ return require("packer").startup({
     use("wbthomason/packer.nvim")
 
     -- Tmux navigator
-    use("christoomey/vim-tmux-navigator")
+    -- use("christoomey/vim-tmux-navigator")
 
     -- lsp
     use("neovim/nvim-lspconfig")
