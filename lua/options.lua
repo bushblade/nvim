@@ -15,7 +15,6 @@ vim.opt.scrolloff = 10
 vim.opt.showmode = false
 vim.opt.numberwidth = 5 -- wider gutter
 vim.opt.linebreak = true -- don't break words on wrap
-vim.opt.spelllang = "en"
 vim.opt.smartindent = true
 vim.opt.completeopt = "menuone,noselect" -- nvim-cmp
 -- vim.opt.completeopt = {"menuone", "longest", "preview"}
@@ -23,7 +22,7 @@ vim.opt.signcolumn = "yes" -- always show the signcolumn
 vim.opt.termguicolors = true
 
 -- spelling
-vim.opt.spelllang = "en_gb"
+vim.opt.spelllang = "en_gb,en_us"
 vim.opt.mousemodel = "popup"
 -- timeout for whichkey
 vim.opt.timeoutlen = 500
@@ -47,15 +46,15 @@ vim.cmd([[autocmd InsertEnter * norm zz]])
 
 -- Give me some fenced codeblock goodness
 vim.g.markdown_fenced_languages = {
-	"html",
-	"javascript",
-	"javascriptreact",
-	"typescript",
-	"json",
-	"css",
-	"scss",
-	"lua",
-	"vim",
-	"bash",
-	"ts=typescript",
+  "html",
+  "javascript",
+  "javascriptreact",
+  "typescript",
+  "json",
+  "css",
+  "scss",
+  "lua",
+  "vim",
+  "bash",
+  "ts=typescript",
 }
