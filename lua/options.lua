@@ -44,6 +44,9 @@ vim.cmd([[au TextYankPost * silent! lua vim.highlight.on_yank()]])
 -- Vertically center document when entering insert mode
 vim.cmd([[autocmd InsertEnter * norm zz]])
 
+-- detect mdx file and set file type to markdown
+vim.cmd([[autocmd BufNewFile,BufRead *.mdx set filetype=markdown.mdx]])
+
 -- Give me some fenced codeblock goodness
 vim.g.markdown_fenced_languages = {
   "html",
