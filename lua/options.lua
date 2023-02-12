@@ -60,4 +60,5 @@ vim.g.markdown_fenced_languages = {
   "vim",
   "bash",
   "ts=typescript",
+  "js=javascript",
 }
