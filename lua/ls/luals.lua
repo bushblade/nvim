@@ -1,6 +1,6 @@
 -- https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md#sumneko_lua
 
-require("lspconfig").sumneko_lua.setup({
+require("lspconfig").lua_ls.setup({
   settings = {
     Lua = {
       runtime = {
