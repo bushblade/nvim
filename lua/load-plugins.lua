@@ -20,6 +20,8 @@ return require("packer").startup({
       "nvim-treesitter/nvim-treesitter",
       run = ":TSUpdate",
     })
+    -- Treesitter Text Object selection
+    use("nvim-treesitter/nvim-treesitter-textobjects")
 
     -- LuaLine
     use({

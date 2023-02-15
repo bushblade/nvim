@@ -78,6 +78,9 @@ local mappings = {
     { "L", "<cmd>BufferLineCycleNext<CR>" },
     { "<C-d>", "<C-d>zz" },
     { "<C-u>", "<C-u>zz" },
+    -- Remap for dealing with line wrap
+    { "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true } },
+    { "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true } },
   },
   t = {
     -- Terminal mode
