@@ -81,6 +81,8 @@ local mappings = {
     -- Remap for dealing with line wrap
     { "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true } },
     { "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true } },
+    -- open link under cursor
+    { "gx", '<Cmd>call jobstart(["xdg-open", expand("<cfile>")], {"detach": v:true})<CR>' },
   },
   t = {
     -- Terminal mode
