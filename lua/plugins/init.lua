@@ -2,7 +2,6 @@ return {
   -- NOTE: First, some plugins that don't require any configuration
   "tpope/vim-fugitive",
   "tpope/vim-surround",
-  -- "neovim/nvim-lspconfig",
   "knubie/vim-kitty-navigator",
   "windwp/nvim-ts-autotag", -- auto close and rename tags
   "windwp/nvim-autopairs",
@@ -14,7 +13,7 @@ return {
   "goolord/alpha-nvim",
   "andweeb/presence.nvim",
   "kyazdani42/nvim-web-devicons",
-  -- "numToStr/Comment.nvim",
+  { "numToStr/Comment.nvim", opts = {} },
   -- "rmagatti/auto-session",
   -- "rmagatti/session-lens",
 }
