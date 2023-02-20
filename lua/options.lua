@@ -29,9 +29,6 @@ vim.opt.timeoutlen = 500
 
 -- Neovide settings
 vim.o.guifont = "Victor Mono Nerd Font:h11"
--- vim.opt.guifontsize = 11
-vim.g.neovide_transparency = 0.9
-vim.g.neovide_fullscreen = true
 
 vim.g.netrw_banner = 0
 vim.g.netrw_liststyle = 3
