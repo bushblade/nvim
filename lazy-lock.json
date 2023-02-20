@@ -32,6 +32,7 @@
   "vim-firestore": { "branch": "master", "commit": "fb9a28186a1e52c3d374f181e45f9008c12f2e57" },
   "vim-fugitive": { "branch": "master", "commit": "62f42f013d866139fa23068ac2651b3f7e05a56f" },
   "vim-kitty-navigator": { "branch": "master", "commit": "98cf55a5074695e3fca1ccace66ab5563e35111e" },
+  "vim-matchtag": { "branch": "master", "commit": "54357c00979e07d86aa12b383ddd1d6a7fbda2c2" },
   "vim-surround": { "branch": "master", "commit": "3d188ed2113431cf8dac77be61b842acb64433d9" },
   "which-key.nvim": { "branch": "main", "commit": "5224c261825263f46f6771f1b644cae33cd06995" }
 }
