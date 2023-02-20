@@ -9,6 +9,7 @@ return require("packer").startup({
     -- lsp
     use("neovim/nvim-lspconfig")
 
+    -- ** separate config
     -- Telescope
     use({
       "nvim-telescope/telescope.nvim",
@@ -29,6 +30,7 @@ return require("packer").startup({
       requires = { "kyazdani42/nvim-web-devicons", opt = true },
     })
 
+    -- *** separate config
     -- Autocomplete
     use({
       "hrsh7th/nvim-cmp",
@@ -54,6 +56,7 @@ return require("packer").startup({
     use("tpope/vim-fugitive")
     use("tpope/vim-surround")
 
+    -- ** spearate config
     -- commenting
     use("JoosepAlviste/nvim-ts-context-commentstring")
     use({ "numToStr/Comment.nvim", tag = "v0.6" })
@@ -63,14 +66,20 @@ return require("packer").startup({
 
     -- windwp
     use("windwp/nvim-ts-autotag") -- auto close and rename tags
+
+    -- ** speparate config
     use("windwp/nvim-autopairs")
+
+    -- ** separate config
     use("windwp/nvim-spectre") -- Spectre for find and replace
 
+    -- ** separate config
     -- Formatting
     use("mhartington/formatter.nvim")
 
     use("airblade/vim-gitgutter")
 
+    -- ** separate config
     -- hightlight matching tag in html,jsx etc.
     use("leafOfTree/vim-matchtag")
 
@@ -85,12 +94,14 @@ return require("packer").startup({
     -- Undotree
     use("mbbill/undotree")
 
+    -- ** speparate config
     -- file tree
     use("kyazdani42/nvim-tree.lua")
 
     -- icons
     use("kyazdani42/nvim-web-devicons")
 
+    -- separate config
     -- icons in completion
     use("onsails/lspkind-nvim")
 
@@ -107,6 +118,7 @@ return require("packer").startup({
       end,
     })
 
+    -- ** separate config
     -- WhichKey
     use("folke/which-key.nvim")
 
@@ -119,12 +131,14 @@ return require("packer").startup({
       end,
     })
 
+    -- ** separate config
     -- Colorizer
     use("norcalli/nvim-colorizer.lua")
 
     -- jsonc file type for json - comments in json
     use("kevinoid/vim-jsonc")
 
+    -- ** separate config
     -- bufferline for buffers in 'tabs'
     use({ "akinsho/bufferline.nvim", tag = "*", requires = "kyazdani42/nvim-web-devicons" })
 
