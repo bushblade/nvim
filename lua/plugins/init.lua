@@ -3,10 +3,9 @@ return {
   "tpope/vim-fugitive",
   "tpope/vim-surround",
   "knubie/vim-kitty-navigator",
-  "windwp/nvim-ts-autotag", -- auto close and rename tags
   "windwp/nvim-autopairs",
   -- "windwp/nvim-spectre", -- Spectre for find and replace
-  "leafOfTree/vim-matchtag",
+  -- "leafOfTree/vim-matchtag",
   "mhartington/formatter.nvim",
   "mbbill/undotree",
   "delphinus/vim-firestore",

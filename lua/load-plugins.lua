@@ -67,7 +67,6 @@ return require("packer").startup({
     -- windwp
     use("windwp/nvim-ts-autotag") -- auto close and rename tags
 
-    -- ** speparate config
     use("windwp/nvim-autopairs")
 
     -- ** separate config
