@@ -14,15 +14,6 @@ Uses the latest 0.7+ Neovim
 git clone https://github.com/bushblade/nvim.git ~/.config/nvim
 ```
 
-## Install Packer
-
-[ Packer Neovim plugin manager ](https://github.com/wbthomason/packer.nvim)
-
-```bash
-git clone https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-```
-
 ## Install language servers
 
 Most available via npm
@@ -88,7 +79,7 @@ One test snippet is included as an example.
 
 ## Currently installed plugins
 
-1. [wbthomason/packer.nvim](https://github.com/wbthomason/packer.nvim) - Plugin manager
+1. [/lazy/lazy.nvim](https://github.com/folke/lazy.nvim.git) - Plugin manager
 2. [neovim/nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) - LSP
 3. [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) - Fuzzy find anything
 4. [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) Language parsing for highlighting and more
@@ -112,8 +103,8 @@ One test snippet is included as an example.
    pairs mappings
 10. [numToStr/Comment.nvim](https://github.com/numToStr/Comment.nvim) Vim style
     commenting
-11. [knubie/vim-kitty-navigator](https://github.com/knubie/vim-kitty-navigator)
-    Move between Nvim and Kitty splits
+11. ~~[knubie/vim-kitty-navigator](https://github.com/knubie/vim-kitty-navigator)
+    Move between Nvim and Kitty splits~~
 12. [windwp/nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag) HTML/JSX
     auto tags
 13. [windwp/nvim-autopairs](https://github.com/windwp/nvim-autopairs) Auto bracket
@@ -141,21 +132,17 @@ One test snippet is included as an example.
     Highlight and search project todos and notes
 26. [norcalli/nvim-colorizer.lua](https://github.com/norcalli/nvim-colorizer.lua)
     Display the colour of your hex/rgb/hsl value
-27. [kevinoid/vim-jsonc](https://github.com/kevinoid/vim-jsonc) Comments in json
-    filetype
-28. [akinsho/bufferline.nvim](https://github.com/akinsho/bufferline.nvim) Buffers
+27. [akinsho/bufferline.nvim](https://github.com/akinsho/bufferline.nvim) Buffers
     in tabs
-29. [weilbith/nvim-code-action-menu](https://github.com/ahmedkhalf/weilbith/nvim-code-action-menu) Better code actions
-30. [delphinus/vim-firestore](https://github.com/delphinus/vim-firestore) Syntax
+28. [weilbith/nvim-code-action-menu](https://github.com/weilbith/nvim-code-action-menu) Better code actions
+29. [delphinus/vim-firestore](https://github.com/delphinus/vim-firestore) Syntax
     highlighting and completion for Firebase rules
-31. [rmagatti/auto-session](https://github.com/rmagatti/auto-session) Session
+30. [rmagatti/auto-session](https://github.com/rmagatti/auto-session) Session
     management
-32. [andweeb/presence.nvim](https://github.com/andweeb/presence.nvim) Rich
+31. [andweeb/presence.nvim](https://github.com/andweeb/presence.nvim) Rich
     presence in Discord
-33. [goolord/alpha-nvim](https://github.com/goolord/alpha-nvim) Dashboard
-34. [mbbill/undotree](https://github.com/mbbill/undotree) Undotree
-35. [folke/noice.nvim](https://github.com/folke/noice.nvim) Noice UI
-    improvements
+32. [goolord/alpha-nvim](https://github.com/goolord/alpha-nvim) Dashboard
+33. [mbbill/undotree](https://github.com/mbbill/undotree) Undotree
 
 ## Resources and inspiration
 
@@ -163,7 +150,7 @@ One test snippet is included as an example.
 
 [Ben Frain has a nice setup](https://gist.github.com/benfrain/97f2b91087121b2d4ba0dcc4202d252f)
 
-[Lunar Vim for inspiration](https://github.com/ChristianChiarulli/LunarVim)
+[Kick start your Nvim config](https://github.com/nvim-lua/kickstart.nvim)
 
 [Ui Customization docs](https://github.com/neovim/nvim-lspconfig/wiki/UI-customization#change-diagnostic-symbols-in-the-sign-column-gutter)
 
