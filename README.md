@@ -60,13 +60,8 @@ sudo pacman -S autopep8
 
 ## Launch Nvim
 
-On the first run of nvim be sure to install plugins.
-
-`:PackerInstall`
-
-Then compile loader file.
-
-`:PackerCompile`
+Lazy will install all plugins, you may then need to quit and restart to get
+everything running correctly.
 
 ## Adding custom Snippets
 
