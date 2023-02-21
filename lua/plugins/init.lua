@@ -1,7 +1,9 @@
 return {
   -- NOTE: plugins here require little to no configuratin
+
   "tpope/vim-fugitive",
   "tpope/vim-surround",
+
   -- NOTE: disabled for now as not working with nvim window bindings
   -- "knubie/vim-kitty-navigator",
   "windwp/nvim-autopairs",
@@ -11,6 +13,10 @@ return {
   "goolord/alpha-nvim",
   "andweeb/presence.nvim",
   "kyazdani42/nvim-web-devicons",
+
+  -- Useful status updates for LSP
+  { "j-hui/fidget.nvim", opts = {} },
+
   { "numToStr/Comment.nvim", opts = {} },
   "rmagatti/auto-session",
   "airblade/vim-gitgutter",

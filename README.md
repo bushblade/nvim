@@ -138,6 +138,8 @@ One test snippet is included as an example.
     presence in Discord
 32. [goolord/alpha-nvim](https://github.com/goolord/alpha-nvim) Dashboard
 33. [mbbill/undotree](https://github.com/mbbill/undotree) Undotree
+34. [j-hui/fidget.nvim](https://github.com/j-hui/fidget.nvim,) UI for lsp
+    progress
 
 ## Resources and inspiration
 
