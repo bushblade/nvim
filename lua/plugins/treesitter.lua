@@ -38,7 +38,9 @@ return {
       -- ignore_install = {}, -- List of parsers to ignore installing
       highlight = {
         enable = true, -- false will disable the whole extension
-        -- disable = { "html" }, -- FIX: disabled for now https://github.com/nvim-treesitter/nvim-treesitter/issues/1788
+        disable = function(lang, bufnr) -- Disable in large typescript buffers i.e. type definitions
+          return lang == "typescript" and vim.api.nvim_buf_line_count(bufnr) > 5000
+        end,
       },
 
       auto_install = true,
