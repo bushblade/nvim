@@ -14,6 +14,7 @@ return {
   { "numToStr/Comment.nvim", opts = {} },
   "rmagatti/auto-session",
   "airblade/vim-gitgutter",
+  "weilbith/nvim-code-action-menu",
   {
     "folke/trouble.nvim",
     config = function()
