@@ -1,7 +1,10 @@
 return {
   {
     "neovim/nvim-lspconfig",
+    dependencies = { "folke/neodev.nvim" },
     config = function()
+      -- Setup neovim lua configuration
+      require("neodev").setup()
       -- require all language server modules
       require("servers.typescript")
       require("servers.eslint")
