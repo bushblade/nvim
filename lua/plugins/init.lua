@@ -4,8 +4,7 @@ return {
   "tpope/vim-surround",
   "knubie/vim-kitty-navigator",
   "windwp/nvim-autopairs",
-  -- "windwp/nvim-spectre", -- Spectre for find and replace
-  -- "leafOfTree/vim-matchtag",
+  "windwp/nvim-spectre", -- Spectre for find and replace
   "mhartington/formatter.nvim",
   "mbbill/undotree",
   "delphinus/vim-firestore",
@@ -13,6 +12,6 @@ return {
   "andweeb/presence.nvim",
   "kyazdani42/nvim-web-devicons",
   { "numToStr/Comment.nvim", opts = {} },
-  -- "rmagatti/auto-session",
+  "rmagatti/auto-session",
   -- "rmagatti/session-lens",
 }
