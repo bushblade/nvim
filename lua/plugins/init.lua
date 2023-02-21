@@ -15,7 +15,7 @@ return {
   "kyazdani42/nvim-web-devicons",
 
   -- Useful status updates for LSP
-  { "j-hui/fidget.nvim", opts = {} },
+  { "j-hui/fidget.nvim", opts = { window = { border = "rounded", blend = 0 } } },
 
   { "numToStr/Comment.nvim", opts = {} },
   "rmagatti/auto-session",
