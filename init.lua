@@ -17,7 +17,9 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup("plugins")
+local lazy_opts = { ui = { border = "rounded" } }
+
+require("lazy").setup("plugins", lazy_opts)
 
 -- keymappings
 require("keymappings")
