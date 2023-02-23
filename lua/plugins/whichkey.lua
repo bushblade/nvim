@@ -43,6 +43,7 @@ return {
           M = { "<cmd>Telescope man_pages<CR>", "Man pages" },
           a = { "<cmd>Telescope session-lens search_session<CR>", "Search Sessions" },
           h = { "<cmd>Telescope help_tags<CR>", "Search help" },
+          T = { "<cmd>TodoTelescope<CR>", "Search Todos" },
         },
         h = {
           name = "Git Gutter",
@@ -63,7 +64,7 @@ return {
           w = { "<cmd>Trouble workspace_diagnostics<CR>", "Workspace Diagnostics" },
           D = { "<cmd>Trouble document_diagnostics<CR>", "Document Diagnostics" },
         },
-        T = { "<cmd>TodoLocList<CR>", "Todos list" },
+        T = { "<cmd>TodoTelescope<CR>", "List Todos" },
         c = { "<cmd>CodeActionMenu<CR>", "Code Actions" },
         d = { "<cmd>lua vim.diagnostic.open_float({ border = 'rounded' })<CR>", "Line Diagnostics" },
         w = { "<cmd>WhichKey<CR>", "WhichKey" },
