@@ -12,6 +12,7 @@ return {
       "L3MON4D3/LuaSnip",
       "rafamadriz/friendly-snippets",
       "onsails/lspkind-nvim",
+      { "roobert/tailwindcss-colorizer-cmp.nvim", config = true }, -- tailwind color in suggesions
     },
     event = "InsertEnter",
     config = function()
@@ -38,8 +39,13 @@ return {
       cmp.setup({
         formatting = {
           format = lspkind.cmp_format({
-            mode = "symbol",
+            mode = "symbol_text",
+            ellipsis_char = "...",
             maxwidth = 50,
+            before = function(entry, vim_item)
+              vim_item = require("tailwindcss-colorizer-cmp").formatter(entry, vim_item)
+              return vim_item
+            end,
           }),
         },
         snippet = {
