@@ -53,6 +53,7 @@ return {
         },
         e = { "<cmd>NvimTreeToggle<CR>", "File Tree" },
         u = { "<cmd>UndotreeToggle<CR><cmd>UndotreeFocus<CR>", "Undotree" },
+        L = { "<cmd>Lazy<CR>", "Lazy" },
         -- trouble bindings
         t = {
           name = "Trouble",
