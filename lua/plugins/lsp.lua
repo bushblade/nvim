@@ -24,6 +24,9 @@ return {
       require("servers.deno")
       require("servers.astro")
 
+      -- rounded border on :LspInfo
+      require("lspconfig.ui.windows").default_options.border = "rounded"
+
       -- Customization and appearance -----------------------------------------
       -- change gutter diagnostic symbols
       local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
