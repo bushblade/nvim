@@ -10,6 +10,7 @@ local prettier = function()
       vim.fn.shellescape(vim.api.nvim_buf_get_name(0)),
     },
     stdin = true,
+    try_node_modules = true,
   }
 end
 
@@ -80,6 +81,7 @@ return {
         pattern = {
           "*.js",
           "*.mjs",
+          "*.cjs",
           "*.jsx",
           "*.ts",
           "*.tsx",
@@ -100,10 +102,6 @@ return {
         },
         command = "FormatWrite",
       })
-      -- vim.api.nvim_create_autocmd(
-      --   "BufWritePost",
-      --   { pattern = { "*.astro" }, command = "lua vim.lsp.buf.format({async = true})" }
-      -- )
     end,
   },
 }
