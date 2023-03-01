@@ -31,7 +31,7 @@ return {
         graphql = { prettier },
         markdown = { prettier },
         vue = { prettier },
-        astro = { prettier },
+        -- astro = { astro_prettier },
         yaml = { prettier },
         go = {
           -- goimport
@@ -96,10 +96,14 @@ return {
           "*.graphql",
           "*.go",
           "*.rs",
-          "*.astro",
+          -- "*.astro",
         },
         command = "FormatWrite",
       })
+      vim.api.nvim_create_autocmd(
+        "BufWritePost",
+        { pattern = { "*.astro" }, command = "lua vim.lsp.buf.format({async = true})" }
+      )
     end,
   },
 }
