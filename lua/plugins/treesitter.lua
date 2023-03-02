@@ -5,7 +5,8 @@ return {
     event = { "BufReadPost", "BufNewFile" },
     dependencies = {
       "nvim-treesitter/nvim-treesitter-textobjects",
-      "windwp/nvim-ts-autotag", -- auto close and rename tags
+      -- "windwp/nvim-ts-autotag", -- auto close and rename tags
+      "simonward87/nvim-ts-autotag",
     },
     opts = {
       context_commentstring = {
@@ -44,7 +45,24 @@ return {
       },
 
       auto_install = true,
-      autotag = { enable = true },
+      autotag = {
+        enable = true,
+        filetypes = {
+          "html",
+          "javascript",
+          "typescript",
+          "javascriptreact",
+          "typescriptreact",
+          "svelte",
+          "vue",
+          "tsx",
+          "jsx",
+          "markdown",
+          -- NOTE: not working in astro
+          -- https://github.com/windwp/nvim-ts-autotag/pull/89
+          "astro",
+        },
+      },
       indent = {
         enable = true,
       },
