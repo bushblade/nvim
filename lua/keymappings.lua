@@ -36,10 +36,11 @@ local mappings = {
   n = {
     -- Normal mode
     -- Better window movement
-    { "<C-h>", "<C-w>h", { silent = true } },
-    { "<C-j>", "<C-w>j", { silent = true } },
-    { "<C-k>", "<C-w>k", { silent = true } },
-    { "<C-l>", "<C-w>l", { silent = true } },
+    -- NOTE: replaced with Navigator for Wezterm and Tmux
+    -- { "<C-h>", "<C-w>h", { silent = true } },
+    -- { "<C-j>", "<C-w>j", { silent = true } },
+    -- { "<C-k>", "<C-w>k", { silent = true } },
+    -- { "<C-l>", "<C-w>l", { silent = true } },
     -- Resize with arrows
     { "<C-Up>", "<cmd>resize -2<CR>", { silent = true } },
     { "<C-Down>", "<cmd>resize +2<CR>", { silent = true } },
