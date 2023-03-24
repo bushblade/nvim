@@ -140,6 +140,8 @@ One test snippet is included as an example.
 33. [mbbill/undotree](https://github.com/mbbill/undotree) Undotree
 34. [j-hui/fidget.nvim](https://github.com/j-hui/fidget.nvim,) UI for lsp
     progress
+35. [numToStr/Navigator.nvim](https://github.com/numToStr/Navigator.nvim)
+    Navigate between Wezterm splits
 
 ## Resources and inspiration
 
