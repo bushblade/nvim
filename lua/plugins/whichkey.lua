@@ -28,6 +28,8 @@ return {
       wk.setup(opts)
       -- register key bindings with <leader> prefix
       wk.register({
+        M = { "<cmd>Mason<CR>", "Mason"
+ },
         f = {
           -- mostly Telescope bindings
           name = "Find with Telescope",
@@ -44,7 +46,7 @@ return {
           a = { "<cmd>Telescope session-lens search_session<CR>", "Search Sessions" },
           h = { "<cmd>Telescope help_tags<CR>", "Search help" },
           T = { "<cmd>TodoTelescope<CR>", "Search Todos" },
-          e = { "<cmd>Telescope file_browser<CR>", "Browse Files"}
+          e = { "<cmd>Telescope file_browser<CR>", "Browse Files" },
         },
         h = {
           name = "Git Gutter",

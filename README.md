@@ -14,25 +14,16 @@ Uses the latest 0.7+ Neovim
 git clone https://github.com/bushblade/nvim.git ~/.config/nvim
 ```
 
-## Install language servers
+## Install typescript globally
 
-Most available via npm
+A couple of the language servers need TS installed globally on your system to
+work correctly.
 
 ```bash
-npm install -g typescript typescript-language-server vscode-langservers-extracted @volar/vue-language-server @tailwindcss/language-server yaml-language-server @prisma/language-server emmet-ls neovim graphql-language-service-cli @astrojs/language-server
-
+npm install -g typescript
 ```
 
 > TIP: [No sudo on global npm install](https://github.com/sindresorhus/guides/blob/main/npm-global-without-sudo.md)
-
-### Lua, Pyright, Deno, Gopls and rust-analyzer available in Arch/Manjaro repos
-
-Check your package manager for availability if not on an Arch based distro -
-_brew, apt_ etc.
-
-```bash
-sudo pacman -S lua-language-server pyright deno rust-analyzer gopls
-```
 
 ## Install formatters
 
@@ -142,6 +133,8 @@ One test snippet is included as an example.
     progress
 35. [numToStr/Navigator.nvim](https://github.com/numToStr/Navigator.nvim)
     Navigate between Wezterm splits
+36. [Mason](https://github.com/williamboman/mason.nvim) for installing language
+    servers.
 
 ## Resources and inspiration
 
