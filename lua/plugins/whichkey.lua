@@ -28,8 +28,7 @@ return {
       wk.setup(opts)
       -- register key bindings with <leader> prefix
       wk.register({
-        M = { "<cmd>Mason<CR>", "Mason"
- },
+        M = { "<cmd>Mason<CR>", "Mason" },
         f = {
           -- mostly Telescope bindings
           name = "Find with Telescope",
