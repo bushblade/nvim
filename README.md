@@ -25,34 +25,11 @@ npm install -g typescript
 
 > TIP: [No sudo on global npm install](https://github.com/sindresorhus/guides/blob/main/npm-global-without-sudo.md)
 
-## Install formatters
-
-prettier with npm
-
-```bash
-npm i -g prettier
-```
-
-[ stylua ](https://github.com/JohnnyMorganz/StyLua) is in the AUR
-
-```bash
-pamac install stylua
-```
-
-Check your package manager for availability if not on an Arch based distro -
-_brew, apt_ etc.
-
-[autopep8](https://pypi.org/project/autopep8/) for python is in Manjaro/Arch
-repos
-
-```bash
-sudo pacman -S autopep8
-```
-
 ## Launch Nvim
 
 Lazy will install all plugins, you may then need to quit and restart to get
 everything running correctly.
+Mason will install language servers and formatters.
 
 ## Adding custom Snippets
 

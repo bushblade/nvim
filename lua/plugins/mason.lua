@@ -8,6 +8,17 @@ return {
           border = "rounded",
         },
       })
+      local registry = require("mason-registry")
+
+      -- auto install formatters
+      for _, pkg_name in ipairs({ "stylua", "prettier", "autopep8" }) do
+        local ok, pkg = pcall(registry.get_package, pkg_name)
+        if ok then
+          if not pkg:is_installed() then
+            pkg:install()
+          end
+        end
+      end
     end,
   },
   {
