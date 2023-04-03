@@ -32,6 +32,7 @@ return {
           "jdtls",
           "eslint",
           "jsonls",
+          "marksman",
         },
         automatic_installation = true,
       })
