@@ -44,6 +44,7 @@ return {
           "eslint",
           "jsonls",
           "marksman",
+          "html",
         },
         automatic_installation = true,
       })
