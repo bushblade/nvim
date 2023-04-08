@@ -1,1 +1,7 @@
-require("lspconfig").yamlls.setup({})
+require("lspconfig").yamlls.setup({
+  settings = {
+    yaml = {
+      keyOrdering = false,
+    },
+  },
+})
