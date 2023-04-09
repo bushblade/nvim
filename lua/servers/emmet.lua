@@ -1,3 +1,3 @@
 require("lspconfig").emmet_ls.setup({
-  filetypes = { "html", "css", "javascriptreact", "typescriptreact", "vue", "astro" },
+  filetypes = { "html", "css", "javascriptreact", "typescriptreact", "vue" },
 })
