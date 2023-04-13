@@ -5,8 +5,8 @@ return {
     event = { "BufReadPost", "BufNewFile" },
     dependencies = {
       "nvim-treesitter/nvim-treesitter-textobjects",
-      -- "windwp/nvim-ts-autotag", -- auto close and rename tags
-      "simonward87/nvim-ts-autotag",
+      "windwp/nvim-ts-autotag", -- auto close and rename tags
+      -- "simonward87/nvim-ts-autotag",
     },
     opts = {
       context_commentstring = {
