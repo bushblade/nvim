@@ -3,12 +3,7 @@ return {
     "nvim-telescope/telescope.nvim",
     dependencies = {
       "nvim-lua/plenary.nvim",
-      {
-        "rmagatti/session-lens",
-        config = function()
-          require("session-lens").setup({})
-        end,
-      },
+      "rmagatti/session-lens",
       "nvim-telescope/telescope-file-browser.nvim",
     },
     lazy = false,
@@ -30,6 +25,7 @@ return {
     config = function(_, opts)
       local telescope = require("telescope")
       telescope.setup(opts)
+      require("session-lens").setup({})
 
       telescope.load_extension("session-lens")
       telescope.load_extension("file_browser")
