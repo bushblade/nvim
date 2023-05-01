@@ -6,7 +6,7 @@ local css_settings = {
   lint = {},
 }
 
-local is_tailwind = vim.fn.filereadable("tailwind.config.js")
+local is_tailwind = vim.fn.filereadable(vim.fn.expand("tailwind.config.*"))
 if is_tailwind == 1 then
   css_settings.lint.unknownAtRules = "ignore"
 end
