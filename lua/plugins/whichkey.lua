@@ -41,7 +41,7 @@ return {
           m = { "<cmd>Telescope marks<CR>", "Marks" },
           k = { "<cmd>Telescope keymaps<CR>", "Key mappings" },
           M = { "<cmd>Telescope man_pages<CR>", "Man pages" },
-          -- a = { require("session-lens").search_session, "Search Sessions" },
+          a = { require("session-lens").search_session, "Search Sessions" },
           h = { "<cmd>Telescope help_tags<CR>", "Search help" },
           T = { "<cmd>TodoTelescope<CR>", "Search Todos" },
           e = { "<cmd>Telescope file_browser<CR>", "Browse Files" },
