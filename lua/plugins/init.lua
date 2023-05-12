@@ -17,12 +17,6 @@ return {
   { "j-hui/fidget.nvim", opts = { window = { border = "rounded", blend = 0 } } },
 
   { "numToStr/Comment.nvim", opts = {} },
-  {
-    "rmagatti/auto-session",
-    config = function()
-      require("auto-session").setup({})
-    end,
-  },
   "airblade/vim-gitgutter",
   "weilbith/nvim-code-action-menu",
   {

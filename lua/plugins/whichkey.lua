@@ -1,31 +1,30 @@
 return {
   {
     "folke/which-key.nvim",
-    opts = {
-      plugins = {
-        spelling = {
-          enabled = true, -- enabling this will show WhichKey when pressing z= to select spelling suggestions
-          suggestions = 20, -- how many suggestions should be shown in the list?
-        },
-      },
-      window = {
-        border = "single", -- none, single, double, shadow
-        position = "bottom", -- bottom, top
-        margin = { 0, 0, 0, 0 }, -- extra window margin [top, right, bottom, left]
-        padding = { 2, 2, 2, 2 }, -- extra window padding [top, right, bottom, left]
-        -- winblend = 0,
-      },
-      triggers_blacklist = {
-        -- list of mode / prefixes that should never be hooked by WhichKey
-        -- this is mostly relevant for key maps that start with a native binding
-        -- most people should not need to change this
-        i = { "j", "k" },
-        v = { "j", "k" },
-      },
-    },
-    config = function(_, opts)
+    config = function()
       local wk = require("which-key")
-      wk.setup(opts)
+      wk.setup({
+        plugins = {
+          spelling = {
+            enabled = true, -- enabling this will show WhichKey when pressing z= to select spelling suggestions
+            suggestions = 20, -- how many suggestions should be shown in the list?
+          },
+        },
+        window = {
+          border = "single", -- none, single, double, shadow
+          position = "bottom", -- bottom, top
+          margin = { 0, 0, 0, 0 }, -- extra window margin [top, right, bottom, left]
+          padding = { 2, 2, 2, 2 }, -- extra window padding [top, right, bottom, left]
+          -- winblend = 0,
+        },
+        triggers_blacklist = {
+          -- list of mode / prefixes that should never be hooked by WhichKey
+          -- this is mostly relevant for key maps that start with a native binding
+          -- most people should not need to change this
+          i = { "j", "k" },
+          v = { "j", "k" },
+        },
+      })
       -- register key bindings with <leader> prefix
       wk.register({
         M = { "<cmd>Mason<CR>", "Mason" },
@@ -42,7 +41,7 @@ return {
           m = { "<cmd>Telescope marks<CR>", "Marks" },
           k = { "<cmd>Telescope keymaps<CR>", "Key mappings" },
           M = { "<cmd>Telescope man_pages<CR>", "Man pages" },
-          a = { "<cmd>Telescope session-lens search_session<CR>", "Search Sessions" },
+          -- a = { require("session-lens").search_session, "Search Sessions" },
           h = { "<cmd>Telescope help_tags<CR>", "Search help" },
           T = { "<cmd>TodoTelescope<CR>", "Search Todos" },
           e = { "<cmd>Telescope file_browser<CR>", "Browse Files" },
