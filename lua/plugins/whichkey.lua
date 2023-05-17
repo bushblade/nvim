@@ -32,6 +32,7 @@ return {
           -- mostly Telescope bindings
           name = "Find with Telescope",
           f = { [[<cmd> lua require"telescope.builtin".find_files({ hidden = true })<CR>]], "Find File" },
+          g = {"<cmd>Telescope git_status<cr>", "Git Status"},
           b = { "<cmd>Telescope buffers<cr>", "Find Buffer" },
           n = { "<cmd>TodoTelescope<cr>", "Find Notes" },
           t = { "<cmd>Telescope builtin<cr>", "Telescope builtin" },
@@ -41,7 +42,7 @@ return {
           m = { "<cmd>Telescope marks<CR>", "Marks" },
           k = { "<cmd>Telescope keymaps<CR>", "Key mappings" },
           M = { "<cmd>Telescope man_pages<CR>", "Man pages" },
-          a = { require("session-lens").search_session, "Search Sessions" },
+          -- a = { require("session-lens").search_session, "Search Sessions" },
           h = { "<cmd>Telescope help_tags<CR>", "Search help" },
           T = { "<cmd>TodoTelescope<CR>", "Search Todos" },
           e = { "<cmd>Telescope file_browser<CR>", "Browse Files" },
@@ -95,13 +96,13 @@ return {
           R = { "<cmd> lua vim.lsp.buf.references()<CR>", "List references" },
           c = { "<cmd>CodeActionMenu<CR>", "Code actions" },
         },
-        a = {
-          name = "Auto Sessions",
-          S = { "<cmd>SaveSession<cr>", "Save session" },
-          s = { "<cmd>SearchSession<cr>", "Search sessions" },
-          d = { "<cmd>DeleteSession<cr>", "Delete session" },
-          r = { "<cmd>RestoreSession<cr>", "Restore session" },
-        },
+        -- a = {
+        --   name = "Auto Sessions",
+        --   S = { "<cmd>SaveSession<cr>", "Save session" },
+        --   s = { "<cmd>SearchSession<cr>", "Search sessions" },
+        --   d = { "<cmd>DeleteSession<cr>", "Delete session" },
+        --   r = { "<cmd>RestoreSession<cr>", "Restore session" },
+        -- },
       }, {
         prefix = "<leader>",
       })
