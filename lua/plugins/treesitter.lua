@@ -14,7 +14,6 @@ return {
       ignore_install = { "help" },
       ensure_installed = {
         "bash",
-        "help",
         "html",
         "javascript",
         "typescript",
