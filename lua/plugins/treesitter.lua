@@ -32,7 +32,6 @@ return {
         "go",
         "python",
         "rust",
-        "help",
         "vim",
         "css",
       }, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
