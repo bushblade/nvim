@@ -14,7 +14,7 @@ return {
   "kyazdani42/nvim-web-devicons",
 
   -- Useful status updates for LSP
-  { "j-hui/fidget.nvim", opts = { window = { border = "rounded", blend = 0 } } },
+  { "j-hui/fidget.nvim", opts = { window = { border = "rounded", blend = 0 } }, tag = 'legacy' },
 
   { "numToStr/Comment.nvim", opts = {} },
   "airblade/vim-gitgutter",
