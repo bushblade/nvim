@@ -80,7 +80,7 @@ One test snippet is included as an example.
     in the sign column
 17. [leafOfTree/vim-matchtag](https://github.com/leafOfTree/vim-matchtag)
     Highlight matching tag in HTML/JSX
-18. [phaazon/hop.nvim](https://github.com/phaazon/hop.nvim) Jump anywhwere in
+18. [folke/flash.nvim](https://github.com/folke/flash.nvim) navigate with search labels, enhanced character motions, and Treesitter integration.
     your code
 19. [kyazdani42/nvim-tree.lua](https://github.com/kyazdani42/nvim-tree.lua) File
     tree
