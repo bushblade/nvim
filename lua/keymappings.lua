@@ -50,9 +50,6 @@ local mappings = {
     { "<C-p>", telescope_find_files },
     -- escape clears highlighting
     { "<esc>", "<cmd>noh<cr><esc>" },
-    -- hop words
-    { "f", "<cmd>HopWord<cr>" },
-    { "F", "<cmd>HopLine<cr>" },
     -- yank to end of line on Y
     { "Y", "y$" },
     -- lsp mappings
@@ -100,8 +97,6 @@ local mappings = {
     -- Better indenting
     { "<", "<gv" },
     { ">", ">gv" },
-    -- hop words
-    { "f", require("hop").hint_words },
     -- moving text
     { "J", "<cmd>m '>+1<CR>gv=gv" },
     { "K", "<cmd>m '<-2<CR>gv=gv" },
@@ -116,9 +111,3 @@ register_mappings(mappings, { silent = true, noremap = true })
 
 -- S for search and replace in buffer
 vim.cmd("nnoremap S :%s/")
-
--- hop in motion
-local actions = { "d", "c", "<", ">", "y" }
-for _, a in ipairs(actions) do
-  vim.keymap.set("n", a .. "f", a .. "<cmd>lua require'hop'.hint_char1()<cr>")
-end

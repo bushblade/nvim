@@ -6,15 +6,15 @@ return {
     dependencies = {
       "nvim-treesitter/nvim-treesitter-textobjects",
       "windwp/nvim-ts-autotag", -- auto close and rename tags
-      -- "simonward87/nvim-ts-autotag",
     },
     opts = {
       context_commentstring = {
         enable = true,
       },
+      ignore_install = { "help" },
       ensure_installed = {
         "bash",
-        "help",
+        "vimdoc",
         "html",
         "javascript",
         "typescript",
@@ -33,7 +33,6 @@ return {
         "go",
         "python",
         "rust",
-        "help",
         "vim",
         "css",
       }, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
@@ -67,57 +66,53 @@ return {
       indent = {
         enable = true,
       },
-      incremental_selection = {
-        enable = true,
-        keymaps = {
-          init_selection = "<CR>",
-          node_incremental = "<TAB>",
-          scope_incremental = "<CR>",
-          node_decremental = "<S-TAB>",
-        },
-      },
-      textobjects = {
-        select = {
-          enable = true,
-          lookahead = true, -- Automatically jump forward to textobj, similar to targets.vim
-          keymaps = {
-            -- You can use the capture groups defined in textobjects.scm
-            ["aa"] = "@parameter.outer",
-            ["ia"] = "@parameter.inner",
-            ["af"] = "@function.outer",
-            ["if"] = "@function.inner",
-            ["ac"] = "@class.outer",
-            ["ic"] = "@class.inner",
-          },
-        },
-        move = {
-          enable = true,
-          set_jumps = true, -- whether to set jumps in the jumplist
-          goto_next_start = {
-            ["]m"] = "@function.outer",
-            ["]]"] = "@class.outer",
-          },
-          goto_next_end = {
-            ["]M"] = "@function.outer",
-            ["]["] = "@class.outer",
-          },
-          goto_previous_start = {
-            ["[m"] = "@function.outer",
-            ["[["] = "@class.outer",
-          },
-          goto_previous_end = {
-            ["[M"] = "@function.outer",
-            ["[]"] = "@class.outer",
-          },
-        },
-      },
+      -- incremental_selection = {
+      --   enable = true,
+      --   keymaps = {
+      --     init_selection = "<CR>",
+      --     node_incremental = "<TAB>",
+      --     scope_incremental = "<CR>",
+      --     node_decremental = "<S-TAB>",
+      --   },
+      -- },
+      -- textobjects = {
+      --   select = {
+      --     enable = true,
+      --     lookahead = true, -- Automatically jump forward to textobj, similar to targets.vim
+      --     keymaps = {
+      --       -- You can use the capture groups defined in textobjects.scm
+      --       ["aa"] = "@parameter.outer",
+      --       ["ia"] = "@parameter.inner",
+      --       ["af"] = "@function.outer",
+      --       ["if"] = "@function.inner",
+      --       ["ac"] = "@class.outer",
+      --       ["ic"] = "@class.inner",
+      --     },
+      --   },
+      --   move = {
+      --     enable = true,
+      --     set_jumps = true, -- whether to set jumps in the jumplist
+      --     goto_next_start = {
+      --       ["]m"] = "@function.outer",
+      --       ["]]"] = "@class.outer",
+      --     },
+      --     goto_next_end = {
+      --       ["]M"] = "@function.outer",
+      --       ["]["] = "@class.outer",
+      --     },
+      --     goto_previous_start = {
+      --       ["[m"] = "@function.outer",
+      --       ["[["] = "@class.outer",
+      --     },
+      --     goto_previous_end = {
+      --       ["[M"] = "@function.outer",
+      --       ["[]"] = "@class.outer",
+      --     },
+      --   },
+      -- },
     },
     config = function(_, opts)
       require("nvim-treesitter.configs").setup(opts)
-      -- FIX: for nvim-autotag - not actually working
-      local ts_utils = require("nvim-treesitter.ts_utils")
-      ts_utils.get_node_text = vim.treesitter.query.get_node_text
-
       -- Detect astro files and set filetype
       vim.api.nvim_create_autocmd("BufEnter", {
         pattern = { "*.astro" },
