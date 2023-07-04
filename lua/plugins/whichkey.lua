@@ -99,8 +99,8 @@ return {
           name = "Auto Sessions",
           S = { "<cmd>SaveSession<cr>", "Save session" },
           s = { "<cmd>SearchSession<cr>", "Search sessions" },
-          d = { "<cmd>DeleteSession<cr>", "Delete session" },
-          r = { "<cmd>RestoreSession<cr>", "Restore session" },
+          d = { "<cmd>SessionDelete<cr>", "Delete session" },
+          r = { "<cmd>SessionRestore<cr>", "Restore session" },
         },
       }, {
         prefix = "<leader>",
