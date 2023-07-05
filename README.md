@@ -1,26 +1,15 @@
-# Leaving the CoC behind.
+# My Neovim config
 
-![Screenshot](https://res.cloudinary.com/bushblade/image/upload/w_1000/nvim-screenshot-03.webp)
-[kitty terminal](https://sw.kovidgoyal.net/kitty/) with [TokyoNight](https://sw.kovidgoyal.net/kitty/) terminal theme and [Victor Mono](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/VictorMono) nerd font.
+![Screenshot](https://res.cloudinary.com/bushblade/image/upload/w_1000/catppuccin.webp)
+[Alacritty terminal](https://github.com/alacritty/alacritty) with [Catppuccin](https://github.com/catppuccin/nvim) terminal theme and [Victor Mono](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/VictorMono) nerd font.
 
 **My config for Nvim using native LSP with some sane defaults and settings**, mainly
 aimed at web development but ready to go with Python, Rust, Golang, Deno and Lua.
-
-Uses the latest 0.7+ Neovim
 
 ## Clone the repository into ~/.config/nvim
 
 ```bash
 git clone https://github.com/bushblade/nvim.git ~/.config/nvim
-```
-
-## Install typescript globally
-
-A couple of the language servers need TS installed globally on your system to
-work correctly.
-
-```bash
-npm install -g typescript
 ```
 
 > TIP: [No sudo on global npm install](https://github.com/sindresorhus/guides/blob/main/npm-global-without-sudo.md)
@@ -87,7 +76,7 @@ One test snippet is included as an example.
 20. [JoosepAlviste/nvim-ts-context-commentstring](https://github.com/JoosepAlviste/nvim-ts-context-commentstring) Better commenting based on file type
 21. [onsails/lspkind-nvim](https://github.com/onsails/lspkind-nvim) Icons in
     completion
-22. [folke/tokyonight.nvim](https://github.com/folke/tokyonight.nvim) Theme
+22. [catppuccin/nvim](https://github.com/catppuccin/nvim) Theme
 23. [folke/trouble.nvim](https://github.com/folke/trouble.nvim) Show the problems
     in your code
 24. [folke/which-key.nvim](https://github.com/folke/which-key.nvim) Keymap helper
