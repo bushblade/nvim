@@ -7,12 +7,12 @@ return {
         components_separators = { left = "", right = "" },
         section_separators = { left = "", right = "" },
         disabled_filetypes = {},
-        theme = "catppuccin",
+        theme = "auto",
         globalstatus = true,
       },
       sections = {
         lualine_a = { "mode" },
-        lualine_b = { "branch" },
+        lualine_b = { "branch", "diff", "diagnostics" },
         lualine_c = { { "filename", file_status = true, path = 1 } },
         -- lualine_x = {"encoding", "fileformat", "filetype"},
         lualine_x = { "encoding", "filetype" },
@@ -28,7 +28,7 @@ return {
         lualine_z = {},
       },
       tabline = {},
-      extensions = { "fugitive", "nvim-tree" },
+      extensions = { "fugitive", "nvim-tree", "trouble" },
     },
   },
 }
