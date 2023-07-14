@@ -14,6 +14,7 @@ return {
       ignore_install = { "help" },
       ensure_installed = {
         "bash",
+        "fish",
         "vimdoc",
         "html",
         "javascript",
