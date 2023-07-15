@@ -54,6 +54,9 @@ local mappings = {
     { "Y", "y$" },
     -- lsp mappings
     { "K", vim.lsp.buf.hover },
+    -- previous and next quickfix
+    { "[q", ":cprev<CR>" },
+    { "]q", ":cnext<CR>" },
     {
       "[d",
       function()
