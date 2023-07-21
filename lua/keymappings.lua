@@ -3,58 +3,36 @@ local function register_mappings(mappings, default_options)
     for _, mapping in pairs(mode_mappings) do
       local options = #mapping == 3 and table.remove(mapping) or default_options
       local prefix, cmd = unpack(mapping)
-      pcall(vim.keymap.set, mode, prefix, cmd, options)
+      local success, message = pcall(vim.keymap.set, mode, prefix, cmd, options)
+      if not success then
+        print(string.format("Error while setting the mapping [%s, %s] : %s", prefix, cmd, message))
+      end
     end
   end
 end
 
-local function telescope_find_files()
+local function telescope_find_hidden_files()
   require("telescope.builtin").find_files({ hidden = true })
 end
 
 local border_options = { float = { border = "rounded" } }
 
--- NOTE<cmd> <leader> prefixed mappings are in whichkey-settings.lua
-
 local mappings = {
   i = {
-    -- Insert mode
     { "kk", "<ESC>" },
     { "jj", "<ESC>" },
     { "jk", "<ESC>" },
-    -- Terminal window navigation
-    { "<C-h>", "<C-\\><C-N><C-w>h" },
-    { "<C-j>", "<C-\\><C-N><C-w>j" },
-    { "<C-k>", "<C-\\><C-N><C-w>k" },
-    { "<C-l>", "<C-\\><C-N><C-w>l" },
-    -- moving text
-    { "<C-j>", "<esc><cmd>m .+1<CR>==" },
-    { "<C-k>", "<esc><cmd>m .-2<CR>==" },
-    -- Ctrl single quote for backtick
     { "<C-'>", "``<esc>i" },
   },
   n = {
-    -- Normal mode
-    -- Better window movement
-    -- NOTE: replaced with Navigator for Wezterm and Tmux
-    -- { "<C-h>", "<C-w>h", { silent = true } },
-    -- { "<C-j>", "<C-w>j", { silent = true } },
-    -- { "<C-k>", "<C-w>k", { silent = true } },
-    -- { "<C-l>", "<C-w>l", { silent = true } },
-    -- Resize with arrows
     { "<C-Up>", "<cmd>resize -2<CR>", { silent = true } },
     { "<C-Down>", "<cmd>resize +2<CR>", { silent = true } },
     { "<C-Left>", "<cmd>vertical resize -2<CR>", { silent = true } },
     { "<C-Right>", "<cmd>vertical resize +2<CR>", { silent = true } },
-    -- Ctrl + p fuzzy files
-    { "<C-p>", telescope_find_files },
-    -- escape clears highlighting
+    { "<C-p>", telescope_find_hidden_files },
     { "<esc>", "<cmd>noh<cr><esc>" },
-    -- yank to end of line on Y
     { "Y", "y$" },
-    -- lsp mappings
     { "K", vim.lsp.buf.hover },
-    -- previous and next quickfix
     { "[q", ":cprev<CR>" },
     { "]q", ":cnext<CR>" },
     {
@@ -73,44 +51,29 @@ local mappings = {
     { "gd", vim.lsp.buf.definition },
     { "gr", vim.lsp.buf.references },
     { "gi", vim.lsp.buf.implementation },
-    -- bufferline
     { "H", "<cmd>BufferLineCyclePrev<CR>" },
     { "L", "<cmd>BufferLineCycleNext<CR>" },
     { "<C-d>", "<C-d>zz" },
     { "<C-u>", "<C-u>zz" },
-    -- Remap for dealing with line wrap
     { "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true } },
     { "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true } },
-    -- open link under cursor
     { "gx", '<Cmd>call jobstart(["xdg-open", expand("<cfile>")], {"detach": v:true})<CR>' },
   },
   t = {
-    -- Terminal mode
-    -- Terminal window navigation
-    -- { "<C-h>", "<C-\\><C-N><C-w>h" },
-    -- { "<C-j>", "<C-\\><C-N><C-w>j" },
-    -- { "<C-k>", "<C-\\><C-N><C-w>k" },
-    -- { "<C-l>", "<C-\\><C-N><C-w>l" },
-    -- map escape to normal mode in terminal
     { "<Esc>", [[ <C-\><C-n> ]] },
     { "jj", [[ <C-\><C-n> ]] },
   },
   v = {
-    -- Visual/Select mode
-    -- Better indenting
     { "<", "<gv" },
     { ">", ">gv" },
-    -- moving text
     { "J", "<cmd>m '>+1<CR>gv=gv" },
     { "K", "<cmd>m '<-2<CR>gv=gv" },
   },
   x = {
-    -- remap p to always paste from last yank
     { "<leader>p", '"_dP' },
   },
 }
 
 register_mappings(mappings, { silent = true, noremap = true })
 
--- S for search and replace in buffer
 vim.cmd("nnoremap S :%s/")
