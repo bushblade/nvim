@@ -37,13 +37,20 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- highlight on yank
-vim.cmd([[au TextYankPost * silent! lua vim.highlight.on_yank()]])
+vim.api.nvim_create_autocmd({ "TextYankPost" }, {
+  command = "silent! lua vim.highlight.on_yank()",
+})
 
 -- Vertically center document when entering insert mode
-vim.cmd([[autocmd InsertEnter * norm zz]])
+vim.api.nvim_create_autocmd({ "InsertEnter" }, {
+  command = "norm zz",
+})
 
 -- detect mdx file and set file type to markdown
-vim.cmd([[autocmd BufNewFile,BufRead *.mdx set filetype=markdown.mdx]])
+vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
+  pattern = "*.mdx",
+  command = "set filetype=markdown.mdx",
+})
 
 -- Give me some fenced codeblock goodness
 vim.g.markdown_fenced_languages = {
