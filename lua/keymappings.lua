@@ -76,4 +76,4 @@ local mappings = {
 
 register_mappings(mappings, { silent = true, noremap = true })
 
-vim.cmd("nnoremap S :%s/")
+-- vim.cmd("nnoremap S :%s/")
