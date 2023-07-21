@@ -1,7 +1,22 @@
+-- Define the highlight group for flash.treesitter visual selection
+local mocha_palette = require("catppuccin.palettes").get_palette("mocha")
+local highlight_fg = mocha_palette.base
+local highlight_bg = mocha_palette.red
+
+-- Set the highlight group with the chosen colors
+vim.cmd("highlight FlashTreesitterSelection guifg=" .. highlight_fg .. " guibg=" .. highlight_bg .. " gui=bold")
+
 return {
   "folke/flash.nvim",
   event = "VeryLazy",
-  opts = {},
+  opts = {
+    highlight = {
+      -- Change the label highlight group to your desired color
+      groups = {
+        label = "FlashTreesitterSelection",
+      },
+    },
+  },
   keys = {
     {
       "s",
@@ -19,7 +34,7 @@ return {
       desc = "Flash",
     },
     {
-      "<tab>",
+      "S",
       mode = { "n", "o", "x" },
       function()
         local bufnr = vim.api.nvim_get_current_buf()
