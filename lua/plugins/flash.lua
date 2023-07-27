@@ -40,7 +40,7 @@ return {
     },
     {
       "S",
-      mode = { "n", "o", "x" },
+      mode = { "n" },
       function()
         local bufnr = vim.api.nvim_get_current_buf()
         local filetype = vim.api.nvim_buf_get_option(bufnr, "filetype")
@@ -59,6 +59,14 @@ return {
         require("flash").remote()
       end,
       desc = "Remote Flash",
+    },
+    {
+      "<c-s>",
+      mode = { "c" },
+      function()
+        require("flash").toggle()
+      end,
+      desc = "Toggle Flash Search",
     },
   },
 }
