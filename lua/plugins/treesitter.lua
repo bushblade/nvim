@@ -122,6 +122,13 @@ return {
           vim.cmd([[ set filetype=astro ]])
         end,
       })
+      -- Detect jsx files and set filetype to javascript
+      vim.api.nvim_create_autocmd("BufEnter", {
+        pattern = { ".jsx" },
+        callback = function()
+          vim.cmd([[set filetype=javascript]])
+        end,
+      })
     end,
   },
 }
