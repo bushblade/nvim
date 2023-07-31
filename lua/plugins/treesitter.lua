@@ -60,8 +60,6 @@ return {
           "tsx",
           "jsx",
           "markdown",
-          -- NOTE: not working in astro
-          -- https://github.com/windwp/nvim-ts-autotag/pull/89
           "astro",
         },
       },
