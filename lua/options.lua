@@ -38,7 +38,9 @@ vim.g.maplocalleader = " "
 
 -- highlight on yank
 vim.api.nvim_create_autocmd({ "TextYankPost" }, {
-  command = "silent! lua vim.highlight.on_yank()",
+  callback = function()
+    vim.highlight.on_yank()
+  end,
 })
 
 -- Vertically center document when entering insert mode
