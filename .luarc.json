@@ -1,4 +1,7 @@
 {
     "$schema": "https://raw.githubusercontent.com/sumneko/vscode-lua/master/setting/schema.json",
-    "Lua.workspace.checkThirdParty": false
+    "Lua.workspace.checkThirdParty": false,
+    "diagnostics.disable": [
+        "missing-fields"
+    ]
 }
