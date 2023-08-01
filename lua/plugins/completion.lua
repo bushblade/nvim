@@ -22,8 +22,11 @@ return {
       local luasnip = require("luasnip")
 
       -- html snippets in javascript and javascriptreact
-      luasnip.filetype_extend("javascriptreact", { "html" })
-      luasnip.filetype_extend("typescriptreact", { "html" })
+      luasnip.filetype_extend("javascriptreact", { "html", "jsdoc", "react-es7" })
+      luasnip.filetype_extend("typescriptreact", { "html", "tsdoc", "react-ts" })
+
+      luasnip.filetype_extend("javascript", { "jsdoc" })
+      luasnip.filetype_extend("typescript", { "tsdoc" })
 
       local loader = require("luasnip/loaders/from_vscode")
       loader.lazy_load()
