@@ -82,7 +82,7 @@ One test snippet is included as an example.
 24. [folke/which-key.nvim](https://github.com/folke/which-key.nvim) Keymap helper
 25. [folke/todo-comments.nvim](https://github.com/folke/todo-comments.nvim)
     Highlight and search project todos and notes
-26. [norcalli/nvim-colorizer.lua](https://github.com/norcalli/nvim-colorizer.lua)
+26. [NvChad/nvim-colorizer.lua](https://github.com/NvChad/nvim-colorizer.lua)
     Display the colour of your hex/rgb/hsl value
 27. [akinsho/bufferline.nvim](https://github.com/akinsho/bufferline.nvim) Buffers
     in tabs
