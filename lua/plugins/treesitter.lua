@@ -78,7 +78,7 @@ return {
       })
       -- Detect jsx files and set filetype to javascript
       vim.api.nvim_create_autocmd("BufEnter", {
-        pattern = { ".jsx" },
+        pattern = { "*.jsx" },
         callback = function()
           vim.cmd([[set filetype=javascript]])
         end,
