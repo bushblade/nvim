@@ -43,7 +43,7 @@ return {
       })
       -- register key bindings with <leader> prefix
       wk.register({
-        q = {qf_toggle, "Toggle Quickfix list"},
+        q = { qf_toggle, "Toggle Quickfix list" },
         M = { "<cmd>Mason<CR>", "Mason" },
         f = {
           -- mostly Telescope bindings
@@ -62,6 +62,7 @@ return {
           h = { "<cmd>Telescope help_tags<CR>", "Search help" },
           T = { "<cmd>TodoTelescope<CR>", "Search Todos" },
           e = { "<cmd>Telescope file_browser<CR>", "Browse Files" },
+          g = { "<cmd>Telescope git_status<CR>", "Git Status" },
         },
         h = {
           name = "Git Gutter",
