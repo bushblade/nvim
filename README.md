@@ -101,6 +101,8 @@ One test snippet is included as an example.
     Navigate between Wezterm splits
 36. [Mason](https://github.com/williamboman/mason.nvim) for installing language
     servers.
+37. [Rest.nvim](https://github.com/rest-nvim/rest.nvim) http requests using curl
+    from Nvim
 
 ## Resources and inspiration
 

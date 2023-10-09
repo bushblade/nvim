@@ -43,6 +43,7 @@ return {
       })
       -- register key bindings with <leader> prefix
       wk.register({
+        R = { "<Plug>RestNvim<CR>", "Run with Rest" },
         q = { qf_toggle, "Toggle Quickfix list" },
         M = { "<cmd>Mason<CR>", "Mason" },
         f = {
