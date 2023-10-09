@@ -45,7 +45,7 @@ return {
           "jsonls",
           "marksman",
           "html",
-          "bashls"
+          "bashls",
         },
         automatic_installation = true,
       })
