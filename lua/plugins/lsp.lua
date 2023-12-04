@@ -26,6 +26,8 @@ return {
       require("servers.java")
       require("servers.markdown")
       require("servers.bash")
+      require("servers.php")
+      require("servers.htmx")
 
       -- rounded border on :LspInfo
       require("lspconfig.ui.windows").default_options.border = "rounded"
