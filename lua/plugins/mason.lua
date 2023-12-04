@@ -46,6 +46,8 @@ return {
           "marksman",
           "html",
           "bashls",
+          "intelephense",
+          "htmx",
         },
         automatic_installation = true,
       })
