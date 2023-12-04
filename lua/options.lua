@@ -69,3 +69,6 @@ vim.g.markdown_fenced_languages = {
   "ts=typescript",
   "js=javascript",
 }
+
+-- Show folds
+vim.opt.foldcolumn = "1"
