@@ -5,7 +5,7 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 require("lspconfig").html.setup({
   capabilities = capabilities,
   cmd = { "vscode-html-language-server", "--stdio" },
-  filetypes = { "html" },
+  filetypes = { "html", "php" },
   init_options = {
     configurationSection = { "html", "css", "javascript" },
     embeddedLanguages = {
