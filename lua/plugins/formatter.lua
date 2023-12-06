@@ -14,6 +14,14 @@ local prettier = function()
   }
 end
 
+-- use lsp formatting in php
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*.php",
+  callback = function()
+    vim.lsp.buf.format({ async = false })
+  end,
+})
+
 return {
   {
     "mhartington/formatter.nvim",
