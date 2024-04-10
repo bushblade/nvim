@@ -9,8 +9,10 @@ return {
       "hrsh7th/cmp-nvim-lsp", -- lsp completions
       "hrsh7th/cmp-path", -- file path completions
       "saadparwaiz1/cmp_luasnip", -- snippets completions
-      "L3MON4D3/LuaSnip",
-      "rafamadriz/friendly-snippets",
+      {
+        "L3MON4D3/LuaSnip",
+        dependencies = { "rafamadriz/friendly-snippets" },
+      },
       "onsails/lspkind-nvim",
       { "roobert/tailwindcss-colorizer-cmp.nvim", config = true }, -- tailwind color in suggesions
     },
@@ -22,13 +24,13 @@ return {
       local luasnip = require("luasnip")
 
       -- html snippets in javascript and javascriptreact
-      luasnip.filetype_extend("javascriptreact", { "html", "jsdoc", "react-es7" })
-      luasnip.filetype_extend("typescriptreact", { "html", "tsdoc", "react-ts" })
+      -- luasnip.filetype_extend("javascriptreact", { "html", "jsdoc", "react-es7" })
+      -- luasnip.filetype_extend("typescriptreact", { "html", "tsdoc", "react-ts" })
 
-      luasnip.filetype_extend("javascript", { "jsdoc" })
-      luasnip.filetype_extend("typescript", { "tsdoc" })
+      luasnip.filetype_extend("javascript", { "jsdoc", "javascriptreact" })
+      luasnip.filetype_extend("typescript", { "tsdoc", "typescriptreact" })
 
-      local loader = require("luasnip/loaders/from_vscode")
+      local loader = require("luasnip.loaders.from_vscode")
       loader.lazy_load()
 
       -- load snippets from path/of/your/nvim/config/my-cool-snippets
