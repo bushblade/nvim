@@ -11,10 +11,6 @@ local function register_mappings(mappings, default_options)
   end
 end
 
-local function telescope_find_hidden_files()
-  require("telescope.builtin").find_files({ hidden = true })
-end
-
 local border_options = { float = { border = "rounded" } }
 
 local mappings = {
@@ -29,7 +25,6 @@ local mappings = {
     { "<C-Down>", "<cmd>resize +2<CR>", { silent = true } },
     { "<C-Left>", "<cmd>vertical resize -2<CR>", { silent = true } },
     { "<C-Right>", "<cmd>vertical resize +2<CR>", { silent = true } },
-    { "<C-p>", telescope_find_hidden_files },
     { "<esc>", "<cmd>noh<cr><esc>" },
     { "Y", "y$" },
     { "K", vim.lsp.buf.hover },
