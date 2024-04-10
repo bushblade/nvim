@@ -57,7 +57,6 @@ return {
           return lang == "typescript" and vim.api.nvim_buf_line_count(bufnr) > 5000
         end,
       },
-
       auto_install = true,
       autotag = {
         enable = true,
@@ -77,6 +76,15 @@ return {
       },
       indent = {
         enable = true,
+      },
+      incremental_selection = {
+        enable = true,
+        keymaps = {
+          init_selection = "<CR>",
+          node_incremental = "<TAB>",
+          scope_incremental = "<CR>",
+          node_decremental = "<S-TAB>",
+        },
       },
     },
     config = function(_, opts)
