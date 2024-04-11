@@ -51,7 +51,7 @@ One test snippet is included as an example.
    8. [rafamadriz/friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
 
 8. [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive) Git tools
-9. [tpope/vim-surround](https://github.com/tpope/vim-surround) Surroundings
+9. [kylechui/nvim-surround](https://github.com/kylechui/nvim-surround) Surroundings
    pairs mappings
 10. [numToStr/Comment.nvim](https://github.com/numToStr/Comment.nvim) Vim style
     commenting

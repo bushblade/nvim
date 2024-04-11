@@ -28,7 +28,8 @@ return {
       -- luasnip.filetype_extend("typescriptreact", { "html", "tsdoc", "react-ts" })
 
       luasnip.filetype_extend("javascript", { "jsdoc", "javascriptreact" })
-      luasnip.filetype_extend("typescript", { "tsdoc", "typescriptreact" })
+      luasnip.filetype_extend("typescript", { "tsdoc" })
+      luasnip.filetype_extend("typescriptreact", { "javascriptreact" })
 
       local loader = require("luasnip.loaders.from_vscode")
       loader.lazy_load()
