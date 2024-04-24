@@ -20,12 +20,6 @@ return {
     config = function()
       local wk = require("which-key")
       wk.setup({
-        plugins = {
-          spelling = {
-            enabled = true, -- enabling this will show WhichKey when pressing z= to select spelling suggestions
-            suggestions = 20, -- how many suggestions should be shown in the list?
-          },
-        },
         window = {
           border = "single", -- none, single, double, shadow
           position = "bottom", -- bottom, top
@@ -49,7 +43,12 @@ return {
         f = {
           -- mostly Telescope bindings
           name = "Find with Telescope",
-          f = { [[<cmd> lua require"telescope.builtin".find_files({ hidden = true })<CR>]], "Find File" },
+          f = {
+            function()
+              require("telescope.builtin").find_files({ hidden = true })
+            end,
+            "Find File",
+          },
           b = { "<cmd>Telescope buffers<cr>", "Find Buffer" },
           n = { "<cmd>TodoTelescope<cr>", "Find Notes" },
           t = { "<cmd>Telescope builtin<cr>", "Telescope builtin" },
@@ -87,10 +86,20 @@ return {
         },
         T = { "<cmd>TodoTelescope<CR>", "List Todos" },
         c = { "<cmd>CodeActionMenu<CR>", "Code Actions" },
-        d = { "<cmd>lua vim.diagnostic.open_float({ border = 'rounded' })<CR>", "Line Diagnostics" },
+        d = {
+          function()
+            vim.diagnostic.open_float({ border = "rounded" })
+          end,
+          "Line Diagnostics",
+        },
         w = { "<cmd>WhichKey<CR>", "WhichKey" },
-        s = { "<cmd>lua vim.o.spell = not vim.o.spell<cr>", "Toggle spell check" },
-        r = { "<cmd>lua vim.lsp.buf.rename()<CR>", "Rename" },
+        s = {
+          function()
+            vim.o.spell = not vim.o.spell
+          end,
+          "Toggle spell check",
+        },
+        r = { vim.lsp.buf.rename, "Rename" },
         -- Bufferline
         b = {
           name = "Bufferline",
@@ -103,15 +112,30 @@ return {
         },
         S = {
           name = "Spectre - find and replace",
-          s = { "<cmd>lua require('spectre').open_visual()<CR>", "Open Spectre" },
-          w = { "<cmd>lua require('spectre').open_visual({select_word=true})<CR>", "Search for word under cursor" },
+          s = { require("spectre").open_visual, "Open Spectre" },
+          w = {
+            function()
+              require("spectre").open_visual({ select_word = true })
+            end,
+            "Search for word under cursor",
+          },
         },
         l = {
           name = "LSP",
-          f = { "<cmd>lua vim.lsp.buf.format({async = true})<CR>", "Format File" },
-          d = { "<cmd>lua vim.diagnostic.open_float({ border = 'rounded' })<CR>", "Line Diagnostics" },
-          r = { "<cmd>lua vim.lsp.buf.rename()<CR>", "Rename" },
-          R = { "<cmd> lua vim.lsp.buf.references()<CR>", "List references" },
+          f = {
+            function()
+              vim.lsp.buf.format({ async = true })
+            end,
+            "Format File",
+          },
+          d = {
+            function()
+              vim.diagnostic.open_float({ border = "rounded" })
+            end,
+            "Line Diagnostics",
+          },
+          r = { vim.lsp.buf.rename(), "Rename" },
+          R = { vim.lsp.buf.references(), "List references" },
           c = { "<cmd>CodeActionMenu<CR>", "Code actions" },
         },
         a = {
