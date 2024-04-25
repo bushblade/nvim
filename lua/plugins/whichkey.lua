@@ -134,8 +134,8 @@ return {
             end,
             "Line Diagnostics",
           },
-          r = { vim.lsp.buf.rename(), "Rename" },
-          R = { vim.lsp.buf.references(), "List references" },
+          r = { vim.lsp.buf.rename, "Rename" },
+          R = { vim.lsp.buf.references, "List references" },
           c = { "<cmd>CodeActionMenu<CR>", "Code actions" },
         },
         a = {
