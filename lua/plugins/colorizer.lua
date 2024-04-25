@@ -1,5 +1,3 @@
--- NOTE: maybe change this to https://github.com/NvChad/nvim-colorizer.lua
--- Useful video https://www.youtube.com/watch?v=_NiWhZeR-MY
 return {
   {
     "NvChad/nvim-colorizer.lua",
