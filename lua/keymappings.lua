@@ -1,74 +1,54 @@
-local function register_mappings(mappings, default_options)
-  for mode, mode_mappings in pairs(mappings) do
-    for _, mapping in pairs(mode_mappings) do
-      local options = #mapping == 3 and table.remove(mapping) or default_options
-      local prefix, cmd = unpack(mapping)
-      local success, message = pcall(vim.keymap.set, mode, prefix, cmd, options)
-      if not success then
-        print(string.format("Error while setting the mapping [%s, %s] : %s", prefix, cmd, message))
-      end
-    end
-  end
+local function map(mode, lhs, rhs, opts)
+  local options = vim.tbl_extend("force", { noremap = true, silent = true }, opts or {})
+  vim.keymap.set(mode, lhs, rhs, options)
 end
 
+-- Options for specific commands
 local border_options = { float = { border = "rounded" } }
 
-local mappings = {
-  i = {
-    { "kk", "<ESC>" },
-    { "jj", "<ESC>" },
-    { "jk", "<ESC>" },
-    { "<C-'>", "``<esc>i" },
-  },
-  n = {
-    { "<C-Up>", "<cmd>resize -2<CR>", { silent = true } },
-    { "<C-Down>", "<cmd>resize +2<CR>", { silent = true } },
-    { "<C-Left>", "<cmd>vertical resize -2<CR>", { silent = true } },
-    { "<C-Right>", "<cmd>vertical resize +2<CR>", { silent = true } },
-    { "<esc>", "<cmd>noh<cr><esc>" },
-    { "Y", "y$" },
-    { "K", vim.lsp.buf.hover },
-    { "[q", ":cprev<CR>" },
-    { "]q", ":cnext<CR>" },
-    {
-      "[d",
-      function()
-        vim.diagnostic.goto_prev(border_options)
-      end,
-    },
-    {
-      "]d",
-      function()
-        vim.diagnostic.goto_next(border_options)
-      end,
-    },
-    { "gD", vim.lsp.buf.declaration },
-    { "gd", vim.lsp.buf.definition },
-    { "gr", vim.lsp.buf.references },
-    { "gi", vim.lsp.buf.implementation },
-    { "H", "<cmd>BufferLineCyclePrev<CR>" },
-    { "L", "<cmd>BufferLineCycleNext<CR>" },
-    { "<C-d>", "<C-d>zz" },
-    { "<C-u>", "<C-u>zz" },
-    { "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true } },
-    { "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true } },
-    { "gx", '<Cmd>call jobstart(["xdg-open", expand("<cfile>")], {"detach": v:true})<CR>' },
-  },
-  t = {
-    { "<Esc>", [[ <C-\><C-n> ]] },
-    { "jj", [[ <C-\><C-n> ]] },
-  },
-  v = {
-    { "<", "<gv" },
-    { ">", ">gv" },
-    { "J", "<cmd>m '>+1<CR>gv=gv" },
-    { "K", "<cmd>m '<-2<CR>gv=gv" },
-  },
-  x = {
-    { "<leader>p", '"_dP' },
-  },
-}
+-- Insert mode mappings
+map("i", "kk", "<ESC>")
+map("i", "jj", "<ESC>")
+map("i", "jk", "<ESC>")
+map("i", "<C-'>", "``<esc>i")
 
-register_mappings(mappings, { silent = true, noremap = true })
+-- Normal mode mappings
+map("n", "<C-Up>", "<cmd>resize -2<CR>")
+map("n", "<C-Down>", "<cmd>resize +2<CR>")
+map("n", "<C-Left>", "<cmd>vertical resize -2<CR>")
+map("n", "<C-Right>", "<cmd>vertical resize +2<CR>")
+map("n", "<esc>", "<cmd>noh<cr><esc>")
+map("n", "Y", "y$")
+map("n", "K", vim.lsp.buf.hover)
+map("n", "[q", ":cprev<CR>")
+map("n", "]q", ":cnext<CR>")
+map("n", "[d", function()
+  vim.diagnostic.goto_prev(border_options)
+end)
+map("n", "]d", function()
+  vim.diagnostic.goto_next(border_options)
+end)
+map("n", "gD", vim.lsp.buf.declaration)
+map("n", "gd", vim.lsp.buf.definition)
+map("n", "gr", vim.lsp.buf.references)
+map("n", "gi", vim.lsp.buf.implementation)
+map("n", "H", "<cmd>BufferLineCyclePrev<CR>")
+map("n", "L", "<cmd>BufferLineCycleNext<CR>")
+map("n", "<C-d>", "<C-d>zz")
+map("n", "<C-u>", "<C-u>zz")
+map("n", "k", 'v:count == 0 ? "gk" : "k"', { expr = true })
+map("n", "j", 'v:count == 0 ? "gj" : "j"', { expr = true })
+map("n", "gx", '<Cmd>call jobstart(["xdg-open", expand("<cfile>")], {"detach": v:true})<CR>')
 
--- vim.cmd("nnoremap S :%s/")
+-- Terminal mode mappings
+map("t", "<Esc>", [[ <C-\><C-n> ]])
+map("t", "jj", [[ <C-\><C-n> ]])
+
+-- Visual mode mappings
+map("v", "<", "<gv")
+map("v", ">", ">gv")
+map("v", "J", "<cmd>m '>+1<CR>gv=gv")
+map("v", "K", "<cmd>m '<-2<CR>gv=gv")
+
+-- Visual block mode mappings
+map("x", "<leader>p", '"_dP')
