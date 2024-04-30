@@ -1,7 +1,7 @@
 local M = {}
 
 ---Map a keybinding to a function or command in Neovim
----@param mode string The mode where the keybinding is active ('n' for normal, 'i' for insert, etc.)
+---@param mode string|table The mode where the keybinding is active ('n' for normal, 'i' for insert, etc.)
 ---@param lhs string The left-hand side of the keybinding (the key combination)
 ---@param rhs string|function The right-hand side of the keybinding (the command or Lua function to execute)
 ---@param opts table? Optional settings for the keybinding (e.g., { silent = true })
