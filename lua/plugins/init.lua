@@ -14,7 +14,6 @@ return {
   -- NOTE: disabled for now as not working with nvim window bindings
   -- "knubie/vim-kitty-navigator",
   "windwp/nvim-spectre", -- Spectre for find and replace
-  "mhartington/formatter.nvim",
   "delphinus/vim-firestore",
   "kyazdani42/nvim-web-devicons",
 
