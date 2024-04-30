@@ -90,17 +90,15 @@ One test snippet is included as an example.
     highlighting and completion for Firebase rules
 29. [rmagatti/auto-session](https://github.com/rmagatti/auto-session) Session
     management
-30. [andweeb/presence.nvim](https://github.com/andweeb/presence.nvim) Rich
-    presence in Discord
-31. [goolord/alpha-nvim](https://github.com/goolord/alpha-nvim) Dashboard
-32. [mbbill/undotree](https://github.com/mbbill/undotree) Undotree
-33. [j-hui/fidget.nvim](https://github.com/j-hui/fidget.nvim,) UI for lsp
+30. [goolord/alpha-nvim](https://github.com/goolord/alpha-nvim) Dashboard
+31. [mbbill/undotree](https://github.com/mbbill/undotree) Undotree
+32. [j-hui/fidget.nvim](https://github.com/j-hui/fidget.nvim,) UI for lsp
     progress
-34. [numToStr/Navigator.nvim](https://github.com/numToStr/Navigator.nvim)
+33. [numToStr/Navigator.nvim](https://github.com/numToStr/Navigator.nvim)
     Navigate between Wezterm splits
-35. [Mason](https://github.com/williamboman/mason.nvim) for installing language
+34. [Mason](https://github.com/williamboman/mason.nvim) for installing language
     servers.
-36. [Rest.nvim](https://github.com/rest-nvim/rest.nvim) http requests using curl
+35. [Rest.nvim](https://github.com/rest-nvim/rest.nvim) http requests using curl
     from Nvim
 
 ## Resources and inspiration
