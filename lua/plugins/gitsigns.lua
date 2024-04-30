@@ -1,3 +1,5 @@
+local map = require("utils").map
+
 return { -- Adds git related signs to the gutter, as well as utilities for managing changes
   "lewis6991/gitsigns.nvim",
   config = function()
@@ -9,14 +11,9 @@ return { -- Adds git related signs to the gutter, as well as utilities for manag
         topdelete = { text = "‾" },
         changedelete = { text = "~" },
       },
+      preview_config = { border = "rounded" },
       on_attach = function(bufnr)
         local gitsigns = require("gitsigns")
-
-        local function map(mode, l, r, opts)
-          opts = opts or {}
-          opts.buffer = bufnr
-          vim.keymap.set(mode, l, r, opts)
-        end
 
         -- Navigation
         map("n", "]c", function()
@@ -53,16 +50,11 @@ return { -- Adds git related signs to the gutter, as well as utilities for manag
         end)
         -- map("n", "<leader>tb", gitsigns.toggle_current_line_blame, { desc = "Toggle Line Blame" })
         map("n", "<leader>hd", gitsigns.diffthis, { desc = "Diff" })
-        map("n", "<leader>hD", function()
-          gitsigns.diffthis("~")
-        end, { desc = "Diff" })
-        map("n", "<leader>td", gitsigns.toggle_deleted, { desc = "Toggle Deleted" })
-
-        -- Text object
-        map({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<CR>")
+        -- map("n", "<leader>hD", function()
+        --   gitsigns.diffthis("~")
+        -- end, { desc = "Diff" })
+        -- map("n", "<leader>td", gitsigns.toggle_deleted, { desc = "Toggle Deleted" })
       end,
     })
   end,
 }
-
--- TODO: set up key bindings

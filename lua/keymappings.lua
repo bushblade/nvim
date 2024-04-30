@@ -1,7 +1,4 @@
-local function map(mode, lhs, rhs, opts)
-  local options = vim.tbl_extend("force", { noremap = true, silent = true }, opts or {})
-  vim.keymap.set(mode, lhs, rhs, options)
-end
+local map = require("utils").map
 
 -- Options for specific commands
 local border_options = { float = { border = "rounded" } }
