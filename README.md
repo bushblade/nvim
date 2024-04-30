@@ -62,7 +62,7 @@ One test snippet is included as an example.
     and quote pairs
 13. [windwp/nvim-spectre](https://github.com/windwp/nvim-spectre) Project wide
     find and replace
-14. [mhartington/formatter.nvim](https://github.com/mhartington/formatter.nvim)
+14. [stevearc/conform.nvim](https://github.com/stevearc/conform.nvim)
     Formatting
 15. [lewis6991/gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) Git status
     in the sign column

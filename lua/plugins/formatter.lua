@@ -1,115 +1,28 @@
--- Prettier function for formatter
-local prettier = function()
-  return {
-    exe = "prettier",
-    args = {
-      "--config-precedence",
-      "prefer-file",
-      -- you can add more global setup here
-      "--stdin-filepath",
-      vim.fn.shellescape(vim.api.nvim_buf_get_name(0)),
-    },
-    stdin = true,
-    try_node_modules = true,
-  }
-end
-
--- use lsp formatting in php
-vim.api.nvim_create_autocmd("BufWritePre", {
-  pattern = "*.php",
-  callback = function()
-    vim.lsp.buf.format({ async = false })
-  end,
-})
-
 return {
-  {
-    "mhartington/formatter.nvim",
-    opts = {
-      logging = false,
-      filetype = {
-        typescriptreact = { prettier },
-        javascriptreact = { prettier },
-        javascript = { prettier },
-        typescript = { prettier },
-        json = { prettier },
-        jsonc = { prettier },
-        html = { prettier },
-        css = { prettier },
-        scss = { prettier },
-        graphql = { prettier },
-        markdown = { prettier },
-        vue = { prettier },
-        astro = { prettier },
-        yaml = { prettier },
-        go = {
-          -- goimport
-          function()
-            return {
-              exe = "gofmt",
-              args = { "-w" },
-              stdin = false,
-            }
-          end,
-        },
-        lua = {
-          -- Stylua
-          function()
-            return {
-              exe = "stylua",
-              args = {},
-              stdin = false,
-            }
-          end,
-        },
-        python = {
-          -- autopep8
-          function()
-            return {
-              exe = "autopep8",
-              args = { "--in-place" },
-              stdin = false,
-            }
-          end,
-        },
-        rust = {
-          function()
-            return {
-              exe = "rustfmt",
-              stdin = true,
-            }
-          end,
-        },
-      },
+  "stevearc/conform.nvim",
+  event = { "BufWritePre" },
+  opts = {
+    formatters_by_ft = {
+      lua = { "stylua" },
+      python = { "autopep8" },
+      typescriptreact = { "prettier" },
+      javascriptreact = { "prettier" },
+      javascript = { "prettier" },
+      typescript = { "prettier" },
+      json = { "prettier" },
+      jsonc = { "prettier" },
+      html = { "prettier" },
+      css = { "prettier" },
+      scss = { "prettier" },
+      graphql = { "prettier" },
+      markdown = { "prettier" },
+      vue = { "prettier" },
+      astro = { "prettier" },
     },
-    config = function(_, opts)
-      require("formatter").setup(opts)
-      -- Runs Formmater on save
-      vim.api.nvim_create_autocmd("BufWritePost", {
-        pattern = {
-          "*.js",
-          "*.mjs",
-          "*.cjs",
-          "*.jsx",
-          "*.ts",
-          "*.tsx",
-          "*.css",
-          "*.scss",
-          "*.md",
-          "*.html",
-          "*.lua",
-          "*.json",
-          "*.jsonc",
-          "*.vue",
-          "*.py",
-          "*.gql",
-          "*.graphql",
-          "*.go",
-          "*.rs",
-          "*.astro",
-        },
-        command = "FormatWrite",
-      })
-    end,
+    format_on_save = {
+      -- These options will be passed to conform.format()
+      timeout_ms = 500,
+      lsp_fallback = true,
+    },
   },
 }
