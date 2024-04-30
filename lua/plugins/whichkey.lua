@@ -143,13 +143,6 @@ return {
       }, {
         prefix = "<leader>",
       })
-
-      wk.register({
-        name = "Go to",
-        d = "Definition",
-        D = "Declaration",
-        r = "References",
-      }, { prefix = "g" })
     end,
   },
 }
