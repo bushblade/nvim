@@ -51,7 +51,7 @@ return { -- Adds git related signs to the gutter, as well as utilities for manag
         map("n", "<leader>hb", function()
           gitsigns.blame_line({ full = true })
         end)
-        map("n", "<leader>tb", gitsigns.toggle_current_line_blame, { desc = "Toggel Line Blame" })
+        -- map("n", "<leader>tb", gitsigns.toggle_current_line_blame, { desc = "Toggle Line Blame" })
         map("n", "<leader>hd", gitsigns.diffthis, { desc = "Diff" })
         map("n", "<leader>hD", function()
           gitsigns.diffthis("~")
