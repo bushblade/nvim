@@ -1,7 +1,5 @@
 return {
   -- NOTE: plugins here require little to no configuration
-
-  "tpope/vim-fugitive",
   {
     "kylechui/nvim-surround",
     version = "*", -- Use for stability; omit to use `main` branch for the latest features
@@ -25,7 +23,6 @@ return {
   { "j-hui/fidget.nvim", opts = { window = { border = "rounded", blend = 0 } }, tag = "legacy" },
 
   { "numToStr/Comment.nvim", opts = {} },
-  "airblade/vim-gitgutter",
   "weilbith/nvim-code-action-menu",
   {
     "folke/trouble.nvim",

@@ -19,6 +19,11 @@ vim.opt.completeopt = "menuone,noselect" -- nvim-cmp
 -- vim.opt.completeopt = {"menuone", "longest", "preview"}
 vim.opt.signcolumn = "yes" -- always show the signcolumn
 vim.opt.termguicolors = true
+-- Preview substitutions live, as you type!
+vim.opt.inccommand = "split"
+-- Configure how new splits should be opened
+vim.opt.splitright = true
+vim.opt.splitbelow = true
 
 -- spelling
 vim.opt.spelllang = "en_gb,en_us"
@@ -31,6 +36,8 @@ vim.o.guifont = "Victor Mono Nerd Font:h11"
 
 vim.g.netrw_banner = 0
 vim.g.netrw_liststyle = 3
+
+vim.g.have_nerd_font = true
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "

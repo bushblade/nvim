@@ -64,12 +64,6 @@ return {
           e = { "<cmd>Telescope file_browser<CR>", "Browse Files" },
           g = { "<cmd>Telescope git_status<CR>", "Git Status" },
         },
-        h = {
-          name = "Git Gutter",
-          p = "Preview Hunk",
-          s = "Stage Hunk",
-          u = "Undo Changes",
-        },
         e = { "<cmd>NvimTreeToggle<CR>", "File Tree" },
         u = { "<cmd>UndotreeToggle<CR><cmd>UndotreeFocus<CR>", "Undotree" },
         L = { "<cmd>Lazy<CR>", "Lazy" },
