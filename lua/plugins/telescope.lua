@@ -6,6 +6,7 @@ return {
       "rmagatti/session-lens",
       "nvim-telescope/telescope-file-browser.nvim",
     },
+    event = "VimEnter",
     lazy = false,
     opts = {
       defaults = {
