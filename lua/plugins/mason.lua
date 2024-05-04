@@ -39,7 +39,7 @@ return {
           "pyright",
           "denols",
           "rust_analyzer",
-          "gopls",
+          -- "gopls",
           "jdtls",
           "eslint",
           "jsonls",
