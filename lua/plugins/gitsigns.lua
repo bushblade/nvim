@@ -22,7 +22,7 @@ return { -- Adds git related signs to the gutter, as well as utilities for manag
           else
             gitsigns.nav_hunk("next")
           end
-        end)
+        end, { desc = "Next hunk" })
 
         map("n", "[c", function()
           if vim.wo.diff then
@@ -30,7 +30,7 @@ return { -- Adds git related signs to the gutter, as well as utilities for manag
           else
             gitsigns.nav_hunk("prev")
           end
-        end)
+        end, { desc = "Prev hunk" })
 
         -- Actions
         map("n", "<leader>hs", gitsigns.stage_hunk, { desc = "Stage Hunk" })
