@@ -21,6 +21,8 @@ return {
         label = "FlashTreesitterSelection",
       },
     },
+    label = { rainbow = { enabled = true } },
+    -- modes = { search = { enabled = true } },
   },
   keys = {
     {
