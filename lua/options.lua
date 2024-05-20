@@ -31,9 +31,6 @@ vim.opt.mousemodel = "popup"
 -- timeout for whichkey
 vim.opt.timeoutlen = 500
 
--- Neovide settings
-vim.o.guifont = "Victor Mono Nerd Font:h11"
-
 vim.g.netrw_banner = 0
 vim.g.netrw_liststyle = 3
 

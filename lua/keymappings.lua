@@ -14,7 +14,7 @@ map("n", "<C-Up>", "<cmd>resize -2<CR>")
 map("n", "<C-Down>", "<cmd>resize +2<CR>")
 map("n", "<C-Left>", "<cmd>vertical resize -2<CR>")
 map("n", "<C-Right>", "<cmd>vertical resize +2<CR>")
-map("n", "<esc>", "<cmd>noh<cr><esc>")
+map("n", "<esc>", "<cmd>noh<cr><esc>") -- remove highlight on <esc>
 map("n", "Y", "y$")
 map("n", "K", vim.lsp.buf.hover)
 map("n", "[q", ":cprev<CR>")
