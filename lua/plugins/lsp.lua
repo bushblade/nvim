@@ -8,6 +8,7 @@ return {
       -- require all language server modules
       require("language_servers.typescript")
       require("language_servers.eslint")
+      require("language_servers.biome")
       require("language_servers.vue")
       require("language_servers.css")
       require("language_servers.html")
