@@ -48,7 +48,7 @@ return {
           prefix = " ", -- Could be '●', '▎', 'x'
         },
         float = {
-          source = "always",
+          source = true,
         },
         severity_sort = true,
       })
