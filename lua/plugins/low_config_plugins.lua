@@ -16,12 +16,14 @@ return {
   "windwp/nvim-spectre", -- Spectre for find and replace
   "delphinus/vim-firestore",
   "kyazdani42/nvim-web-devicons",
-
+  -- Better code action previews
+  {
+    "aznhe21/actions-preview.nvim",
+  },
   -- Useful status updates for LSP
   { "j-hui/fidget.nvim", opts = { window = { border = "rounded", blend = 0 } }, tag = "legacy" },
 
   { "numToStr/Comment.nvim", opts = {} },
-  "weilbith/nvim-code-action-menu",
   {
     "folke/trouble.nvim",
     config = function()

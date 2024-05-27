@@ -80,7 +80,7 @@ return {
           D = { "<cmd>Trouble document_diagnostics<CR>", "Document Diagnostics" },
         },
         T = { "<cmd>TodoTelescope<CR>", "List Todos" },
-        c = { "<cmd>CodeActionMenu<CR>", "Code Actions" },
+        c = { require("actions-preview").code_actions, "Code Actions" },
         d = {
           function()
             vim.diagnostic.open_float({ border = "rounded" })
@@ -131,7 +131,7 @@ return {
           },
           r = { vim.lsp.buf.rename, "Rename" },
           R = { vim.lsp.buf.references, "List references" },
-          c = { "<cmd>CodeActionMenu<CR>", "Code actions" },
+          c = { require("actions-preview").code_actions, "Code actions" },
         },
         a = {
           name = "Auto Sessions",
