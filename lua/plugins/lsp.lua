@@ -45,7 +45,7 @@ return {
       vim.diagnostic.config({
         virtual_text = {
           source = "if_many",
-          prefix = " ", -- Could be '●', '▎', 'x'
+          prefix = "●", -- Could be '●', '▎', 'x'
         },
         float = {
           source = true,
