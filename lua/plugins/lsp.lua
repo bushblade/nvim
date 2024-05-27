@@ -35,7 +35,7 @@ return {
 
       -- Customization and appearance -----------------------------------------
       -- change gutter diagnostic symbols
-      local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+      local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 
       for type, icon in pairs(signs) do
         local hl = "DiagnosticSign" .. type
@@ -45,7 +45,7 @@ return {
       vim.diagnostic.config({
         virtual_text = {
           source = "if_many",
-          prefix = " ", -- Could be '●', '▎', 'x'
+          prefix = " ", -- Could be '●', '▎', 'x'
         },
         float = {
           source = true,
