@@ -106,7 +106,7 @@ return {
         }),
         experimental = {
           -- native_menu = false,
-          ghost_text = true,
+          -- ghost_text = true,
         },
         window = {
           documentation = cmp.config.window.bordered(),
