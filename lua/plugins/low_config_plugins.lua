@@ -25,12 +25,6 @@ return {
 
   { "numToStr/Comment.nvim", opts = {} },
   {
-    "folke/trouble.nvim",
-    config = function()
-      require("trouble").setup()
-    end,
-  },
-  {
     "folke/todo-comments.nvim",
     config = function()
       require("todo-comments").setup()
