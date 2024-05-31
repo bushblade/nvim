@@ -3,7 +3,7 @@ return {
   event = { "BufWritePre" },
   opts = function()
     local function is_biome()
-      return vim.fn.glob("biome.json") ~= "" or vim.fn.glob("biome.jsonc") ~= ""
+      return vim.fn.filereadable("biome.json") or vim.fn.filereadable("biome.jsonc")
     end
 
     local formatters_by_ft = {
