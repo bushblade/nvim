@@ -71,14 +71,13 @@ return {
         -- trouble bindings
         t = {
           name = "Trouble",
-          t = { "<cmd>Trouble diagnostics toggle<CR>", "Diagnostics" },
+          d = { "<cmd>Trouble diagnostics toggle<CR>", "Diagnostics" },
           b = { "<cmd>Trouble diagnostics toggle filter.buf=0<cr>", "Buffer Diagnostics" },
           s = { "<cmd>Trouble symbols toggle focus=false<cr>", "Symbols" },
           l = { "<cmd>Trouble lsp toggle focus=false win.position=right<cr>", "LSP Definitions / references" },
           L = { "<cmd>Trouble loclist toggle<cr>", "Location List" },
           q = { "<cmd>Trouble qflist toggle<cr>", "Quickfix List" },
         },
-        T = { "<cmd>TodoTelescope<CR>", "List Todos" },
         c = { require("actions-preview").code_actions, "Code Actions" },
         d = {
           function()
