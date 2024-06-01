@@ -24,6 +24,11 @@ return {
     keys = {
       { "H", "<cmd>BufferLineCyclePrev<CR>" },
       { "L", "<cmd>BufferLineCycleNext<CR>" },
+      { "<leader>bb", "<cmd>BufferLinePick<CR>", "Pick" },
+      { "<leader>bq", "<cmd>BufferLinePickClose<CR>", "Pick to close" },
+      { "<leader>bl", "<cmd>BufferLineCloseRight<CR>", "Close all to right" },
+      { "<leader>bh", "<cmd>BufferLineCloseLeft<CR>", "Close all to left" },
+      { "<leader>ba", "<cmd>BufferLineCloseLeft<CR><cmd>BufferLineCloseRight<CR>", "Close all but current" },
     },
   },
 }
