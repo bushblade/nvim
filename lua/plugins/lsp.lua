@@ -8,6 +8,7 @@ return {
       -- require all language server modules
       require("language_servers.typescript")
       require("language_servers.eslint")
+      require("language_servers.biome")
       require("language_servers.vue")
       require("language_servers.css")
       require("language_servers.html")
@@ -34,7 +35,7 @@ return {
 
       -- Customization and appearance -----------------------------------------
       -- change gutter diagnostic symbols
-      local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+      local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 
       for type, icon in pairs(signs) do
         local hl = "DiagnosticSign" .. type
@@ -44,10 +45,10 @@ return {
       vim.diagnostic.config({
         virtual_text = {
           source = "if_many",
-          prefix = " ", -- Could be '●', '▎', 'x'
+          prefix = "●", -- Could be '●', '▎', 'x'
         },
         float = {
-          source = "always",
+          source = true,
         },
         severity_sort = true,
       })

@@ -85,7 +85,7 @@ One test snippet is included as an example.
     Display the colour of your hex/rgb/hsl value
 26. [akinsho/bufferline.nvim](https://github.com/akinsho/bufferline.nvim) Buffers
     in tabs
-27. [weilbith/nvim-code-action-menu](https://github.com/weilbith/nvim-code-action-menu) Better code actions
+27. [aznhe21/actions-preview.nvim](https://github.com/aznhe21/actions-preview.nvim) Better code action previews
 28. [delphinus/vim-firestore](https://github.com/delphinus/vim-firestore) Syntax
     highlighting and completion for Firebase rules
 29. [rmagatti/auto-session](https://github.com/rmagatti/auto-session) Session
@@ -98,8 +98,6 @@ One test snippet is included as an example.
     Navigate between Wezterm splits
 34. [Mason](https://github.com/williamboman/mason.nvim) for installing language
     servers.
-35. [Rest.nvim](https://github.com/rest-nvim/rest.nvim) http requests using curl
-    from Nvim
 
 ## Resources and inspiration
 

@@ -38,7 +38,7 @@ return {
       })
       -- register key bindings with <leader> prefix
       wk.register({
-        R = { "<cmd>Rest run<CR>", "Run with Rest" },
+        -- R = { "<cmd>Rest run<CR>", "Run with Rest" },
         q = { qf_toggle, "Toggle Quickfix list" },
         M = { "<cmd>Mason<CR>", "Mason" },
         f = {
@@ -68,19 +68,7 @@ return {
         e = { "<cmd>NvimTreeToggle<CR>", "File Tree" },
         u = { "<cmd>UndotreeToggle<CR><cmd>UndotreeFocus<CR>", "Undotree" },
         L = { "<cmd>Lazy<CR>", "Lazy" },
-        -- trouble bindings
-        t = {
-          name = "Trouble",
-          t = { "<cmd>TroubleToggle<CR>", "Toggle" },
-          r = { "<cmd>Trouble lsp_references<CR>", "References" },
-          d = { "<cmd>Trouble lsp_definitions<CR>", "Definitions" },
-          q = { "<cmd>Trouble quickfix<CR>", "Quickfix" },
-          T = { "<cmd>TodoTrouble<CR>", "Todos" },
-          w = { "<cmd>Trouble workspace_diagnostics<CR>", "Workspace Diagnostics" },
-          D = { "<cmd>Trouble document_diagnostics<CR>", "Document Diagnostics" },
-        },
-        T = { "<cmd>TodoTelescope<CR>", "List Todos" },
-        c = { "<cmd>CodeActionMenu<CR>", "Code Actions" },
+        c = { require("actions-preview").code_actions, "Code Actions" },
         d = {
           function()
             vim.diagnostic.open_float({ border = "rounded" })
@@ -98,12 +86,6 @@ return {
         -- Bufferline
         b = {
           name = "Bufferline",
-          b = { "<cmd>BufferLinePick<CR>", "Pick" },
-          q = { "<cmd>BufferLinePickClose<CR>", "Pick to close" },
-          l = { "<cmd>BufferLineCloseRight<CR>", "Close all to right" },
-          h = { "<cmd>BufferLineCloseLeft<CR>", "Close all to left" },
-          a = { "<cmd>BufferLineCloseLeft<CR><cmd>BufferLineCloseRight<CR>", "Close all but current" },
-          p = { "<cmd>BufferLineTogglePin<CR>", "Toggle pin" },
         },
         S = {
           name = "Spectre - find and replace",
@@ -131,7 +113,7 @@ return {
           },
           r = { vim.lsp.buf.rename, "Rename" },
           R = { vim.lsp.buf.references, "List references" },
-          c = { "<cmd>CodeActionMenu<CR>", "Code actions" },
+          c = { require("actions-preview").code_actions, "Code actions" },
         },
         a = {
           name = "Auto Sessions",
@@ -140,6 +122,8 @@ return {
           d = { "<cmd>SessionDelete<cr>", "Delete session" },
           r = { "<cmd>SessionRestore<cr>", "Restore session" },
         },
+        t = { name = "Trouble" },
+        h = { name = "GitSigns" },
       }, {
         prefix = "<leader>",
       })

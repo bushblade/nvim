@@ -42,6 +42,7 @@ return {
           -- "gopls",
           "jdtls",
           "eslint",
+          "biome",
           "jsonls",
           "marksman",
           "html",

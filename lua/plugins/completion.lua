@@ -9,6 +9,7 @@ return {
       "hrsh7th/cmp-nvim-lsp", -- lsp completions
       "hrsh7th/cmp-path", -- file path completions
       "saadparwaiz1/cmp_luasnip", -- snippets completions
+      "hrsh7th/cmp-emoji",
       {
         "L3MON4D3/LuaSnip",
         dependencies = { "rafamadriz/friendly-snippets" },
@@ -101,13 +102,15 @@ return {
           { name = "luasnip" },
           { name = "buffer" },
           { name = "path" },
+          { name = "emoji" },
         }),
         experimental = {
           -- native_menu = false,
-          ghost_text = true,
+          -- ghost_text = true,
         },
         window = {
           documentation = cmp.config.window.bordered(),
+          completion = cmp.config.window.bordered(),
         },
       })
 

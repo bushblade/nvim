@@ -42,15 +42,9 @@ return {
     },
     {
       "S",
-      mode = { "n" },
+      mode = { "n", "x", "o" },
       function()
-        local bufnr = vim.api.nvim_get_current_buf()
-        local filetype = vim.api.nvim_buf_get_option(bufnr, "filetype")
-
-        if filetype ~= "qf" then
-          -- only call flash.treesitter if not in a quickfix buffer
-          require("flash").treesitter()
-        end
+        require("flash").treesitter()
       end,
       desc = "Flash Treesitter",
     },
