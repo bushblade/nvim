@@ -48,7 +48,7 @@ map("v", "K", "<cmd>m '<-2<CR>gv=gv")
 -- Visual block mode mappings
 map("x", "<leader>p", '"_dP')
 
--- Leader key mappings
+-- function to toggle quick fix list
 local function qf_toggle()
   local qf_exists = false
   for _, win in pairs(vim.fn.getwininfo()) do
@@ -65,6 +65,7 @@ local function qf_toggle()
   end
 end
 
+-- Leader key mappings
 map("n", "<leader>q", qf_toggle, { desc = "Toggle Quickfix list" })
 map("n", "<leader>M", "<cmd>Mason<CR>", { desc = "Mason" })
 map("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "File Tree" })
