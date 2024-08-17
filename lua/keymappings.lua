@@ -69,7 +69,7 @@ end
 map("n", "<leader>q", qf_toggle, { desc = "Toggle Quickfix list" })
 map("n", "<leader>M", "<cmd>Mason<CR>", { desc = "Mason" })
 map("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "File Tree" })
-map("n", "<leader>u", "<cmd>UndotreeToggle<CR><cmd>UndotreeFocus<CR>", { desc = "Undotree" })
+map("n", "<leader>u", "<cmd>UndotreeToggle<CR><cmd>UndotreeFocus<CR>", { desc = "Toggle Undotree" })
 map("n", "<leader>L", "<cmd>Lazy<CR>", { desc = "Lazy" })
 map("n", "<leader>c", require("actions-preview").code_actions, { desc = "Code Actions" })
 map("n", "<leader>d", function()
@@ -79,7 +79,7 @@ map("n", "<leader>w", "<cmd>WhichKey<CR>", { desc = "WhichKey" })
 map("n", "<leader>s", function()
   vim.o.spell = not vim.o.spell
 end, { desc = "Toggle spell check" })
-map("n", "<leader>r", vim.lsp.buf.rename, { desc = "Rename" })
+map("n", "<leader>r", vim.lsp.buf.rename, { desc = "LSP Rename" })
 
 -- Telescope mappings
 local telescope_builtin = require("telescope.builtin")
