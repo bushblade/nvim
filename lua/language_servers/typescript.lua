@@ -1,7 +1,7 @@
 -- JavaScript and TypeScript -------------------------------
 local root_pattern = require("lspconfig").util.root_pattern
 
-require("lspconfig").tsserver.setup({
+require("lspconfig").ts_ls.setup({
   filetypes = {
     "javascript",
     "javascriptreact",
