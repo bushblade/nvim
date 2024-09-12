@@ -26,7 +26,7 @@ return {
     config = function()
       require("mason-lspconfig").setup({
         ensure_installed = {
-          "tsserver",
+          "ts_ls",
           "volar",
           "tailwindcss",
           "cssls",
