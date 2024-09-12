@@ -76,6 +76,12 @@ vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
   command = "set filetype=markdown.mdx",
 })
 
+-- detect .env.local and set filetype to 'sh'
+vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
+  pattern = ".env.local",
+  command = "set filetype=sh",
+})
+
 -- Auto create dir when saving a file, in case some intermediate directory does not exist
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   callback = function(event)
