@@ -5,7 +5,6 @@ return {
     event = { "BufReadPost", "BufNewFile" },
     dependencies = {
       "nvim-treesitter/nvim-treesitter-textobjects",
-      "windwp/nvim-ts-autotag", -- auto close and rename tags
     },
     opts = {
       context_commentstring = {
@@ -60,22 +59,6 @@ return {
         end,
       },
       auto_install = true,
-      autotag = {
-        enable = true,
-        filetypes = {
-          "html",
-          "javascript",
-          "typescript",
-          "javascriptreact",
-          "typescriptreact",
-          "svelte",
-          "vue",
-          "tsx",
-          "jsx",
-          "markdown",
-          "astro",
-        },
-      },
       indent = {
         enable = true,
       },
