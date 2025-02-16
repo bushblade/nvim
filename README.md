@@ -4,7 +4,7 @@
 [Alacritty terminal](https://github.com/alacritty/alacritty) with [Catppuccin](https://github.com/catppuccin/nvim) terminal theme and [Victor Mono](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/VictorMono) nerd font.
 
 **My config for Nvim using native LSP with some sane defaults and settings**, mainly
-aimed at web development but ready to go with Python, Rust, Golang, Deno and Lua.
+aimed at web development but ready to go with Python, Rust, Golang and Lua.
 
 ## Clone the repository into ~/.config/nvim
 
