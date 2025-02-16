@@ -11,7 +11,6 @@ return {
       -- require("language_servers.gql")
       -- require("language_servers.rust")
       -- require("language_servers.go")
-      -- require("language_servers.deno")
       -- require("language_servers.java")
       -- require("language_servers.bash")
       -- require("language_servers.php")
@@ -110,6 +109,7 @@ return {
           },
         },
       })
+
       -- HTML
       require("lspconfig").html.setup({
         capabilities = capabilities,
