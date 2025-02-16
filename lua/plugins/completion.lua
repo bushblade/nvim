@@ -4,23 +4,33 @@ return {
   version = "*",
   opts = {
     completion = {
-      menu = { border = "rounded" },
-      documentation = { window = { border = "rounded" } },
+      menu = {
+        border = "rounded",
+        draw = {
+          columns = {
+            { "label", "label_description", gap = 1 },
+            { "kind_icon", gap = 1, "kind" },
+          },
+        },
+      },
+      ghost_text = { enabled = true },
+      documentation = { auto_show = true, auto_show_delay_ms = 500, window = { border = "rounded" } },
     },
     signature = { enabled = true, window = { border = "rounded" } },
     keymap = {
       preset = "default",
       ["<CR>"] = { "select_and_accept", "fallback" },
-      ["<Tab>"] = { "select_next", "show_documentation", "fallback" },
-      ["<S-Tab>"] = { "select_prev", "show_signature", "fallback" },
-      ["<C-l>"] = { "show_signature", "hide_signature", "fallback" },
+      ["<Tab>"] = { "select_next", "fallback" },
+      ["<S-Tab>"] = { "select_prev", "fallback" },
+      ["<C-K>"] = { "show_documentation", "hide_documentation", "fallback" },
+      -- ["<C-K>"] = { "show_signature", "hide_signature", "fallback" },
     },
-    -- cmdline = {
-    -- keymap = {
-    --   -- preset = "enter",
-    --   ["<CR>"] = { "fallback" },
-    -- },
-    -- },
+    cmdline = {
+      keymap = {
+        preset = "enter",
+        ["<CR>"] = { "fallback" },
+      },
+    },
     appearance = {
       use_nvim_cmp_as_default = true,
       nerd_font_variant = "mono",
