@@ -5,16 +5,6 @@ return {
     config = function()
       -- Setup neovim lua configuration
       require("neodev").setup()
-      -- require all language server modules
-      -- require("language_servers.python")
-      -- require("language_servers.yaml")
-      -- require("language_servers.gql")
-      -- require("language_servers.rust")
-      -- require("language_servers.go")
-      -- require("language_servers.java")
-      -- require("language_servers.bash")
-      -- require("language_servers.php")
-      -- require("language_servers.htmx")
 
       -- rounded border on :LspInfo
       require("lspconfig.ui.windows").default_options.border = "rounded"
@@ -175,6 +165,38 @@ return {
           return vim.loop.cwd()
         end,
       })
+
+      -- php
+      require("lspconfig").intelephense.setup({
+        root_dir = root_pattern("composer.json", ".git", "*.php"),
+      })
+
+      -- Bash
+      require("lspconfig").bashls.setup({})
+
+      -- Python
+      require("lspconfig").pyright.setup({})
+
+      -- Java
+      require("lspconfig").jdtls.setup({})
+
+      -- Yaml
+      require("lspconfig").yamlls.setup({
+        settings = {
+          yaml = {
+            keyOrdering = false,
+          },
+        },
+      })
+
+      -- Go
+      require("lspconfig").gopls.setup({})
+
+      -- GraphQL
+      require("lspconfig").graphql.setup({})
+
+      -- Rust
+      require("lspconfig").rust_analyzer.setup({})
 
       -- Lua
       lspconfig.lua_ls.setup({
