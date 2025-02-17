@@ -1,8 +1,25 @@
+local source_priority = {
+  snippets = 3,
+  lsp = 4,
+  path = 1,
+  buffer = 2,
+}
+
 return {
   "saghen/blink.cmp",
   dependencies = "rafamadriz/friendly-snippets",
   version = "*",
   opts = {
+    fuzzy = {
+      sorts = {
+        function(a, b)
+          return source_priority[a.source_id] > source_priority[b.source_id]
+        end,
+        -- defaults
+        "score",
+        "sort_text",
+      },
+    },
     completion = {
       menu = {
         border = "rounded",
@@ -13,7 +30,7 @@ return {
           },
         },
       },
-      ghost_text = { enabled = true },
+      ghost_text = { enabled = false },
       documentation = { auto_show = true, auto_show_delay_ms = 500, window = { border = "rounded" } },
     },
     signature = { enabled = true, window = { border = "rounded" } },
