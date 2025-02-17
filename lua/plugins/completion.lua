@@ -1,29 +1,9 @@
--- local source_priority = {
---   snippets = 3,
---   lsp = 4,
---   path = 1,
---   buffer = 2,
--- }
-
 return {
   "saghen/blink.cmp",
-  dependencies = "rafamadriz/friendly-snippets",
+  dependencies = { "rafamadriz/friendly-snippets", "moyiz/blink-emoji.nvim" },
   version = "*",
   opts = {
-    fuzzy = {
-      -- sorts = {
-      --   function(a, b)
-      --     return source_priority[a.source_id] > source_priority[b.source_id]
-      --   end,
-      --   -- defaults
-      --   "score",
-      --   "sort_text",
-      -- },
-    },
     completion = {
-      trigger = {
-        show_on_x_blocked_trigger_characters = { "'", '"', "(", "[", "{" },
-      },
       menu = {
         border = "rounded",
         draw = {
@@ -36,7 +16,7 @@ return {
       ghost_text = { enabled = false },
       documentation = { auto_show = true, auto_show_delay_ms = 500, window = { border = "rounded" } },
     },
-    signature = { enabled = true, window = { border = "rounded" } },
+    signature = { enabled = false, window = { border = "rounded" } },
     keymap = {
       preset = "default",
       ["<CR>"] = { "select_and_accept", "fallback" },
@@ -56,8 +36,22 @@ return {
       nerd_font_variant = "mono",
     },
     sources = {
-      default = { "lsp", "path", "snippets", "buffer" },
+      default = { "emoji", "lsp", "path", "snippets", "buffer" },
       providers = {
+        emoji = {
+          module = "blink-emoji",
+          name = "Emoji",
+          score_offset = 15, -- Tune by preference
+          opts = { insert = true }, -- Insert emoji (default) or complete its name
+          -- should_show_items = function()
+          --   return vim.tbl_contains(
+          --     -- Enable emoji completion only for git commits and markdown.
+          --     -- By default, enabled for all file-types.
+          --     { "gitcommit", "markdown" },
+          --     vim.o.filetype
+          --   )
+          -- end,
+        },
         cmdline = {
           min_keyword_length = 2,
         },
