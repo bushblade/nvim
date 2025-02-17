@@ -1,9 +1,9 @@
-local source_priority = {
-  snippets = 3,
-  lsp = 4,
-  path = 1,
-  buffer = 2,
-}
+-- local source_priority = {
+--   snippets = 3,
+--   lsp = 4,
+--   path = 1,
+--   buffer = 2,
+-- }
 
 return {
   "saghen/blink.cmp",
@@ -11,16 +11,19 @@ return {
   version = "*",
   opts = {
     fuzzy = {
-      sorts = {
-        function(a, b)
-          return source_priority[a.source_id] > source_priority[b.source_id]
-        end,
-        -- defaults
-        "score",
-        "sort_text",
-      },
+      -- sorts = {
+      --   function(a, b)
+      --     return source_priority[a.source_id] > source_priority[b.source_id]
+      --   end,
+      --   -- defaults
+      --   "score",
+      --   "sort_text",
+      -- },
     },
     completion = {
+      trigger = {
+        show_on_x_blocked_trigger_characters = { "'", '"', "(", "[", "{" },
+      },
       menu = {
         border = "rounded",
         draw = {
