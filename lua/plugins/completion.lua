@@ -37,6 +37,11 @@ return {
     },
     sources = {
       default = { "lsp", "path", "snippets", "buffer" },
+      providers = {
+        cmdline = {
+          min_keyword_length = 2,
+        },
+      },
     },
   },
   opts_extend = { "sources.default" },
