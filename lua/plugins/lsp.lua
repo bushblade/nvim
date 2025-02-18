@@ -115,13 +115,12 @@ return {
       })
 
       -- JSON
-      local uv = vim.loop
 
       -- Function to check if biome.json exists in the current working directory
       local function biome_file_exists()
         local cwd = vim.fn.getcwd()
         local biome_file = cwd .. "/biome.json"
-        return uv.fs_stat(biome_file) ~= nil
+        return vim.loop.fs_stat(biome_file) ~= nil
       end
 
       -- Conditionally set up jsonls if biome.json does not exist
