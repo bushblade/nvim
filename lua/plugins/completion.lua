@@ -19,7 +19,7 @@ return {
     signature = { enabled = false, window = { border = "rounded" } },
     keymap = {
       preset = "default",
-      ["<CR>"] = { "select_and_accept", "fallback" },
+      -- ["<CR>"] = { "select_and_accept", "fallback" },
       -- ["<Tab>"] = { "select_next", "fallback" },
       -- ["<S-Tab>"] = { "select_prev", "fallback" },
       ["<C-K>"] = { "show_documentation", "hide_documentation", "fallback" },
