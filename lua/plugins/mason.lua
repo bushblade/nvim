@@ -37,7 +37,6 @@ return {
           "astro",
           "lua_ls",
           "pyright",
-          "denols",
           "rust_analyzer",
           "gopls",
           "jdtls",
@@ -48,7 +47,6 @@ return {
           "html",
           "bashls",
           "intelephense",
-          "htmx",
         },
         automatic_installation = true,
       })
