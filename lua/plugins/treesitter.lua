@@ -14,7 +14,6 @@ return {
       ensure_installed = {
         "astro",
         "bash",
-        "clojure",
         "comment",
         "css",
         "fish",

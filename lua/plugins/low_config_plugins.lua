@@ -1,18 +1,13 @@
+-- NOTE: plugins here require little to no configuration
 return {
-  -- NOTE: plugins here require little to no configuration
   {
     "kylechui/nvim-surround",
     version = "*", -- Use for stability; omit to use `main` branch for the latest features
     event = "VeryLazy",
     config = function()
-      require("nvim-surround").setup({
-        -- Configuration here, or leave empty to use defaults
-      })
+      require("nvim-surround").setup({})
     end,
   },
-
-  -- NOTE: disabled for now as not working with nvim window bindings
-  -- "knubie/vim-kitty-navigator",
   { "windwp/nvim-spectre", event = "VeryLazy" }, -- Spectre for find and replace
   "delphinus/vim-firestore",
   "kyazdani42/nvim-web-devicons",

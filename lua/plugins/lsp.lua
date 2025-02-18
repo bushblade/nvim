@@ -39,9 +39,9 @@ return {
 
       local root_pattern = require("lspconfig").util.root_pattern
 
-      -- Language Servers
+      -- Language Servers ----------------------------------------
 
-      -- JavaScript and TypeScript -------------------------------
+      -- JavaScript and TypeScript
       require("lspconfig").ts_ls.setup({
         filetypes = {
           "javascript",
