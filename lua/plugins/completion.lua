@@ -25,12 +25,12 @@ return {
       ["<C-K>"] = { "show_documentation", "hide_documentation", "fallback" },
       -- ["<C-K>"] = { "show_signature", "hide_signature", "fallback" },
     },
-    cmdline = {
-      keymap = {
-        preset = "enter",
-        ["<CR>"] = { "fallback" },
-      },
-    },
+    -- cmdline = {
+    --   keymap = {
+    --     preset = "enter",
+    --     ["<CR>"] = { "fallback" },
+    --   },
+    -- },
     appearance = {
       use_nvim_cmp_as_default = true,
       nerd_font_variant = "mono",
