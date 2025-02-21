@@ -153,7 +153,8 @@ return {
 
       -- Emmet
       require("lspconfig").emmet_ls.setup({
-        filetypes = { "html", "css", "javascriptreact", "typescriptreact", "vue", "php", "astro" },
+        filetypes = { "html", "css", "javascriptreact", "typescriptreact", "vue", "php" },
+        capabilities = capabilities,
       })
 
       -- Astro
