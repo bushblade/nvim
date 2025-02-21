@@ -138,6 +138,7 @@ return {
 
       -- Tailwind
       require("lspconfig").tailwindcss.setup({
+        capabilities = capabilities,
         root_dir = root_pattern(
           "tailwind.config.js",
           "tailwind.config.ts",
@@ -149,11 +150,12 @@ return {
 
       -- Emmet
       require("lspconfig").emmet_ls.setup({
-        filetypes = { "html", "css", "javascriptreact", "typescriptreact", "vue", "php", "astro" },
+        filetypes = { "html", "css", "javascriptreact", "typescriptreact", "vue", "php" },
+        capabilities = capabilities,
       })
 
       -- Astro
-      require("lspconfig").astro.setup({})
+      require("lspconfig").astro.setup({ capabilities = capabilities })
 
       -- Markdown
       require("lspconfig").marksman.setup({})
