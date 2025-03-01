@@ -43,6 +43,7 @@ return {
           nvimtree = true,
           telescope = true,
           flash = true,
+          blink_cmp = true,
           -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
         },
       })
