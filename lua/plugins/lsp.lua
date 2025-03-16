@@ -144,6 +144,7 @@ return {
           "tailwind.config.js",
           "tailwind.config.ts",
           "postcss.config.js",
+          "postcss.config.mjs",
           "postcss.config.ts",
           "tailwind.config.cjs"
         ),
