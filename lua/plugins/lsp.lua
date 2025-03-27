@@ -65,7 +65,8 @@ return {
           ".eslintrc.yml",
           ".eslintrc.js",
           ".eslintrc.cjs",
-          "eslint.config.js"
+          "eslint.config.js",
+          "eslint.config.mjs"
         ),
       })
 
