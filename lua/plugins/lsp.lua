@@ -1,3 +1,17 @@
+local function is_tailwind_project()
+  local has_package_dot_json = vim.fn.filereadable(vim.fn.expand("package.json"))
+  if has_package_dot_json == 0 then
+    return false
+  end
+  local lines = vim.fn.readfile("package.json")
+  for _, line in ipairs(lines) do
+    if line:match('"tailwindcss"') then
+      return true
+    end
+  end
+  return false
+end
+
 return {
   {
     "neovim/nvim-lspconfig",
@@ -82,8 +96,7 @@ return {
         lint = {},
       }
 
-      local is_tailwind = vim.fn.filereadable(vim.fn.expand("tailwind.config.*"))
-      if is_tailwind == 1 then
+      if is_tailwind_project() then
         css_settings.lint.unknownAtRules = "ignore"
       end
 
@@ -139,17 +152,12 @@ return {
       end
 
       -- Tailwind
-      require("lspconfig").tailwindcss.setup({
-        capabilities = capabilities,
-        root_dir = root_pattern(
-          "tailwind.config.js",
-          "tailwind.config.ts",
-          "postcss.config.js",
-          "postcss.config.mjs",
-          "postcss.config.ts",
-          "tailwind.config.cjs"
-        ),
-      })
+      if is_tailwind_project() then
+        require("lspconfig").tailwindcss.setup({
+          capabilities = capabilities,
+          root_dir = root_pattern("package.json"),
+        })
+      end
 
       -- Emmet
       require("lspconfig").emmet_ls.setup({
