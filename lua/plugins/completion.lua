@@ -25,12 +25,14 @@ return {
       ["<C-K>"] = { "show_documentation", "hide_documentation", "fallback" },
       -- ["<C-K>"] = { "show_signature", "hide_signature", "fallback" },
     },
-    -- cmdline = {
-    --   keymap = {
-    --     preset = "enter",
-    --     ["<CR>"] = { "fallback" },
-    --   },
-    -- },
+    cmdline = {
+      enabled = true,
+      completion = {
+        menu = {
+          auto_show = true,
+        },
+      },
+    },
     appearance = {
       use_nvim_cmp_as_default = true,
       nerd_font_variant = "mono",
@@ -51,9 +53,6 @@ return {
           --     vim.o.filetype
           --   )
           -- end,
-        },
-        cmdline = {
-          min_keyword_length = 2,
         },
       },
     },
