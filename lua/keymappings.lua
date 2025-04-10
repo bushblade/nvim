@@ -83,7 +83,6 @@ map("n", "<leader>r", vim.lsp.buf.rename, { desc = "LSP Rename" })
 
 -- Telescope mappings
 local telescope_builtin = require("telescope.builtin")
-local session_lens = require("session-lens")
 
 map("n", "<leader>ff", function()
   telescope_builtin.find_files({ hidden = true })
@@ -97,7 +96,6 @@ map("n", "<leader>fd", "<cmd>Telescope diagnostics<cr>", { desc = "Document Diag
 map("n", "<leader>fm", "<cmd>Telescope marks<CR>", { desc = "Marks" })
 map("n", "<leader>fk", "<cmd>Telescope keymaps<CR>", { desc = "Key mappings" })
 map("n", "<leader>fM", "<cmd>Telescope man_pages<CR>", { desc = "Man pages" })
-map("n", "<leader>fa", session_lens.search_session, { desc = "Search Sessions" })
 map("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", { desc = "Search help" })
 map("n", "<leader>fT", "<cmd>TodoTelescope<CR>", { desc = "Search Todos" })
 map("n", "<leader>fe", "<cmd>Telescope file_browser<CR>", { desc = "Browse Files" })
@@ -113,18 +111,6 @@ end, { desc = "Line Diagnostics" })
 map("n", "<leader>lr", vim.lsp.buf.rename, { desc = "Rename" })
 map("n", "<leader>lR", vim.lsp.buf.references, { desc = "List references" })
 map("n", "<leader>lc", require("actions-preview").code_actions, { desc = "Code actions" })
-
--- Spectre mappings
-map("n", "<leader>Ss", require("spectre").open_visual, { desc = "Open Spectre" })
-map("n", "<leader>Sw", function()
-  require("spectre").open_visual({ select_word = true })
-end, { desc = "Search for word under cursor" })
-
--- Auto Sessions mappings
-map("n", "<leader>aS", "<cmd>SaveSession<cr>", { desc = "Save session" })
-map("n", "<leader>as", "<cmd>SearchSession<cr>", { desc = "Search sessions" })
-map("n", "<leader>ad", "<cmd>SessionDelete<cr>", { desc = "Delete session" })
-map("n", "<leader>ar", "<cmd>SessionRestore<cr>", { desc = "Restore session" })
 
 -- Bufferline and other mappings
 map("n", "<leader>b", "", { desc = "Bufferline" })

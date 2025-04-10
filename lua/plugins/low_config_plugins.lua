@@ -8,7 +8,6 @@ return {
       require("nvim-surround").setup({})
     end,
   },
-  { "windwp/nvim-spectre", event = "VeryLazy" }, -- Spectre for find and replace
   "delphinus/vim-firestore",
   "kyazdani42/nvim-web-devicons",
   -- Better code action previews

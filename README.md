@@ -48,42 +48,36 @@ One test snippet is included as an example.
     auto tags
 11. [windwp/nvim-autopairs](https://github.com/windwp/nvim-autopairs) Auto bracket
     and quote pairs
-12. [windwp/nvim-spectre](https://github.com/windwp/nvim-spectre) Project wide
-    find and replace
-13. [stevearc/conform.nvim](https://github.com/stevearc/conform.nvim)
+12. [stevearc/conform.nvim](https://github.com/stevearc/conform.nvim)
     Formatting
-14. [lewis6991/gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) Git status
+13. [lewis6991/gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) Git status
     in the sign column
-15. [leafOfTree/vim-matchtag](https://github.com/leafOfTree/vim-matchtag)
+14. [leafOfTree/vim-matchtag](https://github.com/leafOfTree/vim-matchtag)
     Highlight matching tag in HTML/JSX
-16. [folke/flash.nvim](https://github.com/folke/flash.nvim) navigate with search labels, enhanced character motions, and Treesitter integration.
+15. [folke/flash.nvim](https://github.com/folke/flash.nvim) navigate with search labels, enhanced character motions, and Treesitter integration.
     your code
-17. [kyazdani42/nvim-tree.lua](https://github.com/kyazdani42/nvim-tree.lua) File
+16. [kyazdani42/nvim-tree.lua](https://github.com/kyazdani42/nvim-tree.lua) File
     tree
-18. [JoosepAlviste/nvim-ts-context-commentstring](https://github.com/JoosepAlviste/nvim-ts-context-commentstring) Better commenting based on file type
+17. [JoosepAlviste/nvim-ts-context-commentstring](https://github.com/JoosepAlviste/nvim-ts-context-commentstring) Better commenting based on file type
     completion
-19. [catppuccin/nvim](https://github.com/catppuccin/nvim) Theme
-20. [folke/trouble.nvim](https://github.com/folke/trouble.nvim) Show the problems
+18. [catppuccin/nvim](https://github.com/catppuccin/nvim) Theme
+19. [folke/trouble.nvim](https://github.com/folke/trouble.nvim) Show the problems
     in your code
-21. [folke/which-key.nvim](https://github.com/folke/which-key.nvim) Keymap helper
-22. [folke/todo-comments.nvim](https://github.com/folke/todo-comments.nvim)
+20. [folke/which-key.nvim](https://github.com/folke/which-key.nvim) Keymap helper
+21. [folke/todo-comments.nvim](https://github.com/folke/todo-comments.nvim)
     Highlight and search project todos and notes
-23. [NvChad/nvim-colorizer.lua](https://github.com/NvChad/nvim-colorizer.lua)
+22. [NvChad/nvim-colorizer.lua](https://github.com/NvChad/nvim-colorizer.lua)
     Display the colour of your hex/rgb/hsl value
-24. [akinsho/bufferline.nvim](https://github.com/akinsho/bufferline.nvim) Buffers
+23. [akinsho/bufferline.nvim](https://github.com/akinsho/bufferline.nvim) Buffers
     in tabs
-25. [aznhe21/actions-preview.nvim](https://github.com/aznhe21/actions-preview.nvim) Better code action previews
-26. [delphinus/vim-firestore](https://github.com/delphinus/vim-firestore) Syntax
+24. [aznhe21/actions-preview.nvim](https://github.com/aznhe21/actions-preview.nvim) Better code action previews
+25. [delphinus/vim-firestore](https://github.com/delphinus/vim-firestore) Syntax
     highlighting and completion for Firebase rules
-27. [rmagatti/auto-session](https://github.com/rmagatti/auto-session) Session
-    management
-28. [goolord/alpha-nvim](https://github.com/goolord/alpha-nvim) Dashboard
-29. [mbbill/undotree](https://github.com/mbbill/undotree) Undotree
-30. [j-hui/fidget.nvim](https://github.com/j-hui/fidget.nvim,) UI for lsp
+26. [j-hui/fidget.nvim](https://github.com/j-hui/fidget.nvim,) UI for lsp
     progress
-31. [numToStr/Navigator.nvim](https://github.com/numToStr/Navigator.nvim)
+27. [numToStr/Navigator.nvim](https://github.com/numToStr/Navigator.nvim)
     Navigate between Wezterm splits
-32. [Mason](https://github.com/williamboman/mason.nvim) for installing language
+28. [Mason](https://github.com/williamboman/mason.nvim) for installing language
     servers.
 
 ## Resources and inspiration
