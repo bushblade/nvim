@@ -1,8 +1,19 @@
 return {
   "saghen/blink.cmp",
-  dependencies = { "rafamadriz/friendly-snippets", "moyiz/blink-emoji.nvim" },
+  dependencies = {
+    {
+      "L3MON4D3/LuaSnip",
+      version = "v2.*",
+      dependencies = { "rafamadriz/friendly-snippets" },
+      config = function()
+        require("luasnip.loaders.from_vscode").lazy_load()
+      end,
+    },
+    "moyiz/blink-emoji.nvim",
+  },
   version = "*",
   opts = {
+    snippets = { preset = "luasnip" },
     completion = {
       menu = {
         border = "rounded",
