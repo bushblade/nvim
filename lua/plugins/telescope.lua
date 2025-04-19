@@ -13,8 +13,12 @@ return {
     lazy = false,
     opts = {
       defaults = {
-        file_ignore_patterns = { ".git/", "node_modules/", "env/" }, -- ignore git
         winblend = 0,
+      },
+      extensions = {
+        ["ui-select"] = {
+          require("telescope.themes").get_cursor(),
+        },
       },
     },
     keys = {
@@ -32,6 +36,7 @@ return {
 
       telescope.load_extension("session-lens")
       telescope.load_extension("file_browser")
+      telescope.load_extension("ui-select")
     end,
   },
 }

@@ -72,18 +72,17 @@ One test snippet is included as an example.
     Display the colour of your hex/rgb/hsl value
 24. [akinsho/bufferline.nvim](https://github.com/akinsho/bufferline.nvim) Buffers
     in tabs
-25. [aznhe21/actions-preview.nvim](https://github.com/aznhe21/actions-preview.nvim) Better code action previews
-26. [delphinus/vim-firestore](https://github.com/delphinus/vim-firestore) Syntax
+25. [delphinus/vim-firestore](https://github.com/delphinus/vim-firestore) Syntax
     highlighting and completion for Firebase rules
-27. [rmagatti/auto-session](https://github.com/rmagatti/auto-session) Session
+26. [rmagatti/auto-session](https://github.com/rmagatti/auto-session) Session
     management
-28. [goolord/alpha-nvim](https://github.com/goolord/alpha-nvim) Dashboard
-29. [mbbill/undotree](https://github.com/mbbill/undotree) Undotree
-30. [j-hui/fidget.nvim](https://github.com/j-hui/fidget.nvim,) UI for lsp
+27. [goolord/alpha-nvim](https://github.com/goolord/alpha-nvim) Dashboard
+28. [mbbill/undotree](https://github.com/mbbill/undotree) Undotree
+29. [j-hui/fidget.nvim](https://github.com/j-hui/fidget.nvim,) UI for lsp
     progress
-31. [numToStr/Navigator.nvim](https://github.com/numToStr/Navigator.nvim)
+30. [numToStr/Navigator.nvim](https://github.com/numToStr/Navigator.nvim)
     Navigate between Wezterm splits
-32. [Mason](https://github.com/williamboman/mason.nvim) for installing language
+31. [Mason](https://github.com/williamboman/mason.nvim) for installing language
     servers.
 
 ## Resources and inspiration
