@@ -122,7 +122,7 @@ map("n", "<leader>Sw", function()
 end, { desc = "Search for word under cursor" })
 
 -- Auto Sessions mappings
-map("n", "<leader>aS", "<cmd>SaveSession<cr>", { desc = "Save session" })
+map("n", "<leader>aS", "<cmd>SessionSave<cr>", { desc = "Save session" })
 map("n", "<leader>as", "<cmd>SessionSearch<cr>", { desc = "Search sessions" })
 map("n", "<leader>ad", "<cmd>SessionDelete<cr>", { desc = "Delete session" })
 map("n", "<leader>ar", "<cmd>SessionRestore<cr>", { desc = "Restore session" })
