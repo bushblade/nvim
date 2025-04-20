@@ -95,7 +95,7 @@ map("n", "<leader>ft", "<cmd>Telescope builtin<CR>", { desc = "Telescope builtin
 map("n", "<leader>fs", "<cmd>Telescope live_grep<CR>", { desc = "Search In Files" })
 map("n", "<leader>fr", "<cmd>Telescope lsp_references<CR>", { desc = "Find References" })
 map("n", "<leader>fd", "<cmd>Telescope diagnostics theme=dropdown<CR>", { desc = "Document Diagnostics" })
-map("n", "<leader>fm", "<cmd>Telescope marks theme=dropdown><CR>", { desc = "Marks" })
+map("n", "<leader>fm", "<cmd>Telescope marks theme=dropdown<CR>", { desc = "Marks" })
 map("n", "<leader>fk", "<cmd>Telescope keymaps<CR>", { desc = "Key mappings" })
 map("n", "<leader>fM", "<cmd>Telescope man_pages<CR>", { desc = "Man pages" })
 map("n", "<leader>fa", "<cmd>SessionSearch<CR>", { desc = "Search Sessions" })
