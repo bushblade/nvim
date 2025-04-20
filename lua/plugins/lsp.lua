@@ -23,15 +23,6 @@ return {
       -- rounded border on :LspInfo
       require("lspconfig.ui.windows").default_options.border = "rounded"
 
-      -- Customization and appearance -----------------------------------------
-      -- change gutter diagnostic symbols
-      local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
-
-      for type, icon in pairs(signs) do
-        local hl = "DiagnosticSign" .. type
-        vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
-      end
-
       vim.diagnostic.config({
         virtual_text = {
           source = "if_many",
@@ -41,6 +32,14 @@ return {
           source = true,
         },
         severity_sort = true,
+        signs = vim.g.have_nerd_font and {
+          text = {
+            [vim.diagnostic.severity.ERROR] = "󰅚 ",
+            [vim.diagnostic.severity.WARN] = "󰀪 ",
+            [vim.diagnostic.severity.INFO] = "󰋽 ",
+            [vim.diagnostic.severity.HINT] = "󰌶 ",
+          },
+        } or {},
       })
 
       vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
