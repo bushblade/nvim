@@ -24,14 +24,12 @@ return {
       require("lspconfig.ui.windows").default_options.border = "rounded"
 
       vim.diagnostic.config({
-        virtual_text = {
-          source = "if_many",
-          prefix = "●", -- Could be '●', '▎', 'x'
-        },
-        float = {
-          source = true,
-        },
         severity_sort = true,
+        float = {
+          border = "rounded",
+          source = "if_many",
+        },
+        underline = { severity = vim.diagnostic.severity.ERROR },
         signs = vim.g.have_nerd_font and {
           text = {
             [vim.diagnostic.severity.ERROR] = "󰅚 ",
@@ -40,6 +38,19 @@ return {
             [vim.diagnostic.severity.HINT] = "󰌶 ",
           },
         } or {},
+        virtual_text = {
+          source = "if_many",
+          prefix = "●", -- Could be '●', '▎', 'x'
+          format = function(diagnostic)
+            local diagnostic_message = {
+              [vim.diagnostic.severity.ERROR] = diagnostic.message,
+              [vim.diagnostic.severity.WARN] = diagnostic.message,
+              [vim.diagnostic.severity.INFO] = diagnostic.message,
+              [vim.diagnostic.severity.HINT] = diagnostic.message,
+            }
+            return diagnostic_message[diagnostic.severity]
+          end,
+        },
       })
 
       vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
