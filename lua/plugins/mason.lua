@@ -28,7 +28,7 @@ return {
         automatic_enable = false,
         ensure_installed = {
           "ts_ls",
-          "volar",
+          "vue_ls",
           "tailwindcss",
           "cssls",
           "yamlls",
