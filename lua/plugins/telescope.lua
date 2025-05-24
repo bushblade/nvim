@@ -9,7 +9,6 @@ return {
       { "nvim-tree/nvim-web-devicons", enabled = vim.g.have_nerd_font },
     },
     event = "VimEnter",
-    lazy = false,
     opts = {
       defaults = {
         winblend = 0,

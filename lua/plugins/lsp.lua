@@ -4,6 +4,7 @@ local biome_file_exists = require("utils").biome_file_exists
 return {
   {
     "neovim/nvim-lspconfig",
+    event = "VimEnter",
     dependencies = { "folke/neodev.nvim", "saghen/blink.cmp" },
     config = function()
       -- Setup neovim lua configuration
@@ -187,7 +188,11 @@ return {
             },
             workspace = {
               -- Make the server aware of Neovim runtime files
-              library = vim.api.nvim_get_runtime_file("", true),
+              library = {
+                vim.env.VIMRUNTIME .. "/lua", -- core Neovim API
+                vim.env.VIMRUNTIME .. "/lua/vim/lsp", -- lspconfig / diagnostics
+                vim.fn.stdpath("config") .. "/lua", -- my config
+              },
             },
             -- Do not send telemetry data containing a randomized but unique identifier
             telemetry = {

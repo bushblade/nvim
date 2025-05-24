@@ -1,6 +1,7 @@
 return {
   {
     "NvChad/nvim-colorizer.lua",
+    event = "VimEnter",
     opts = {
       filetypes = { "*" },
       user_default_options = {
