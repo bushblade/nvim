@@ -10,4 +10,24 @@ function M.map(mode, lhs, rhs, opts)
   vim.keymap.set(mode, lhs, rhs, options)
 end
 
+function M.is_tailwind_project()
+  local has_package_dot_json = vim.fn.filereadable(vim.fn.expand("package.json"))
+  if has_package_dot_json == 0 then
+    return false
+  end
+  local lines = vim.fn.readfile("package.json")
+  for _, line in ipairs(lines) do
+    if line:match('"tailwindcss"') then
+      return true
+    end
+  end
+  return false
+end
+
+function M.biome_file_exists()
+  local cwd = vim.fn.getcwd()
+  local biome_file = cwd .. "/biome.json"
+  return vim.loop.fs_stat(biome_file) ~= nil
+end
+
 return M

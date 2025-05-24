@@ -1,16 +1,5 @@
-local function is_tailwind_project()
-  local has_package_dot_json = vim.fn.filereadable(vim.fn.expand("package.json"))
-  if has_package_dot_json == 0 then
-    return false
-  end
-  local lines = vim.fn.readfile("package.json")
-  for _, line in ipairs(lines) do
-    if line:match('"tailwindcss"') then
-      return true
-    end
-  end
-  return false
-end
+local is_tailwind_project = require("utils").is_tailwind_project
+local biome_file_exists = require("utils").biome_file_exists
 
 return {
   {
@@ -119,13 +108,6 @@ return {
       vim.lsp.enable("html")
 
       -- JSON
-
-      -- Function to check if biome.json exists in the current working directory
-      local function biome_file_exists()
-        local cwd = vim.fn.getcwd()
-        local biome_file = cwd .. "/biome.json"
-        return vim.loop.fs_stat(biome_file) ~= nil
-      end
 
       -- Conditionally set up jsonls if biome.json does not exist
       if not biome_file_exists() then
