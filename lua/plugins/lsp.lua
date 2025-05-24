@@ -150,7 +150,7 @@ return {
       vim.lsp.enable("prismals")
 
       -- php
-      vim.lsp.enable("intelephense")
+      -- vim.lsp.enable("intelephense")
 
       -- Bash
       vim.lsp.enable("bashls")
@@ -165,13 +165,13 @@ return {
       vim.lsp.enable("yamlls")
 
       -- Go
-      vim.lsp.enable("gopls")
+      -- vim.lsp.enable("gopls")
 
       -- GraphQL
       vim.lsp.enable("graphql")
 
       -- Rust
-      vim.lsp.enable("rust_analyzer")
+      -- vim.lsp.enable("rust_analyzer")
 
       -- Lua
       vim.lsp.config("lua_ls", {
