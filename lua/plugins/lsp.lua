@@ -20,7 +20,7 @@ return {
       -- Setup neovim lua configuration
       require("neodev").setup()
 
-      -- rounded border on :LspInfo
+      -- rounded border
       require("lspconfig.ui.windows").default_options.border = "rounded"
 
       vim.diagnostic.config({
@@ -53,19 +53,17 @@ return {
         },
       })
 
-      vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-        border = "rounded",
-      })
-
-      vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
-        border = "rounded",
-      })
+      -- vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+      --   border = "rounded",
+      -- })
+      --
+      -- vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
+      --   border = "rounded",
+      -- })
       local capabilities = require("blink.cmp").get_lsp_capabilities()
-      local root_pattern = require("lspconfig").util.root_pattern
-      local lspconfig = require("lspconfig")
 
       -- TS/JS
-      lspconfig.ts_ls.setup({
+      vim.lsp.config("ts_ls", {
         filetypes = {
           "javascript",
           "javascriptreact",
@@ -75,30 +73,18 @@ return {
           "typescript.tsx",
         },
         cmd = { "typescript-language-server", "--stdio" },
-        root_dir = root_pattern("package.json", "tsconfig.json", "jsconfig.json", "index.js", "app.js"),
         capabilities = capabilities,
       })
+      vim.lsp.enable("ts_ls")
 
       -- EsLint
-      require("lspconfig").eslint.setup({
-        root_dir = root_pattern(
-          -- "package.json",
-          ".eslintrc",
-          ".eslintrc.json",
-          ".eslintrc.yaml",
-          ".eslintrc.yml",
-          ".eslintrc.js",
-          ".eslintrc.cjs",
-          "eslint.config.js",
-          "eslint.config.mjs"
-        ),
-      })
+      vim.lsp.enable("eslint")
 
       -- Vue JS
-      require("lspconfig").volar.setup({})
+      vim.lsp.enable("vue_ls")
 
       -- Biome
-      require("lspconfig").biome.setup({})
+      vim.lsp.enable("biome")
 
       -- CSS
       local css_settings = {
@@ -110,10 +96,8 @@ return {
         css_settings.lint.unknownAtRules = "ignore"
       end
 
-      require("lspconfig").cssls.setup({
+      vim.lsp.config("cssls", {
         capabilities = capabilities,
-        cmd = { "vscode-css-language-server", "--stdio" },
-        filetypes = { "css", "scss", "less" },
         settings = {
           css = css_settings,
           less = {
@@ -124,9 +108,10 @@ return {
           },
         },
       })
+      vim.lsp.enable("cssls")
 
       -- HTML
-      require("lspconfig").html.setup({
+      vim.lsp.config("html", {
         capabilities = capabilities,
         cmd = { "vscode-html-language-server", "--stdio" },
         filetypes = { "html", "php" },
@@ -138,6 +123,7 @@ return {
           },
         },
       })
+      vim.lsp.enable("html")
 
       -- JSON
 
@@ -150,78 +136,69 @@ return {
 
       -- Conditionally set up jsonls if biome.json does not exist
       if not biome_file_exists() then
-        lspconfig.jsonls.setup({
+        vim.lsp.config("jsonls", {
+          capabilities = capabilities,
           cmd = { "vscode-json-language-server", "--stdio" },
           filetypes = { "json", "jsonc" },
           init_options = {
             provideFormatter = true,
           },
         })
+        vim.lsp.enable("jsonls")
       else
         print("biome.json found, not enabling jsonls")
       end
 
       -- Tailwind
       if is_tailwind_project() then
-        require("lspconfig").tailwindcss.setup({
+        vim.lsp.config("tailwindcss", {
           capabilities = capabilities,
-          root_dir = root_pattern("package.json"),
         })
+        vim.lsp.enable("tailwindcss")
       end
 
       -- Emmet
-      require("lspconfig").emmet_ls.setup({
-        filetypes = { "html", "css", "javascriptreact", "typescriptreact", "vue", "php" },
+      vim.lsp.config("emmet_ls", {
         capabilities = capabilities,
       })
+      vim.lsp.enable("emmet_ls")
 
       -- Astro
-      require("lspconfig").astro.setup({ capabilities = capabilities })
+      vim.lsp.config("astro", { capabilities = capabilities })
+      vim.lsp.enable("astro")
 
       -- Markdown
-      require("lspconfig").marksman.setup({})
+      vim.lsp.enable("marksman")
 
       -- Prisma
-      require("lspconfig").prismals.setup({
-        root_dir = function()
-          return vim.loop.cwd()
-        end,
-      })
+      vim.lsp.enable("prismals")
 
       -- php
-      require("lspconfig").intelephense.setup({
-        root_dir = root_pattern("composer.json", ".git", "*.php"),
-      })
+      vim.lsp.enable("intelephense")
 
       -- Bash
-      require("lspconfig").bashls.setup({})
+      vim.lsp.enable("bashls")
 
       -- Python
-      require("lspconfig").pyright.setup({})
+      vim.lsp.enable("pyright")
 
       -- Java
-      require("lspconfig").jdtls.setup({})
+      vim.lsp.enable("jdtls")
 
       -- Yaml
-      require("lspconfig").yamlls.setup({
-        settings = {
-          yaml = {
-            keyOrdering = false,
-          },
-        },
-      })
+      vim.lsp.enable("yamlls")
 
       -- Go
-      require("lspconfig").gopls.setup({})
+      vim.lsp.enable("gopls")
 
       -- GraphQL
-      require("lspconfig").graphql.setup({})
+      vim.lsp.enable("graphql")
 
       -- Rust
-      require("lspconfig").rust_analyzer.setup({})
+      vim.lsp.enable("rust_analyzer")
 
       -- Lua
-      lspconfig.lua_ls.setup({
+      vim.lsp.config("lua_ls", {
         capabilities = capabilities,
         settings = {
           Lua = {
@@ -244,6 +221,7 @@ return {
           },
         },
       })
+      vim.lsp.enable("lua_ls")
     end,
   },
 }
