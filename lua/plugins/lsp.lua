@@ -75,6 +75,7 @@ return {
         lint = {},
       }
 
+      -- Turn of unknownAtRules if in a Tailwind project
       if is_tailwind_project() then
         css_settings.lint.unknownAtRules = "ignore"
       end
