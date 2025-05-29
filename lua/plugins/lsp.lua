@@ -60,13 +60,12 @@ return {
       })
       vim.lsp.enable("ts_ls")
 
-      -- EsLint
-      vim.lsp.enable("eslint")
-
       -- Vue JS
+      vim.lsp.config("vue_ls", { capabilities = capabilities })
       vim.lsp.enable("vue_ls")
 
       -- Biome
+      vim.lsp.config("biome", { capabilities = capabilities })
       vim.lsp.enable("biome")
 
       -- CSS
@@ -111,7 +110,7 @@ return {
 
       -- JSON
 
-      -- Conditionally set up jsonls if biome.json does not exist
+      -- Conditionally set up jsonls and EsLint if biome.json does not exist
       if not biome_file_exists() then
         vim.lsp.config("jsonls", {
           capabilities = capabilities,
@@ -121,9 +120,12 @@ return {
             provideFormatter = true,
           },
         })
+
         vim.lsp.enable("jsonls")
+        -- EsLint
+        vim.lsp.enable("eslint")
       else
-        print("biome.json found, not enabling jsonls")
+        print("biome.json found, not enabling jsonls or eslint")
       end
 
       -- Tailwind
