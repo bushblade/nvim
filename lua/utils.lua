@@ -31,7 +31,7 @@ function M.biome_file_exists()
   local cwd = vim.fn.getcwd()
   local biome_file = cwd .. "/biome.json"
   ---@diagnostic disable-next-line: undefined-field
-  return vim.loop.fs_stat(biome_file) ~= nil
+  return vim.uv.fs_stat(biome_file) ~= nil
 end
 
 return M
