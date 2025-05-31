@@ -29,7 +29,7 @@ return {
         automatic_enable = false,
         ensure_installed = {
           "ts_ls",
-          "vue_ls",
+          "vuels",
           "tailwindcss",
           "cssls",
           "yamlls",
