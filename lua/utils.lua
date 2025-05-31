@@ -29,9 +29,10 @@ end
 --Detect the presence of a biome config file in the project directory
 function M.biome_file_exists()
   local cwd = vim.fn.getcwd()
-  local biome_file = cwd .. "/biome.json"
+  local json = cwd .. "/biome.json"
+  local jsonc = cwd .. "/biome.jsonc"
   ---@diagnostic disable-next-line: undefined-field
-  return vim.uv.fs_stat(biome_file) ~= nil
+  return vim.uv.fs_stat(json) ~= nil or vim.uv.fs_stat(jsonc) ~= nil
 end
 
 return M
