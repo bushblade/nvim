@@ -1,8 +1,5 @@
 local map = require("utils").map
 
--- Options for specific commands
-local border_options = { float = { border = "rounded" } }
-
 -- Insert mode mappings
 map("i", "kk", "<ESC>")
 map("i", "jj", "<ESC>")
@@ -22,10 +19,10 @@ end)
 map("n", "[q", ":cprev<CR>")
 map("n", "]q", ":cnext<CR>")
 map("n", "[d", function()
-  vim.diagnostic.goto_prev(border_options)
+  vim.diagnostic.jump({ count = -1, float = true })
 end, { desc = "Prev diagnostic" })
 map("n", "]d", function()
-  vim.diagnostic.goto_next(border_options)
+  vim.diagnostic.jump({ count = 1, float = true })
 end, { desc = "Next diagnostic" })
 map("n", "gD", vim.lsp.buf.declaration, { desc = "Go to Declaration" })
 map("n", "gd", vim.lsp.buf.definition, { desc = "Go to Definition" })

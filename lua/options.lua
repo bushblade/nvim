@@ -25,6 +25,10 @@ vim.opt.inccommand = "split"
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
+-- `vim.o.sessionoptions` should contain 'localoptions' to make sure
+-- filetype and highlighting work correctly after a session is restored.
+vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+
 -- spelling
 vim.opt.spelllang = "en_gb,en_us"
 vim.opt.mousemodel = "popup"
@@ -61,7 +65,7 @@ vim.g.markdown_fenced_languages = {
 -- highlight on yank
 vim.api.nvim_create_autocmd({ "TextYankPost" }, {
   callback = function()
-    vim.highlight.on_yank()
+    vim.hl.on_yank()
   end,
 })
 
@@ -88,6 +92,7 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
     if event.match:match("^%w%w+:[\\/][\\/]") then
       return
     end
+    ---@diagnostic disable-next-line: undefined-field
     local file = vim.uv.fs_realpath(event.match) or event.match
     vim.fn.mkdir(vim.fn.fnamemodify(file, ":p:h"), "p")
   end,

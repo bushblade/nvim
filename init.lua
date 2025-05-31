@@ -5,6 +5,7 @@ require("options")
 --    https://github.com/folke/lazy.nvim
 --    `:help lazy.nvim.txt` for more info
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+---@diagnostic disable-next-line: undefined-field
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
     "git",
@@ -17,7 +18,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-local lazy_opts = { ui = { border = "rounded" } }
+local lazy_opts = { ui = { border = "rounded" }, rocks = { enabled = false } }
 
 require("lazy").setup("plugins", lazy_opts)
 
