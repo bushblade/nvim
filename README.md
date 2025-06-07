@@ -1,7 +1,7 @@
 # My Neovim config
 
-![Screenshot](https://res.cloudinary.com/bushblade/image/upload/w_1000/catppuccin.webp)
-[Alacritty terminal](https://github.com/alacritty/alacritty) with [Catppuccin](https://github.com/catppuccin/nvim) terminal theme and [Victor Mono](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/VictorMono) nerd font.
+![Screenshot](https://res.cloudinary.com/bushblade/image/upload/w_1000/nvim-screenshot_zzjql0.webp)
+[Ghostty Terminal](https://ghostty.org/) with [Catppuccin](https://github.com/catppuccin/nvim) terminal theme and [Victor Mono](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/VictorMono) nerd font.
 
 **My config for Nvim using native LSP with some sane defaults and settings**, mainly
 aimed at web development but ready to go with Python, Rust, Golang and Lua.
@@ -11,8 +11,6 @@ aimed at web development but ready to go with Python, Rust, Golang and Lua.
 ```bash
 git clone https://github.com/bushblade/nvim.git ~/.config/nvim
 ```
-
-> TIP: [No sudo on global npm install](https://github.com/sindresorhus/guides/blob/main/npm-global-without-sudo.md)
 
 ## Launch Nvim
 
