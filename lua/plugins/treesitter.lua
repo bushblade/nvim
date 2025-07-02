@@ -33,7 +33,6 @@ return {
         "php",
         "prisma",
         "python",
-        "python",
         "query",
         "regex",
         "rust",
