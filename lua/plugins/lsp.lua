@@ -54,6 +54,16 @@ return {
           "typescript",
           "typescriptreact",
           "typescript.tsx",
+          "vue",
+        },
+        init_options = {
+          plugins = {
+            {
+              name = "@vue/typescript-plugin",
+              location = "/home/will/.local/share/nvm/v24.1.0/lib/node_modules/@vue/typescript-plugin",
+              languages = { "javascript", "typescript", "vue" },
+            },
+          },
         },
         cmd = { "typescript-language-server", "--stdio" },
         capabilities = capabilities,
