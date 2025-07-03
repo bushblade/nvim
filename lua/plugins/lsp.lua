@@ -60,8 +60,8 @@ return {
           plugins = {
             {
               name = "@vue/typescript-plugin",
-              location = "/home/will/.local/share/nvm/v24.1.0/lib/node_modules/@vue/typescript-plugin",
-              languages = { "javascript", "typescript", "vue" },
+              location = os.getenv("HOME") .. "/.local/share/nvm/v24.1.0/lib/node_modules/@vue/typescript-plugin",
+              languages = { "vue" },
             },
           },
         },
@@ -71,8 +71,11 @@ return {
       vim.lsp.enable("ts_ls")
 
       -- Vue JS
-      vim.lsp.config("vue_ls", { capabilities = capabilities })
-      vim.lsp.enable("vue_ls")
+      -- vim.lsp.config("vue_ls", {
+      --   filetypes = { "vue" }, -- Only attach to .vue files
+      --   capabilities = capabilities,
+      -- })
+      -- vim.lsp.enable("vue_ls")
 
       -- Biome
       vim.lsp.config("biome", { capabilities = capabilities })
@@ -91,6 +94,7 @@ return {
 
       vim.lsp.config("cssls", {
         capabilities = capabilities,
+        filetypes = { "css", "scss", "less", "vue" }, -- Also attach to .vue files
         settings = {
           css = css_settings,
           less = {
@@ -107,7 +111,7 @@ return {
       vim.lsp.config("html", {
         capabilities = capabilities,
         cmd = { "vscode-html-language-server", "--stdio" },
-        filetypes = { "html", "php" },
+        filetypes = { "html", "php", "vue" },
         init_options = {
           configurationSection = { "html", "css", "javascript" },
           embeddedLanguages = {
