@@ -1,5 +1,6 @@
 local is_tailwind_project = require("utils").is_tailwind_project
 local biome_file_exists = require("utils").biome_file_exists
+local find_vue_plugin_path = require("utils").find_vue_plugin_path
 
 return {
   {
@@ -46,6 +47,9 @@ return {
       local capabilities = require("blink.cmp").get_lsp_capabilities()
 
       -- TS/JS
+
+      -- NOTE: make sure to install @vue/typescript-plugin in the project or
+      -- have it installed globally to fall back to.
       vim.lsp.config("ts_ls", {
         filetypes = {
           "javascript",
@@ -60,7 +64,8 @@ return {
           plugins = {
             {
               name = "@vue/typescript-plugin",
-              location = os.getenv("HOME") .. "/.local/share/nvm/v24.1.0/lib/node_modules/@vue/typescript-plugin",
+              -- Use the dynamic path variable here
+              location = find_vue_plugin_path(),
               languages = { "vue" },
             },
           },
@@ -68,6 +73,8 @@ return {
         cmd = { "typescript-language-server", "--stdio" },
         capabilities = capabilities,
       })
+      vim.lsp.enable("ts_ls")
+
       vim.lsp.enable("ts_ls")
 
       -- Vue JS
