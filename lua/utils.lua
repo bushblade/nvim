@@ -35,32 +35,4 @@ function M.biome_file_exists()
   return vim.uv.fs_stat(json) ~= nil or vim.uv.fs_stat(jsonc) ~= nil
 end
 
----Finds the path for @vue/typescript-plugin.
----Prioritizes the local project's node_modules and falls back to the global installation.
----@return string|nil The path to the plugin, or nil if not found.
-function M.find_vue_plugin_path()
-  -- 1. Check for a local installation first
-  local root_pattern = require("lspconfig.util").root_pattern("package.json")
-  local project_root = root_pattern(vim.api.nvim_buf_get_name(0))
-
-  if project_root then
-    local local_path = project_root .. "/node_modules/@vue/typescript-plugin"
-    if vim.fn.isdirectory(local_path) == 1 then
-      return local_path
-    end
-  end
-
-  -- 2. If not found locally, fall back to the global installation
-  local npm_global_root = vim.fn.trim(vim.fn.system("npm root -g"))
-  if vim.v.shell_error == 0 then
-    local global_path = npm_global_root .. "/@vue/typescript-plugin"
-    if vim.fn.isdirectory(global_path) == 1 then
-      return global_path
-    end
-  end
-
-  -- 3. If not found anywhere, return nil
-  return nil
-end
-
 return M

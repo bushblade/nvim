@@ -1,6 +1,5 @@
 local is_tailwind_project = require("utils").is_tailwind_project
 local biome_file_exists = require("utils").biome_file_exists
-local find_vue_plugin_path = require("utils").find_vue_plugin_path
 
 return {
   {
@@ -48,41 +47,60 @@ return {
 
       -- TS/JS
 
-      -- NOTE: make sure to install @vue/typescript-plugin in the project or
-      -- have it installed globally to fall back to.
-      vim.lsp.config("ts_ls", {
-        filetypes = {
-          "javascript",
-          "javascriptreact",
-          "javascript.jsx",
-          "typescript",
-          "typescriptreact",
-          "typescript.tsx",
-          "vue",
-        },
-        init_options = {
-          plugins = {
-            {
-              name = "@vue/typescript-plugin",
-              -- Use the dynamic path variable here
-              location = find_vue_plugin_path(),
-              languages = { "vue" },
+      -- managed to get vue-language-server working with vtsls following https://github.com/vuejs/language-tools/wiki/Neovim
+      local vue_language_server_path = vim.fn.stdpath("data")
+        .. "/mason/packages/vue-language-server/node_modules/@vue/language-server"
+
+      local vue_plugin = {
+        name = "@vue/typescript-plugin",
+        location = vue_language_server_path,
+        languages = { "vue" },
+        configNamespace = "typescript",
+      }
+      local vtsls_config = {
+        settings = {
+          vtsls = {
+            tsserver = {
+              globalPlugins = {
+                vue_plugin,
+              },
             },
           },
         },
-        cmd = { "typescript-language-server", "--stdio" },
-        capabilities = capabilities,
-      })
-      vim.lsp.enable("ts_ls")
+        filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
+      }
 
-      vim.lsp.enable("ts_ls")
+      local vue_ls_config = {
+        on_init = function(client)
+          client.handlers["tsserver/request"] = function(_, result, context)
+            local clients = vim.lsp.get_clients({ bufnr = context.bufnr, name = "vtsls" })
+            if #clients == 0 then
+              vim.notify("Could not found `vtsls` lsp client, vue_lsp would not work without it.", vim.log.levels.ERROR)
+              return
+            end
+            local ts_client = clients[1]
 
-      -- Vue JS
-      -- vim.lsp.config("vue_ls", {
-      --   filetypes = { "vue" }, -- Only attach to .vue files
-      --   capabilities = capabilities,
-      -- })
-      -- vim.lsp.enable("vue_ls")
+            local param = unpack(result)
+            local id, command, payload = unpack(param)
+            ts_client:exec_cmd({
+              title = "vue_request_forward", -- You can give title anything as it's used to represent a command in the UI, `:h Client:exec_cmd`
+              command = "typescript.tsserverRequest",
+              arguments = {
+                command,
+                payload,
+              },
+            }, { bufnr = context.bufnr }, function(_, r)
+              local response_data = { { id, r.body } }
+              ---@diagnostic disable-next-line: param-type-mismatch
+              client:notify("tsserver/response", response_data)
+            end)
+          end
+        end,
+      }
+      -- nvim 0.11 or above
+      vim.lsp.config("vtsls", vtsls_config)
+      vim.lsp.config("vue_ls", vue_ls_config)
+      vim.lsp.enable({ "vtsls", "vue_ls" })
 
       -- Biome
       vim.lsp.config("biome", { capabilities = capabilities })
@@ -101,7 +119,7 @@ return {
 
       vim.lsp.config("cssls", {
         capabilities = capabilities,
-        filetypes = { "css", "scss", "less", "vue" }, -- Also attach to .vue files
+        filetypes = { "css", "scss", "less" },
         settings = {
           css = css_settings,
           less = {
@@ -118,7 +136,7 @@ return {
       vim.lsp.config("html", {
         capabilities = capabilities,
         cmd = { "vscode-html-language-server", "--stdio" },
-        filetypes = { "html", "php", "vue" },
+        filetypes = { "html", "php" },
         init_options = {
           configurationSection = { "html", "css", "javascript" },
           embeddedLanguages = {
