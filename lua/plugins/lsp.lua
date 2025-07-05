@@ -17,7 +17,7 @@ return {
         severity_sort = true,
         float = {
           border = "rounded",
-          source = "if_many",
+          source = true,
         },
         underline = { severity = vim.diagnostic.severity.ERROR },
         signs = vim.g.have_nerd_font and {
