@@ -102,10 +102,6 @@ return {
       vim.lsp.config("vue_ls", vue_ls_config)
       vim.lsp.enable({ "vtsls", "vue_ls" })
 
-      -- Biome
-      vim.lsp.config("biome", { capabilities = capabilities })
-      vim.lsp.enable("biome")
-
       -- CSS
       local css_settings = {
         validate = true,
@@ -164,6 +160,9 @@ return {
         -- EsLint
         vim.lsp.enable("eslint")
       else
+        -- Biome
+        vim.lsp.config("biome", { capabilities = capabilities })
+        vim.lsp.enable("biome")
         print("biome.json found, not enabling jsonls or eslint")
       end
 
