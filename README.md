@@ -60,7 +60,7 @@ One test snippet is included as an example.
     tree
 18. [JoosepAlviste/nvim-ts-context-commentstring](https://github.com/JoosepAlviste/nvim-ts-context-commentstring) Better commenting based on file type
     completion
-19. [catppuccin/nvim](https://github.com/catppuccin/nvim) Theme
+19. [folke/tokyonight.nvim](https://github.com/folke/tokyonight.nvim) Theme
 20. [folke/trouble.nvim](https://github.com/folke/trouble.nvim) Show the problems
     in your code
 21. [folke/which-key.nvim](https://github.com/folke/which-key.nvim) Keymap helper
