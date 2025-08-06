@@ -1,7 +1,7 @@
 # My Neovim config
 
-![Screenshot](https://res.cloudinary.com/bushblade/image/upload/w_1000/nvim-screenshot_zzjql0.webp)
-[Ghostty Terminal](https://ghostty.org/) with [Catppuccin](https://github.com/catppuccin/nvim) terminal theme and [Victor Mono](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/VictorMono) nerd font.
+![Screenshot](https://res.cloudinary.com/bushblade/image/upload/w_1000/nvim-tokyo-night_t62g3p.webp)
+[Ghostty Terminal](https://ghostty.org/) with [Tokyonight](https://github.com/folke/tokyonight.nvim) terminal theme and [Victor Mono](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/VictorMono) nerd font.
 
 **My config for Nvim using native LSP with some sane defaults and settings**, mainly
 aimed at web development but ready to go with Python, Rust, Golang and Lua.
