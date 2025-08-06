@@ -1,16 +1,3 @@
--- Define the highlight group for flash.treesitter visual selection
-local mocha_palette = require("catppuccin.palettes").get_palette("mocha")
-
--- Define the highlight group attributes as a Lua table
-local highlight = {
-  fg = mocha_palette.base,
-  bg = mocha_palette.red,
-  bold = true,
-}
-
--- Set the highlight group using vim.api.nvim_set_hl()
-vim.api.nvim_set_hl(0, "FlashTreesitterSelection", highlight)
-
 return {
   "folke/flash.nvim",
   event = "VeryLazy",
