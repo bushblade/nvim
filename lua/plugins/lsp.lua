@@ -158,6 +158,7 @@ return {
 
         vim.lsp.enable("jsonls")
         -- EsLint
+        vim.lsp.config("eslint", { capabilities = capabilities })
         vim.lsp.enable("eslint")
       else
         -- Biome
