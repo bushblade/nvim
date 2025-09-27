@@ -20,6 +20,7 @@ function M.is_tailwind_project()
   local lines = vim.fn.readfile("package.json")
   for _, line in ipairs(lines) do
     if line:match('"tailwindcss"') then
+      print("Tailwind Project Detected")
       return true
     end
   end
