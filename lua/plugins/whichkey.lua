@@ -3,6 +3,7 @@ return {
     "folke/which-key.nvim",
     event = "VeryLazy",
     opts = {
+      preset = "helix",
       win = {
         -- don't allow the popup to overlap with the cursor
         no_overlap = true,
