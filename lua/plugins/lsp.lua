@@ -5,10 +5,10 @@ return {
   {
     "neovim/nvim-lspconfig",
     event = "VimEnter",
-    dependencies = { "folke/neodev.nvim", "saghen/blink.cmp" },
+    dependencies = { "folke/lazydev.nvim", "saghen/blink.cmp" },
     config = function()
       -- Setup neovim lua configuration
-      require("neodev").setup()
+      require("lazydev").setup()
 
       -- rounded border
       require("lspconfig.ui.windows").default_options.border = "rounded"
