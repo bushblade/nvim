@@ -7,9 +7,6 @@ return {
       "nvim-treesitter/nvim-treesitter-textobjects",
     },
     opts = {
-      context_commentstring = {
-        enable = true,
-      },
       ignore_install = { "help" },
       ensure_installed = {
         "astro",
