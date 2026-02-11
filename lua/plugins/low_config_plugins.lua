@@ -10,10 +10,18 @@ return {
   },
   { "windwp/nvim-spectre", event = "VeryLazy" }, -- Spectre for find and replace
   "delphinus/vim-firestore",
-  "kyazdani42/nvim-web-devicons",
+  "nvim-tree/nvim-web-devicons",
   -- Useful status updates for LSP
-  { "j-hui/fidget.nvim", opts = { window = { border = "rounded", blend = 0 } }, tag = "legacy" },
+  {
+    "j-hui/fidget.nvim",
+    opts = {
+      notification = {
+        window = { border = "rounded", winblend = 0 },
+      },
+    },
+  },
 
+  { "JoosepAlviste/nvim-ts-context-commentstring", opts = {} },
   { "numToStr/Comment.nvim", opts = {} },
   {
     "folke/todo-comments.nvim",

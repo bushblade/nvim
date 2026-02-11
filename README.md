@@ -34,7 +34,7 @@ One test snippet is included as an example.
 3. [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) - Fuzzy find anything
 4. [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) Language parsing for highlighting and more
 5. [hoob3rt/lualine.nvim](https://github.com/hoob3rt/lualine.nvim) Status line
-6. [kyazdani42/nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons) Icons
+6. [nvim-tree/nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons) Icons
 7. [Saghen/blink.cmp](https://cmp.saghen.dev/) Auto completions, suggestions and imports
    1. [rafamadriz/friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
 8. [kylechui/nvim-surround](https://github.com/kylechui/nvim-surround) Surroundings
@@ -56,7 +56,7 @@ One test snippet is included as an example.
     Highlight matching tag in HTML/JSX
 16. [folke/flash.nvim](https://github.com/folke/flash.nvim) navigate with search labels, enhanced character motions, and Treesitter integration.
     your code
-17. [kyazdani42/nvim-tree.lua](https://github.com/kyazdani42/nvim-tree.lua) File
+17. [nvim-tree/nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua) File
     tree
 18. [JoosepAlviste/nvim-ts-context-commentstring](https://github.com/JoosepAlviste/nvim-ts-context-commentstring) Better commenting based on file type
     completion
