@@ -4,6 +4,13 @@ if biome_file_exists() then
   formatter_to_use = "biome"
 else
   formatter_to_use = "prettierd"
+  vim.api.nvim_create_autocmd("VimLeavePre", {
+    callback = function()
+      if vim.fn.executable("prettierd") == 1 then
+        vim.system({ "prettierd", "stop" })
+      end
+    end,
+  })
 end
 return {
   "stevearc/conform.nvim",
