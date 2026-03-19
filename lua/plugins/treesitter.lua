@@ -68,7 +68,7 @@ return {
       },
     },
     config = function(_, opts)
-      require("nvim-treesitter.configs").setup(opts)
+      require("nvim-treesitter").setup(opts)
       -- Detect astro files and set filetype
       vim.api.nvim_create_autocmd("BufEnter", {
         pattern = { "*.astro" },
