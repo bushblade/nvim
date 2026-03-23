@@ -1,14 +1,18 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
+    branch = "main",
     build = ":TSUpdate",
-    event = { "BufReadPost", "BufNewFile" },
+    lazy = false,
+    priority = 1000,
     dependencies = {
       "nvim-treesitter/nvim-treesitter-textobjects",
     },
-    opts = {
-      ignore_install = { "help" },
-      ensure_installed = {
+    config = function(_, opts)
+      local ts = require("nvim-treesitter")
+      ts.setup(opts)
+
+      local langs = {
         "astro",
         "bash",
         "comment",
@@ -40,47 +44,18 @@ return {
         "tsx",
         "typescript",
         "vim",
-        "vim",
         "vimdoc",
         "vue",
         "xml",
         "yaml",
-      }, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-      -- ignore_install = {}, -- List of parsers to ignore installing
-      highlight = {
-        enable = true, -- false will disable the whole extension
-        disable = function(lang, bufnr) -- Disable in large typescript buffers i.e. type definitions
-          return lang == "typescript" and vim.api.nvim_buf_line_count(bufnr) > 5000
-        end,
-      },
-      auto_install = true,
-      indent = {
-        enable = true,
-      },
-      incremental_selection = {
-        enable = true,
-        keymaps = {
-          init_selection = "<CR>",
-          node_incremental = "<TAB>",
-          scope_incremental = "<CR>",
-          node_decremental = "<S-TAB>",
-        },
-      },
-    },
-    config = function(_, opts)
-      require("nvim-treesitter").setup(opts)
-      -- Detect astro files and set filetype
-      vim.api.nvim_create_autocmd("BufEnter", {
-        pattern = { "*.astro" },
+      }
+
+      ts.install(langs)
+
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = langs,
         callback = function()
-          vim.cmd([[ set filetype=astro ]])
-        end,
-      })
-      -- Detect jsx files and set filetype to javascript
-      vim.api.nvim_create_autocmd("BufEnter", {
-        pattern = { "*.jsx" },
-        callback = function()
-          vim.cmd([[set filetype=javascript]])
+          pcall(vim.treesitter.start)
         end,
       })
     end,
