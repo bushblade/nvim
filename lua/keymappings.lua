@@ -112,12 +112,6 @@ map("n", "<leader>lr", vim.lsp.buf.rename, { desc = "Rename" })
 map("n", "<leader>lR", vim.lsp.buf.references, { desc = "List references" })
 map("n", "<leader>lc", vim.lsp.buf.code_action, { desc = "Code actions" })
 
--- Spectre mappings
-map("n", "<leader>Ss", require("spectre").open_visual, { desc = "Open Spectre" })
-map("n", "<leader>Sw", function()
-  require("spectre").open_visual({ select_word = true })
-end, { desc = "Search for word under cursor" })
-
 -- Auto Sessions mappings
 map("n", "<leader>aS", "<cmd>SessionSave<cr>", { desc = "Save session" })
 map("n", "<leader>as", "<cmd>SessionSearch<cr>", { desc = "Search sessions" })

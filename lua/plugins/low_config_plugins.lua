@@ -8,7 +8,6 @@ return {
       require("nvim-surround").setup({})
     end,
   },
-  { "windwp/nvim-spectre", event = "VeryLazy" }, -- Spectre for find and replace
   "delphinus/vim-firestore",
   "nvim-tree/nvim-web-devicons",
   -- Useful status updates for LSP
