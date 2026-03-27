@@ -77,7 +77,7 @@ One test snippet is included as an example.
 28. [j-hui/fidget.nvim](https://github.com/j-hui/fidget.nvim,) UI for lsp
     progress
 29. [numToStr/Navigator.nvim](https://github.com/numToStr/Navigator.nvim)
-    Navigate between Wezterm splits
+    Navigate between Tmux splits
 30. [Mason](https://github.com/williamboman/mason.nvim) for installing language
     servers.
 
