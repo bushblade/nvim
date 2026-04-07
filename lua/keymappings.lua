@@ -113,10 +113,10 @@ map("n", "<leader>lR", vim.lsp.buf.references, { desc = "List references" })
 map("n", "<leader>lc", vim.lsp.buf.code_action, { desc = "Code actions" })
 
 -- Auto Sessions mappings
-map("n", "<leader>aS", "<cmd>SessionSave<cr>", { desc = "Save session" })
-map("n", "<leader>as", "<cmd>SessionSearch<cr>", { desc = "Search sessions" })
-map("n", "<leader>ad", "<cmd>SessionDelete<cr>", { desc = "Delete session" })
-map("n", "<leader>ar", "<cmd>SessionRestore<cr>", { desc = "Restore session" })
+map("n", "<leader>aS", "<cmd>AutoSession save<cr>", { desc = "Save session" })
+map("n", "<leader>as", "<cmd>AutoSession search<cr>", { desc = "Search sessions" })
+map("n", "<leader>ad", "<cmd>AutoSession delete<cr>", { desc = "Delete session" })
+map("n", "<leader>ar", "<cmd>AutoSession restore<cr>", { desc = "Restore session" })
 
 -- Bufferline and other mappings
 map("n", "<leader>b", "", { desc = "Bufferline" })
