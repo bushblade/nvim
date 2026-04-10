@@ -51,9 +51,21 @@ return {
       }
 
       ts.install(langs)
+      vim.treesitter.language.register("javascript", "javascriptreact")
+      vim.treesitter.language.register("tsx", "typescriptreact")
+
+      vim.filetype.add({
+        extension = {
+          jsx = "javascriptreact",
+          tsx = "typescriptreact",
+        },
+      })
+
+      local ft_pattern = vim.list_extend({}, langs)
+      vim.list_extend(ft_pattern, { "javascriptreact", "typescriptreact" })
 
       vim.api.nvim_create_autocmd("FileType", {
-        pattern = langs,
+        pattern = ft_pattern,
         callback = function()
           pcall(vim.treesitter.start)
         end,
