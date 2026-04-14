@@ -23,7 +23,6 @@ vim.opt.rtp:prepend(lazypath)
 
 local lazy_opts = {
   ui = { border = "rounded" },
-  rocks = { enabled = false },
   spec = {
     { import = "plugins" },
   },
