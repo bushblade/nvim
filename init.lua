@@ -28,7 +28,7 @@ local lazy_opts = {
   },
   install = { colorscheme = { "habamax" } },
   -- automatically check for plugin updates
-  checker = { enabled = true },
+  checker = { enabled = false },
 }
 
 require("lazy").setup(lazy_opts)
