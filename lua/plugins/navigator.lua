@@ -1,13 +1,13 @@
 local map = require("utils").map
 return {
   {
-    "numToStr/Navigator.nvim", -- navigate vim splits in wezterm and tmux
+    "christoomey/vim-tmux-navigator",
+    lazy = false,
+    init = function()
+      vim.g.tmux_navigator_no_mappings = 1
+    end,
     config = function()
-      require("Navigator").setup({})
-      map({ "n", "t" }, "<C-h>", "<CMD>NavigatorLeft<CR>")
-      map({ "n", "t" }, "<C-l>", "<CMD>NavigatorRight<CR>")
-      map({ "n", "t" }, "<C-k>", "<CMD>NavigatorUp<CR>")
-      map({ "n", "t" }, "<C-j>", "<CMD>NavigatorDown<CR>")
+      dofile(vim.fn.expand("~/.config/herdr/plugins/vim-herdr-navigation/editor/nvim.lua"))
     end,
   },
 }
