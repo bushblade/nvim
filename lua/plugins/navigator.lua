@@ -1,4 +1,3 @@
-local map = require("utils").map
 return {
   {
     "christoomey/vim-tmux-navigator",
