@@ -161,8 +161,20 @@ return {
         vim.lsp.config("eslint", { capabilities = capabilities })
         vim.lsp.enable("eslint")
       else
-        -- Biome
-        vim.lsp.config("biome", { capabilities = capabilities })
+        -- Biome: linting (diagnostics) + formatting only. Exclude it from
+        -- go-to-definition so it doesn't report a second, identical location
+        -- alongside vtsls on .ts/.tsx (which made gd open the quickfix).
+        local biome_capabilities = vim.deepcopy(capabilities)
+        biome_capabilities.textDocument = biome_capabilities.textDocument or {}
+        biome_capabilities.textDocument.definition =
+          biome_capabilities.textDocument.definition or {}
+        biome_capabilities.textDocument.definition.dynamicRegistration = false
+        vim.lsp.config("biome", {
+          capabilities = biome_capabilities,
+          on_init = function(client)
+            client.server_capabilities.definitionProvider = nil
+          end,
+        })
         vim.lsp.enable("biome")
         print("biome.json found, not enabling jsonls or eslint")
       end
