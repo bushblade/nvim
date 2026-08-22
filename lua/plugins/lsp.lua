@@ -1,5 +1,4 @@
-local is_tailwind_project = require("utils").is_tailwind_project
-local biome_file_exists = require("utils").biome_file_exists
+local toolchain = require("toolchain")
 
 return {
   {
@@ -109,7 +108,7 @@ return {
       }
 
       -- Turn of unknownAtRules if in a Tailwind project
-      if is_tailwind_project() then
+      if toolchain.tailwind() then
         css_settings.lint.unknownAtRules = "ignore"
       end
 
@@ -145,8 +144,8 @@ return {
 
       -- JSON
 
-      -- Conditionally set up jsonls and EsLint if biome.json does not exist
-      if not biome_file_exists() then
+      -- Conditionally set up jsonls and EsLint if the project does not use Biome
+      if toolchain.javascript().linter == "eslint" then
         vim.lsp.config("jsonls", {
           capabilities = capabilities,
           cmd = { "vscode-json-language-server", "--stdio" },
@@ -180,7 +179,7 @@ return {
       end
 
       -- Tailwind
-      if is_tailwind_project() then
+      if toolchain.tailwind() then
         vim.lsp.config("tailwindcss", {
           capabilities = capabilities,
         })

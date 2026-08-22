@@ -10,30 +10,4 @@ function M.map(mode, lhs, rhs, opts)
   vim.keymap.set(mode, lhs, rhs, options)
 end
 
---Detect if we are in a project using TailwindCSS by checking for "tailwindcss"
---in package.json
-function M.is_tailwind_project()
-  local has_package_dot_json = vim.fn.filereadable(vim.fn.expand("package.json"))
-  if has_package_dot_json == 0 then
-    return false
-  end
-  local lines = vim.fn.readfile("package.json")
-  for _, line in ipairs(lines) do
-    if line:match('"tailwindcss"') then
-      print("Tailwind Project Detected")
-      return true
-    end
-  end
-  return false
-end
-
---Detect the presence of a biome config file in the project directory
-function M.biome_file_exists()
-  local cwd = vim.fn.getcwd()
-  local json = cwd .. "/biome.json"
-  local jsonc = cwd .. "/biome.jsonc"
-  ---@diagnostic disable-next-line: undefined-field
-  return vim.uv.fs_stat(json) ~= nil or vim.uv.fs_stat(jsonc) ~= nil
-end
-
 return M

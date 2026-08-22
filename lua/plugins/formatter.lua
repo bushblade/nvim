@@ -1,9 +1,6 @@
-local biome_file_exists = require("utils").biome_file_exists
-local formatter_to_use
-if biome_file_exists() then
-  formatter_to_use = "biome"
-else
-  formatter_to_use = "prettierd"
+local formatter_to_use = require("toolchain").javascript().formatter
+
+if formatter_to_use == "prettierd" then
   vim.api.nvim_create_autocmd("VimLeavePre", {
     callback = function()
       if vim.fn.executable("prettierd") == 1 then
