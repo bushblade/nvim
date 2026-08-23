@@ -4,9 +4,7 @@
 [Ghostty Terminal](https://ghostty.org/) with [Tokyonight](https://github.com/folke/tokyonight.nvim) terminal theme and [Victor Mono](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/VictorMono) nerd font.
 
 **My config for Nvim using native LSP with some sane defaults and settings**, mainly
-aimed at web development with Python and Lua ready to go. Go, Rust and PHP
-servers are installed but switched off — see
-[Adding or toggling languages](#adding-or-toggling-languages).
+aimed at web development with Python and Lua ready to go.
 
 ## Clone the repository into ~/.config/nvim
 
