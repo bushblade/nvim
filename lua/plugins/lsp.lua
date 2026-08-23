@@ -165,8 +165,7 @@ return {
         -- alongside vtsls on .ts/.tsx (which made gd open the quickfix).
         local biome_capabilities = vim.deepcopy(capabilities)
         biome_capabilities.textDocument = biome_capabilities.textDocument or {}
-        biome_capabilities.textDocument.definition =
-          biome_capabilities.textDocument.definition or {}
+        biome_capabilities.textDocument.definition = biome_capabilities.textDocument.definition or {}
         biome_capabilities.textDocument.definition.dynamicRegistration = false
         vim.lsp.config("biome", {
           capabilities = biome_capabilities,
@@ -221,7 +220,7 @@ return {
       -- vim.lsp.enable("gopls")
 
       -- GraphQL
-      vim.lsp.enable("graphql")
+      -- vim.lsp.enable("graphql")
 
       -- Rust
       -- vim.lsp.enable("rust_analyzer")
