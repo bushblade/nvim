@@ -13,10 +13,8 @@ return {
       spec = {
         {
           mode = { "n", "v" },
-          { "<leader>b", group = "BufferLine" },
           { "<leader>f", group = "Telescope" },
           { "<leader>l", group = "LSP" },
-          { "<leader>S", group = "Spectre" },
           { "<leader>a", group = "Sessions" },
           -- { "<leader>u", group = "ui", icon = { icon = "󰙵 ", color = "cyan" } },
           -- { "<leader>x", group = "diagnostics/quickfix", icon = { icon = "󱖫 ", color = "green" } },
