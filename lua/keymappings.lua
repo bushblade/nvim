@@ -104,6 +104,12 @@ map("n", "<leader>fg", "<cmd>Telescope git_status<CR>", { desc = "Git Status" })
 map("n", "<leader>lf", function()
   vim.lsp.buf.format({ async = true })
 end, { desc = "Format File" })
+map("n", "<leader>ld", function()
+  vim.diagnostic.open_float({ border = "rounded" })
+end, { desc = "Line Diagnostics" })
+map("n", "<leader>lr", vim.lsp.buf.rename, { desc = "Rename" })
+map("n", "<leader>lR", vim.lsp.buf.references, { desc = "List references" })
+map("n", "<leader>lc", vim.lsp.buf.code_action, { desc = "Code actions" })
 
 -- Auto Sessions mappings
 map("n", "<leader>aS", "<cmd>AutoSession save<cr>", { desc = "Save session" })

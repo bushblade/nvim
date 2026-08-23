@@ -14,3 +14,4 @@ Shared vocabulary for this Neovim configuration. Architecture reviews and refact
 
 - `lua/utils.lua` holds deliberately shallow shared helpers (currently just `map`). Concepts get their own named module instead of accumulating here.
 - Plugin specs under `lua/plugins/` stay thin: they wire plugins and consume decisions from named modules. `lua/languages.lua` is data-as-interface: mason, lsp, treesitter, and formatter specs all derive from it.
+- Duplicate leader-namespace keymap aliases (e.g. `<leader>r` and `<leader>lr`) are deliberate muscle-memory affordances — do not deduplicate keymaps that differ only by prefix.
