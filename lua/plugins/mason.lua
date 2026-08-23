@@ -1,3 +1,5 @@
+local languages = require("languages")
+
 return {
   {
     "williamboman/mason.nvim",
@@ -27,30 +29,7 @@ return {
     config = function()
       require("mason-lspconfig").setup({
         automatic_enable = false,
-        ensure_installed = {
-          "ts_ls",
-          "vue_ls",
-          "vtsls",
-          "tailwindcss",
-          "cssls",
-          "yamlls",
-          "prismals",
-          "emmet_ls",
-          "graphql",
-          "astro",
-          "lua_ls",
-          "pyright",
-          "rust_analyzer",
-          "gopls",
-          "jdtls",
-          "eslint",
-          "biome",
-          "jsonls",
-          "marksman",
-          "html",
-          "bashls",
-          "intelephense",
-        },
+        ensure_installed = languages.all_servers(),
         automatic_installation = true,
       })
     end,

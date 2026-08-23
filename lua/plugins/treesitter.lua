@@ -1,3 +1,5 @@
+local languages = require("languages")
+
 return {
   {
     "nvim-treesitter/nvim-treesitter",
@@ -12,45 +14,7 @@ return {
       local ts = require("nvim-treesitter")
       ts.setup(opts)
 
-      local langs = {
-        "astro",
-        "bash",
-        "comment",
-        "css",
-        "fish",
-        "gitcommit",
-        "gitignore",
-        "go",
-        "graphql",
-        "html",
-        "http",
-        "javascript",
-        "json",
-        "jsdoc",
-        -- "lua",
-        "luadoc",
-        -- "markdown",
-        "markdown_inline",
-        "php",
-        "prisma",
-        "python",
-        "query",
-        "regex",
-        "rust",
-        "scss",
-        "svelte",
-        "tmux",
-        "toml",
-        "tsx",
-        "typescript",
-        -- "vim",
-        -- "vimdoc",
-        "vue",
-        "xml",
-        "yaml",
-      }
-
-      ts.install(langs)
+      ts.install(languages.parsers())
       vim.treesitter.language.register("javascript", "javascriptreact")
       vim.treesitter.language.register("tsx", "typescriptreact")
 
@@ -61,7 +25,7 @@ return {
         },
       })
 
-      local ft_pattern = vim.list_extend({}, langs)
+      local ft_pattern = vim.list_extend({}, languages.parsers())
       vim.list_extend(ft_pattern, { "javascriptreact", "typescriptreact" })
 
       vim.api.nvim_create_autocmd("FileType", {

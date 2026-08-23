@@ -1,3 +1,4 @@
+local languages = require("languages")
 local formatter_to_use = require("toolchain").javascript().formatter
 
 if formatter_to_use == "prettierd" then
@@ -9,27 +10,21 @@ if formatter_to_use == "prettierd" then
     end,
   })
 end
+
+-- every language marked `web_fts` in lua/languages.lua formats with the Toolchain
+local formatters_by_ft = {
+  lua = { "stylua" },
+  python = { "autopep8" },
+}
+for _, ft in ipairs(languages.web_filetypes()) do
+  formatters_by_ft[ft] = { formatter_to_use }
+end
+
 return {
   "stevearc/conform.nvim",
   event = { "BufWritePre" },
   opts = {
-    formatters_by_ft = {
-      lua = { "stylua" },
-      python = { "autopep8" },
-      typescriptreact = { formatter_to_use },
-      javascriptreact = { formatter_to_use },
-      javascript = { formatter_to_use },
-      typescript = { formatter_to_use },
-      json = { formatter_to_use },
-      jsonc = { formatter_to_use },
-      html = { formatter_to_use },
-      css = { formatter_to_use },
-      scss = { formatter_to_use },
-      graphql = { formatter_to_use },
-      markdown = { formatter_to_use },
-      vue = { formatter_to_use },
-      astro = { formatter_to_use },
-    },
+    formatters_by_ft = formatters_by_ft,
     format_on_save = {
       -- These options will be passed to conform.format()
       timeout_ms = 500,

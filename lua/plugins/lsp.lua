@@ -1,3 +1,4 @@
+local languages = require("languages")
 local toolchain = require("toolchain")
 
 return {
@@ -43,6 +44,9 @@ return {
       })
 
       local capabilities = require("blink.cmp").get_lsp_capabilities()
+
+      -- Servers needing custom configuration are registered below.
+      -- Everything else is enabled straight from lua/languages.lua.
 
       -- TS/JS
 
@@ -99,7 +103,6 @@ return {
       -- nvim 0.11 or above
       vim.lsp.config("vtsls", vtsls_config)
       vim.lsp.config("vue_ls", vue_ls_config)
-      vim.lsp.enable({ "vtsls", "vue_ls" })
 
       -- CSS
       local css_settings = {
@@ -125,7 +128,6 @@ return {
           },
         },
       })
-      vim.lsp.enable("cssls")
 
       -- HTML
       vim.lsp.config("html", {
@@ -140,11 +142,8 @@ return {
           },
         },
       })
-      vim.lsp.enable("html")
 
-      -- JSON
-
-      -- Conditionally set up jsonls and EsLint if the project does not use Biome
+      -- JSON + linting: when a project uses Biome it replaces jsonls and EsLint
       if toolchain.javascript().linter == "eslint" then
         vim.lsp.config("jsonls", {
           capabilities = capabilities,
@@ -154,11 +153,8 @@ return {
             provideFormatter = true,
           },
         })
-
-        vim.lsp.enable("jsonls")
         -- EsLint
         vim.lsp.config("eslint", { capabilities = capabilities })
-        vim.lsp.enable("eslint")
       else
         -- Biome: linting (diagnostics) + formatting only. Exclude it from
         -- go-to-definition so it doesn't report a second, identical location
@@ -173,57 +169,7 @@ return {
             client.server_capabilities.definitionProvider = nil
           end,
         })
-        vim.lsp.enable("biome")
-        print("biome.json found, not enabling jsonls or eslint")
       end
-
-      -- Tailwind
-      if toolchain.tailwind() then
-        vim.lsp.config("tailwindcss", {
-          capabilities = capabilities,
-        })
-        vim.lsp.enable("tailwindcss")
-      end
-
-      -- Emmet
-      vim.lsp.config("emmet_ls", {
-        capabilities = capabilities,
-      })
-      vim.lsp.enable("emmet_ls")
-
-      -- Astro
-      vim.lsp.config("astro", { capabilities = capabilities })
-      vim.lsp.enable("astro")
-
-      -- Markdown
-      vim.lsp.enable("marksman")
-
-      -- Prisma
-      vim.lsp.enable("prismals")
-
-      -- php
-      -- vim.lsp.enable("intelephense")
-
-      -- Bash
-      vim.lsp.enable("bashls")
-
-      -- Python
-      vim.lsp.enable("pyright")
-
-      -- Java
-      vim.lsp.enable("jdtls")
-
-      -- Yaml
-      vim.lsp.enable("yamlls")
-
-      -- Go
-      -- vim.lsp.enable("gopls")
-
-      -- GraphQL
-      -- vim.lsp.enable("graphql")
-
-      -- Rust
-      -- vim.lsp.enable("rust_analyzer")
 
       -- Lua
       vim.lsp.config("lua_ls", {
@@ -253,7 +199,27 @@ return {
           },
         },
       })
-      vim.lsp.enable("lua_ls")
+
+      -- Enable every server the languages table asks for
+      for _, server in ipairs(languages.enabled_servers()) do
+        vim.lsp.enable(server)
+      end
+
+      -- Per-project servers: chosen by the Toolchain, not by the table
+      if toolchain.javascript().linter == "eslint" then
+        vim.lsp.enable({ "jsonls", "eslint" })
+      else
+        print("biome.json found, not enabling jsonls or eslint")
+        vim.lsp.enable("biome")
+      end
+
+      -- Tailwind
+      if toolchain.tailwind() then
+        vim.lsp.config("tailwindcss", {
+          capabilities = capabilities,
+        })
+        vim.lsp.enable("tailwindcss")
+      end
     end,
   },
 }
