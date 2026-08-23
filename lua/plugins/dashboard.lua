@@ -5,10 +5,14 @@ return {
       local alpha = require("alpha")
       local dashboard = require("alpha.themes.dashboard")
 
+      -- Vertical padding to center content
+      local padding = { type = "padding", val = 15 }
+
       -- Set header
       dashboard.section.header.val = {
-        "█▀▄ █░█ █▀▀ █▀█ █▀▄ █░░ ▄▀█ █▀█ █▀▀ ░░░ █▄░█ █░█ █ █▀▄▀█",
-        "█▄▀ █▄█ █▄▄ █▀▄ █▄▀ █▄▄ █▀█ █▄█ █▄▄ ░█░ █▀▄█ ▀▄▀ █ █░▀░█",
+        "┏┓ ╻ ╻┏━┓╻ ╻┏┓ ╻  ┏━┓╺┳┓┏━╸ ┏┓╻╻ ╻╻┏┳┓",
+        "┣┻┓┃ ┃┗━┓┣━┫┣┻┓┃  ┣━┫ ┃┃┣╸  ┃┗┫┃┏┛┃┃┃┃",
+        "┗━┛┗━┛┗━┛╹ ╹┗━┛┗━╸╹ ╹╺┻┛┗━╸╹╹ ╹┗┛ ╹╹ ╹",
       }
 
       -- Set menu
@@ -23,7 +27,14 @@ return {
       }
 
       -- Send config to alpha
-      alpha.setup(dashboard.opts)
+      alpha.setup({
+        layout = {
+          padding,
+          dashboard.section.header,
+          dashboard.section.buttons,
+        },
+        opts = dashboard.opts,
+      })
 
       -- Disable folding on alpha buffer
       vim.cmd([[
