@@ -18,6 +18,27 @@ Lazy will install all plugins, you may then need to quit and restart to get
 everything running correctly.
 Mason will install language servers and formatters.
 
+## Adding or toggling languages
+
+Everything about which languages your setup supports lives in one place:
+[lua/languages.lua](./lua/languages.lua). Edit that file and restart Nvim — Mason
+installs any newly added servers automatically.
+
+- **Turn a language server on/off** — each entry has `lsp = "server_name"`.
+  Add `enabled = false` to keep it installed but not enabled (like `gopls`
+  today); delete the line to switch it back on.
+- **Add a new language** — add an entry, e.g.
+  `elixir = { lsp = "elixirls", parsers = { "elixir" } }`.
+- **Treesitter highlighting** — list parser names in `parsers`. Parsers that
+  aren't tied to a language (`comment`, `regex`, …) live in `support_parsers`
+  in the same file.
+- **Formatting** — filetypes listed in `web_fts` are formatted by your project
+  Toolchain (Biome, or prettierd — decided per project by
+  [lua/toolchain.lua](./lua/toolchain.lua)). Lua formats with stylua and Python
+  with autopep8 regardless.
+- A few servers only run in some projects (biome, eslint, jsonls, tailwindcss).
+  Those are listed in `project_servers`: always installed, enabled per project.
+
 ## Adding custom Snippets
 
 The config uses [ luasnip ](https://github.com/saadparwaiz1/cmp_luasnip) paired
