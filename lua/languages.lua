@@ -49,7 +49,6 @@ local languages = {
   fish = { parsers = { "fish" } },
   git = { parsers = { "gitcommit", "gitignore" } },
   svelte = { parsers = { "svelte" } },
-  tmux = { parsers = { "tmux" } },
   toml = { parsers = { "toml" } },
   xml = { parsers = { "xml" } },
 }
