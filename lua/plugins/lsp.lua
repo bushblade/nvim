@@ -45,6 +45,15 @@ return {
 
       local capabilities = require("blink.cmp").get_lsp_capabilities()
 
+      -- Global defaults for every language server, including those enabled
+      -- straight from languages.enabled_servers() with no per-server config.
+      vim.lsp.config("*", {
+        capabilities = capabilities,
+        workspace = {
+          fileOperations = { didRename = true, willRename = true },
+        },
+      })
+
       -- Servers needing custom configuration are registered below.
       -- Everything else is enabled straight from lua/languages.lua.
 
@@ -116,7 +125,6 @@ return {
       end
 
       vim.lsp.config("cssls", {
-        capabilities = capabilities,
         filetypes = { "css", "scss", "less" },
         settings = {
           css = css_settings,
@@ -131,7 +139,6 @@ return {
 
       -- HTML
       vim.lsp.config("html", {
-        capabilities = capabilities,
         cmd = { "vscode-html-language-server", "--stdio" },
         filetypes = { "html", "php" },
         init_options = {
@@ -146,15 +153,12 @@ return {
       -- JSON + linting: when a project uses Biome it replaces jsonls and EsLint
       if toolchain.javascript().linter == "eslint" then
         vim.lsp.config("jsonls", {
-          capabilities = capabilities,
           cmd = { "vscode-json-language-server", "--stdio" },
           filetypes = { "json", "jsonc" },
           init_options = {
             provideFormatter = true,
           },
         })
-        -- EsLint
-        vim.lsp.config("eslint", { capabilities = capabilities })
       else
         -- Biome: linting (diagnostics) + formatting only. Exclude it from
         -- go-to-definition so it doesn't report a second, identical location
@@ -173,7 +177,6 @@ return {
 
       -- Lua
       vim.lsp.config("lua_ls", {
-        capabilities = capabilities,
         settings = {
           Lua = {
             runtime = {
@@ -215,9 +218,6 @@ return {
 
       -- Tailwind
       if toolchain.tailwind() then
-        vim.lsp.config("tailwindcss", {
-          capabilities = capabilities,
-        })
         vim.lsp.enable("tailwindcss")
       end
     end,
