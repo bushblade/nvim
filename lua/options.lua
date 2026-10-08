@@ -43,8 +43,8 @@ vim.g.have_nerd_font = true
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- Show folds
-vim.opt.foldcolumn = "1"
+-- Hide the fold column (LSP folds still work; use za/zM/zR to fold)
+vim.opt.foldcolumn = "0"
 
 -- Give me some fenced codeblock goodness
 vim.g.markdown_fenced_languages = {
