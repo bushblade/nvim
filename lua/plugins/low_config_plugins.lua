@@ -31,8 +31,4 @@ return {
       require("todo-comments").setup()
     end,
   },
-  {
-    "leafOfTree/vim-matchtag",
-    event = "VeryLazy",
-  },
 }
