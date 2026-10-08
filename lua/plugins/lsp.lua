@@ -132,22 +132,31 @@ return {
       -- TS/JS
 
       -- managed to get vue-language-server working with vtsls following https://github.com/vuejs/language-tools/wiki/Neovim
-      local vue_language_server_path = vim.fn.stdpath("data")
-        .. "/mason/packages/vue-language-server/node_modules/@vue/language-server"
+      -- Resolve the install path through the Mason registry instead of
+      -- hardcoding the stdpath("data")/mason/packages layout, which is
+      -- brittle across platforms/installs. get_package errors when the
+      -- registry has not been populated yet, so guard it.
+      local has_vue_ls, vue_ls_pkg = pcall(function()
+        return require("mason-registry").get_package("vue-language-server")
+      end)
+      local vue_language_server_path = has_vue_ls
+        and (vue_ls_pkg:get_install_path() .. "/node_modules/@vue/language-server")
+        or nil
 
-      local vue_plugin = {
+      local vue_plugin = vue_language_server_path and {
         name = "@vue/typescript-plugin",
         location = vue_language_server_path,
         languages = { "vue" },
         configNamespace = "typescript",
-      }
+        -- Keep working in projects that pin their own TypeScript version.
+        enableForWorkspaceTypeScriptVersions = true,
+      } or nil
+
       local vtsls_config = {
         settings = {
           vtsls = {
             tsserver = {
-              globalPlugins = {
-                vue_plugin,
-              },
+              globalPlugins = vue_plugin and { vue_plugin } or {},
             },
           },
         },
