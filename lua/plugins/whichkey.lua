@@ -15,7 +15,6 @@ return {
           mode = { "n", "v" },
           { "<leader>f", group = "Telescope" },
           { "<leader>l", group = "LSP" },
-          { "<leader>a", group = "Sessions" },
           -- { "<leader>u", group = "ui", icon = { icon = "󰙵 ", color = "cyan" } },
           -- { "<leader>x", group = "diagnostics/quickfix", icon = { icon = "󱖫 ", color = "green" } },
           { "z", group = "fold" },

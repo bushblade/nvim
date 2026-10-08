@@ -84,7 +84,6 @@ map("n", "<leader>fd", "<cmd>Telescope diagnostics theme=dropdown<CR>", { desc =
 map("n", "<leader>fm", "<cmd>Telescope marks theme=dropdown<CR>", { desc = "Marks" })
 map("n", "<leader>fk", "<cmd>Telescope keymaps<CR>", { desc = "Key mappings" })
 map("n", "<leader>fM", "<cmd>Telescope man_pages<CR>", { desc = "Man pages" })
-map("n", "<leader>fa", "<cmd>SessionSearch<CR>", { desc = "Search Sessions" })
 map("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", { desc = "Search help" })
 map("n", "<leader>fe", "<cmd>Telescope file_browser<CR>", { desc = "Browse Files" })
 map("n", "<leader>fg", "<cmd>Telescope git_status<CR>", { desc = "Git Status" })
@@ -93,9 +92,3 @@ map("n", "<leader>fg", "<cmd>Telescope git_status<CR>", { desc = "Git Status" })
 map("n", "<leader>ld", function()
   vim.diagnostic.open_float({ border = "rounded" })
 end, { desc = "Line Diagnostics" })
-
--- Auto Sessions mappings
-map("n", "<leader>aS", "<cmd>AutoSession save<cr>", { desc = "Save session" })
-map("n", "<leader>as", "<cmd>AutoSession search<cr>", { desc = "Search sessions" })
-map("n", "<leader>ad", "<cmd>AutoSession delete<cr>", { desc = "Delete session" })
-map("n", "<leader>ar", "<cmd>AutoSession restore<cr>", { desc = "Restore session" })

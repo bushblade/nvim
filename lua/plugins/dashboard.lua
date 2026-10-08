@@ -22,7 +22,6 @@ return {
         dashboard.button("s", "  > Search In Files", "<cmd>Telescope live_grep<cr>"),
         dashboard.button("r", "  > Recent", "<cmd>Telescope oldfiles<CR>"),
         dashboard.button("L", "  > Manage plugins", "<cmd>Lazy<CR>"),
-        dashboard.button("S", "  > Sessions", "<cmd>Telescope session-lens search_session<CR>"),
         dashboard.button("q", "  > Quit NVIM", ":qa<CR>"),
       }
 

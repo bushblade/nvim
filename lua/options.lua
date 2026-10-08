@@ -25,10 +25,6 @@ vim.opt.inccommand = "split"
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
--- `vim.o.sessionoptions` should contain 'localoptions' to make sure
--- filetype and highlighting work correctly after a session is restored.
-vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
-
 -- spelling
 vim.opt.spelllang = "en_gb,en_us"
 vim.opt.mousemodel = "popup"

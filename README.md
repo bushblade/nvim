@@ -80,12 +80,11 @@ One test snippet is included as an example.
 22. [catgoose/nvim-colorizer.lua](https://github.com/catgoose/nvim-colorizer.lua) - Display the colour of your hex/rgb/hsl value
 23. [akinsho/bufferline.nvim](https://github.com/akinsho/bufferline.nvim) - Buffers in tabs
 24. [delphinus/vim-firestore](https://github.com/delphinus/vim-firestore) - Syntax highlighting and completion for Firebase rules
-25. [rmagatti/auto-session](https://github.com/rmagatti/auto-session) - Session management
-26. [goolord/alpha-nvim](https://github.com/goolord/alpha-nvim) - Dashboard
-27. [mbbill/undotree](https://github.com/mbbill/undotree) - Undo tree
-28. [j-hui/fidget.nvim](https://github.com/j-hui/fidget.nvim) - UI for lsp progress
-29. [christoomey/vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator) - Navigate between splits; wired up to use Herdr panes instead of Tmux
-30. [williamboman/mason.nvim](https://github.com/williamboman/mason.nvim) - Installing language servers and formatters
+25. [goolord/alpha-nvim](https://github.com/goolord/alpha-nvim) - Dashboard
+26. [mbbill/undotree](https://github.com/mbbill/undotree) - Undo tree
+27. [j-hui/fidget.nvim](https://github.com/j-hui/fidget.nvim) - UI for lsp progress
+28. [christoomey/vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator) - Navigate between splits; wired up to use Herdr panes instead of Tmux
+29. [williamboman/mason.nvim](https://github.com/williamboman/mason.nvim) - Installing language servers and formatters
 
 ## Resources and inspiration
 
