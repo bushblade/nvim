@@ -1,5 +1,6 @@
 local languages = require("languages")
 local toolchain = require("toolchain")
+local map = require("utils").map
 
 return {
   {
@@ -52,6 +53,77 @@ return {
         workspace = {
           fileOperations = { didRename = true, willRename = true },
         },
+      })
+
+      -- Buffer-local LSP maps, set only for capabilities the attached client
+      -- actually supports. Non-LSP maps stay global in lua/keymappings.lua.
+      vim.api.nvim_create_autocmd("LspAttach", {
+        callback = function(ev)
+          local client = vim.lsp.get_client_by_id(ev.data.client_id)
+          if not client then
+            return
+          end
+
+          local function supports(method)
+            return client:supports_method(method, ev.buf)
+          end
+          local function bufmap(lhs, rhs, desc)
+            map("n", lhs, rhs, { buffer = ev.buf, desc = desc })
+          end
+
+          if supports("textDocument/definition") then
+            bufmap("gd", vim.lsp.buf.definition, "Go to Definition")
+          end
+          if supports("textDocument/declaration") then
+            bufmap("gD", vim.lsp.buf.declaration, "Go to Declaration")
+          end
+          if supports("textDocument/references") then
+            bufmap("gr", vim.lsp.buf.references, "List References")
+            bufmap("<leader>lR", vim.lsp.buf.references, "List references")
+          end
+          if supports("textDocument/implementation") then
+            bufmap("gi", vim.lsp.buf.implementation, "Go to Implementation")
+          end
+          if supports("textDocument/typeDefinition") then
+            bufmap("gy", vim.lsp.buf.type_definition, "Go to Type Definition")
+          end
+          if supports("textDocument/hover") then
+            bufmap("K", function()
+              vim.lsp.buf.hover({ border = "rounded" })
+            end, "Hover")
+          end
+          if supports("textDocument/rename") then
+            bufmap("<leader>r", vim.lsp.buf.rename, "LSP Rename")
+            bufmap("<leader>lr", vim.lsp.buf.rename, "Rename")
+          end
+          if supports("textDocument/codeAction") then
+            bufmap("<leader>c", vim.lsp.buf.code_action, "Code Actions")
+            bufmap("<leader>lc", vim.lsp.buf.code_action, "Code actions")
+            bufmap("<leader>co", function()
+              vim.lsp.buf.code_action({ context = { only = { "source.organizeImports" }, diagnostics = {} } })
+            end, "Organize Imports")
+            bufmap("<leader>cA", function()
+              vim.lsp.buf.code_action({ context = { only = { "source" }, diagnostics = {} } })
+            end, "Source Action")
+          end
+          if supports("textDocument/formatting") then
+            bufmap("<leader>lf", function()
+              vim.lsp.buf.format({ async = true })
+            end, "Format File")
+          end
+
+          -- Inlay hints (Vue excluded, matching LazyVim)
+          if supports("textDocument/inlayHint") and vim.bo[ev.buf].filetype ~= "vue" then
+            vim.lsp.inlay_hint.enable(true, { bufnr = ev.buf })
+          end
+
+          -- LSP-backed folds
+          if supports("textDocument/foldingRange") then
+            vim.opt_local.foldmethod = "expr"
+            vim.opt_local.foldexpr = "v:lua.vim.lsp.foldexpr()"
+            vim.opt_local.foldlevel = 99
+          end
+        end,
       })
 
       -- Servers needing custom configuration are registered below.

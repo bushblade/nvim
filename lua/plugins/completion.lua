@@ -41,7 +41,7 @@ return {
       ghost_text = { enabled = false },
       documentation = { auto_show = true, auto_show_delay_ms = 500, window = { border = "rounded" } },
     },
-    signature = { enabled = false, window = { border = "rounded" } },
+    signature = { enabled = true, window = { border = "rounded" } },
     keymap = {
       preset = "default",
       -- ["<CR>"] = { "select_and_accept", "fallback" },
