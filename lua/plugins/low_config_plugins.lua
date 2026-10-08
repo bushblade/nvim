@@ -21,12 +21,11 @@ return {
     },
   },
 
-  { "JoosepAlviste/nvim-ts-context-commentstring", event = "VeryLazy", opts = {} },
-  { "numToStr/Comment.nvim", event = "VeryLazy", opts = {} },
+  { "folke/ts-comments.nvim", event = "VeryLazy", opts = {} },
   {
     "folke/todo-comments.nvim",
     event = "VeryLazy",
-    cmd = { "TodoTelescope", "TodoTrouble", "TodoLocList", "TodoQuickFix" },
+    cmd = { "TodoTrouble", "TodoLocList", "TodoQuickFix" },
     config = function()
       require("todo-comments").setup()
     end,

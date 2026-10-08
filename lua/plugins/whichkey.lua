@@ -13,7 +13,7 @@ return {
       spec = {
         {
           mode = { "n", "v" },
-          { "<leader>f", group = "Telescope" },
+          { "<leader>f", group = "Find" },
           { "<leader>l", group = "LSP" },
           -- { "<leader>u", group = "ui", icon = { icon = "󰙵 ", color = "cyan" } },
           -- { "<leader>x", group = "diagnostics/quickfix", icon = { icon = "󱖫 ", color = "green" } },
