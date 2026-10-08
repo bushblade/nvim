@@ -9,11 +9,11 @@ return {
       dashboard = {
         enabled = true,
         preset = {
-          header = {
+          header = table.concat({
             "┏┓ ╻ ╻┏━┓╻ ╻┏┓ ╻  ┏━┓╺┳┓┏━╸ ┏┓╻╻ ╻╻┏┳┓",
             "┣┻┓┃ ┃┗━┓┣━┫┣┻┓┃  ┣━┫ ┃┃┣╸  ┃┗┫┃┏┛┃┃┃┃",
             "┗━┛┗━┛┗━┛╹ ╹┗━┛┗━╸╹ ╹╺┻┛┗━╸╹╹ ╹┗┛ ╹╹ ╹",
-          },
+          }, "\n"),
           keys = {
             { icon = "\u{f15b} ", key = "e", desc = "New file", action = ":ene | startinsert" },
             { icon = "\u{f71d} ", key = "f", desc = "Find file", action = ":lua Snacks.dashboard.pick('files')" },
