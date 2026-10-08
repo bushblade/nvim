@@ -8,16 +8,13 @@ return {
       -- Useful for getting pretty icons, but requires a Nerd Font.
       { "nvim-tree/nvim-web-devicons", enabled = vim.g.have_nerd_font },
     },
-    event = "VimEnter",
+    event = "VeryLazy",
+    cmd = "Telescope",
     opts = {
       defaults = {
         winblend = 0,
       },
-      extensions = {
-        ["ui-select"] = {
-          require("telescope.themes").get_cursor(),
-        },
-      },
+      extensions = {},
     },
     keys = {
       {
@@ -29,6 +26,11 @@ return {
       },
     },
     config = function(_, opts)
+      -- Build the ui-select theme here rather than in the spec table above.
+      -- A `require()` in the spec runs while lazy is still collecting specs,
+      -- which force-loads telescope during startup and defeats `event`.
+      opts.extensions["ui-select"] = { require("telescope.themes").get_cursor() }
+
       local telescope = require("telescope")
       telescope.setup(opts)
 

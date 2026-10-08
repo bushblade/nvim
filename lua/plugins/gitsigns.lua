@@ -2,6 +2,7 @@ local map = require("utils").map
 
 return { -- Adds git related signs to the gutter, as well as utilities for managing changes
   "lewis6991/gitsigns.nvim",
+  event = { "BufReadPost", "BufNewFile" },
   config = function()
     require("gitsigns").setup({
       signs = {

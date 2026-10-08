@@ -5,7 +5,7 @@ return {
       "nvim-tree/nvim-web-devicons",
     },
     name = "BufferLine",
-    lazy = false,
+    event = "VeryLazy",
     opts = {
       options = {
         offsets = {

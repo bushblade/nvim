@@ -8,11 +8,12 @@ return {
       require("nvim-surround").setup({})
     end,
   },
-  "delphinus/vim-firestore",
-  "nvim-tree/nvim-web-devicons",
+  { "delphinus/vim-firestore", event = "VeryLazy" },
+  { "nvim-tree/nvim-web-devicons", event = "VeryLazy" },
   -- Useful status updates for LSP
   {
     "j-hui/fidget.nvim",
+    event = "LspAttach",
     opts = {
       notification = {
         window = { border = "rounded", winblend = 0 },
@@ -20,15 +21,18 @@ return {
     },
   },
 
-  { "JoosepAlviste/nvim-ts-context-commentstring", opts = {} },
-  { "numToStr/Comment.nvim", opts = {} },
+  { "JoosepAlviste/nvim-ts-context-commentstring", event = "VeryLazy", opts = {} },
+  { "numToStr/Comment.nvim", event = "VeryLazy", opts = {} },
   {
     "folke/todo-comments.nvim",
+    event = "VeryLazy",
+    cmd = { "TodoTelescope", "TodoTrouble", "TodoLocList", "TodoQuickFix" },
     config = function()
       require("todo-comments").setup()
     end,
   },
   {
     "leafOfTree/vim-matchtag",
+    event = "VeryLazy",
   },
 }

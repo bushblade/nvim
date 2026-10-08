@@ -5,6 +5,16 @@ return {
     "williamboman/mason.nvim",
     event = "VeryLazy",
     build = ":MasonUpdate", -- :MasonUpdate updates registry contents
+    init = function()
+      -- mason.nvim prepends its bin dir in setup(), but that now runs at
+      -- VeryLazy -- after servers are spawned for files opened from the CLI
+      -- (and for session restore). Put it on PATH during startup so LSP
+      -- servers installed by mason resolve whenever they are first needed.
+      local bin = vim.fn.stdpath("data") .. "/mason/bin"
+      if not vim.env.PATH:find(bin, 1, true) then
+        vim.env.PATH = bin .. ":" .. vim.env.PATH
+      end
+    end,
     config = function()
       require("mason").setup({
         ui = {
@@ -26,6 +36,7 @@ return {
   },
   {
     "williamboman/mason-lspconfig.nvim",
+    event = "VeryLazy",
     config = function()
       require("mason-lspconfig").setup({
         automatic_enable = false,

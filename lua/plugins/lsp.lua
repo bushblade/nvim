@@ -5,7 +5,7 @@ local map = require("utils").map
 return {
   {
     "neovim/nvim-lspconfig",
-    event = "VimEnter",
+    event = { "BufReadPre", "BufNewFile" },
     dependencies = { "folke/lazydev.nvim", "saghen/blink.cmp" },
     config = function()
       -- Setup neovim lua configuration

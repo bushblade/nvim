@@ -72,10 +72,8 @@ map("n", "<leader>s", function()
 end, { desc = "Toggle spell check" })
 
 -- Telescope mappings
-local telescope_builtin = require("telescope.builtin")
-
 map("n", "<leader>ff", function()
-  telescope_builtin.find_files({ hidden = true })
+  require("telescope.builtin").find_files({ hidden = true })
 end, { desc = "Find File" })
 map("n", "<leader>fb", "<cmd>Telescope buffers theme=dropdown<CR>", { desc = "Find Buffer" })
 map("n", "<leader>fn", "<cmd>TodoTelescope<CR>", { desc = "Find Notes" })
