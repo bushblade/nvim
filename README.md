@@ -71,15 +71,14 @@ One test snippet is included as an example.
 14. [folke/flash.nvim](https://github.com/folke/flash.nvim) - Navigate with search labels, enhanced character motions, and Treesitter integration
 15. [folke/snacks.nvim](https://github.com/folke/snacks.nvim) - File explorer (sidebar tree)
 16. [folke/tokyonight.nvim](https://github.com/folke/tokyonight.nvim) - Theme
-17. [folke/trouble.nvim](https://github.com/folke/trouble.nvim) - Show the problems in your code
-18. [folke/which-key.nvim](https://github.com/folke/which-key.nvim) - Keymap helper
-19. [folke/todo-comments.nvim](https://github.com/folke/todo-comments.nvim) - Highlight and search project todos and notes
-20. [catgoose/nvim-colorizer.lua](https://github.com/catgoose/nvim-colorizer.lua) - Display the colour of your hex/rgb/hsl value
-21. [akinsho/bufferline.nvim](https://github.com/akinsho/bufferline.nvim) - Buffers in tabs
-22. [delphinus/vim-firestore](https://github.com/delphinus/vim-firestore) - Syntax highlighting and completion for Firebase rules
-23. [j-hui/fidget.nvim](https://github.com/j-hui/fidget.nvim) - UI for lsp progress
-24. [christoomey/vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator) - Navigate between splits; wired up to use Herdr panes instead of Tmux
-25. [williamboman/mason.nvim](https://github.com/williamboman/mason.nvim) - Installing language servers and formatters
+17. [folke/which-key.nvim](https://github.com/folke/which-key.nvim) - Keymap helper
+18. [folke/todo-comments.nvim](https://github.com/folke/todo-comments.nvim) - Highlight and search project todos and notes
+19. [catgoose/nvim-colorizer.lua](https://github.com/catgoose/nvim-colorizer.lua) - Display the colour of your hex/rgb/hsl value
+20. [akinsho/bufferline.nvim](https://github.com/akinsho/bufferline.nvim) - Buffers in tabs
+21. [delphinus/vim-firestore](https://github.com/delphinus/vim-firestore) - Syntax highlighting and completion for Firebase rules
+22. [j-hui/fidget.nvim](https://github.com/j-hui/fidget.nvim) - UI for lsp progress
+23. [christoomey/vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator) - Navigate between splits; wired up to use Herdr panes instead of Tmux
+24. [williamboman/mason.nvim](https://github.com/williamboman/mason.nvim) - Installing language servers and formatters
 
 ## Resources and inspiration
 

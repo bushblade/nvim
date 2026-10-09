@@ -31,7 +31,6 @@ return {
         lualine_z = {},
       },
       tabline = {},
-      extensions = { "trouble" },
     },
   },
 }

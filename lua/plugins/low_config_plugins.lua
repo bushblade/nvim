@@ -25,7 +25,7 @@ return {
   {
     "folke/todo-comments.nvim",
     event = "VeryLazy",
-    cmd = { "TodoTrouble", "TodoLocList", "TodoQuickFix" },
+    cmd = { "TodoLocList", "TodoQuickFix" },
     config = function()
       require("todo-comments").setup()
     end,
