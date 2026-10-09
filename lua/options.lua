@@ -42,6 +42,16 @@ vim.g.maplocalleader = " "
 -- Hide the fold column (LSP folds still work; use za/zM/zR to fold)
 vim.opt.foldcolumn = "0"
 
+-- Persistent undo: keep undo history across sessions
+if vim.fn.has("persistent_undo") == 1 then
+  local undodir = vim.fn.expand("~/.undodir")
+  if vim.fn.isdirectory(undodir) == 0 then
+    vim.fn.mkdir(undodir, "p", "0700")
+  end
+  vim.opt.undodir = undodir
+  vim.opt.undofile = true
+end
+
 -- Give me some fenced codeblock goodness
 vim.g.markdown_fenced_languages = {
   "html",
