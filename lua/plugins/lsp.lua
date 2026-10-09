@@ -113,8 +113,14 @@ return {
           end
 
           -- Inlay hints (Vue excluded, matching LazyVim)
-          if supports("textDocument/inlayHint") and vim.bo[ev.buf].filetype ~= "vue" then
-            vim.lsp.inlay_hint.enable(true, { bufnr = ev.buf })
+          if supports("textDocument/inlayHint") then
+            bufmap("<leader>lh", function()
+              vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ bufnr = ev.buf }), { bufnr = ev.buf })
+            end, "Toggle Inlay Hints")
+
+            if vim.bo[ev.buf].filetype ~= "vue" then
+              vim.lsp.inlay_hint.enable(true, { bufnr = ev.buf })
+            end
           end
 
           -- LSP-backed folds
@@ -154,6 +160,18 @@ return {
 
       local vtsls_config = {
         settings = {
+          -- Only the `typescript.*` namespace is set, so hints show for .ts/.tsx
+          -- and not .js/.jsx (those read the separate `javascript.*` namespace).
+          typescript = {
+            inlayHints = {
+              enumMemberValues = { enabled = true },
+              functionLikeReturnTypes = { enabled = true },
+              variableTypes = { enabled = true },
+              propertyDeclarationTypes = { enabled = true },
+              parameterTypes = { enabled = true, suppressWhenArgumentMatchesName = true },
+              parameterNames = { enabled = "literals" }, -- the `event:` / `opts:` style
+            },
+          },
           vtsls = {
             tsserver = {
               globalPlugins = vue_plugin and { vue_plugin } or {},
