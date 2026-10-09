@@ -6,6 +6,7 @@ return {
     opts = {
       picker = { enabled = true },
       input = { enabled = true },
+      explorer = { enabled = true },
       dashboard = {
         enabled = true,
         preset = {

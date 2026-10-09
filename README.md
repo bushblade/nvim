@@ -54,7 +54,7 @@ One test snippet is included as an example.
 1. [/lazy/lazy.nvim](https://github.com/folke/lazy.nvim) - Plugin manager
 2. [neovim/nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) - LSP
    1. [folke/lazydev.nvim](https://github.com/folke/lazydev.nvim) - Lua LSP goodies for editing this config
-3. [folke/snacks.nvim](https://github.com/folke/snacks.nvim) - Fuzzy finder (picker), dashboard and input UI
+3. [folke/snacks.nvim](https://github.com/folke/snacks.nvim) - Fuzzy finder (picker), file explorer, dashboard and input UI
 4. [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) - Language parsing for highlighting and more
 5. [nvim-lualine/lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) - Status line
 6. [nvim-tree/nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons) - Icons
@@ -69,7 +69,7 @@ One test snippet is included as an example.
 12. [stevearc/conform.nvim](https://github.com/stevearc/conform.nvim) - Formatting
 13. [lewis6991/gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) - Git status in the sign column
 14. [folke/flash.nvim](https://github.com/folke/flash.nvim) - Navigate with search labels, enhanced character motions, and Treesitter integration
-15. [nvim-tree/nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua) - File tree
+15. [folke/snacks.nvim](https://github.com/folke/snacks.nvim) - File explorer (sidebar tree)
 16. [folke/tokyonight.nvim](https://github.com/folke/tokyonight.nvim) - Theme
 17. [folke/trouble.nvim](https://github.com/folke/trouble.nvim) - Show the problems in your code
 18. [folke/which-key.nvim](https://github.com/folke/which-key.nvim) - Keymap helper

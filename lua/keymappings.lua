@@ -60,7 +60,9 @@ end
 -- Leader key mappings
 map("n", "<leader>q", qf_toggle, { desc = "Toggle Quickfix list" })
 map("n", "<leader>M", "<cmd>Mason<CR>", { desc = "Mason" })
-map("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "File Tree" })
+map("n", "<leader>e", function()
+  Snacks.explorer()
+end, { desc = "Explorer" })
 map("n", "<leader>u", "<cmd>UndotreeToggle<CR><cmd>UndotreeFocus<CR>", { desc = "Toggle Undotree" })
 map("n", "<leader>L", "<cmd>Lazy<CR>", { desc = "Lazy" })
 map("n", "<leader>d", function()

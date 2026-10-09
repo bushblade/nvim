@@ -10,7 +10,7 @@ return {
       options = {
         offsets = {
           {
-            filetype = "NvimTree",
+            filetype = "snacks_layout_box",
             -- text = "File Explorer",
             highlight = "Directory",
             text_align = "left",
