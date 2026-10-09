@@ -15,6 +15,7 @@ return {
           mode = { "n", "v" },
           { "<leader>f", group = "Find" },
           { "<leader>l", group = "LSP" },
+          { "<leader>t", group = "Toggle" },
           -- { "<leader>u", group = "ui", icon = { icon = "󰙵 ", color = "cyan" } },
           -- { "<leader>x", group = "diagnostics/quickfix", icon = { icon = "󱖫 ", color = "green" } },
           { "z", group = "fold" },
