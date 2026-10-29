@@ -9,7 +9,16 @@ return {
     end,
   },
   { "delphinus/vim-firestore", event = "VeryLazy" },
-  { "nvim-tree/nvim-web-devicons", event = "VeryLazy" },
+  {
+    "nvim-mini/mini.icons",
+    version = false,
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("mini.icons").setup()
+      MiniIcons.mock_nvim_web_devicons()
+    end,
+  },
   -- Useful status updates for LSP
   {
     "j-hui/fidget.nvim",

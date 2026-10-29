@@ -1,13 +1,13 @@
 return {
   {
     "akinsho/bufferline.nvim",
-    dependencies = {
-      "nvim-tree/nvim-web-devicons",
-    },
     name = "BufferLine",
     event = "VeryLazy",
     opts = {
       options = {
+        get_element_icon = function(opts)
+          return MiniIcons.get(opts.directory and "directory" or "file", opts.path)
+        end,
         offsets = {
           {
             filetype = "snacks_layout_box",

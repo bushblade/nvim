@@ -57,7 +57,7 @@ One test snippet is included as an example.
 3. [folke/snacks.nvim](https://github.com/folke/snacks.nvim) - Fuzzy finder (picker), file explorer, dashboard and input UI
 4. [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) - Language parsing for highlighting and more
 5. [nvim-lualine/lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) - Status line
-6. [nvim-tree/nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons) - Icons
+6. [nvim-mini/mini.icons](https://github.com/nvim-mini/mini.icons) - Icons
 7. [Saghen/blink.cmp](https://cmp.saghen.dev/) - Auto completions, suggestions and imports
    1. [L3MON4D3/LuaSnip](https://github.com/L3MON4D3/LuaSnip) - Snippet engine
    2. [rafamadriz/friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
