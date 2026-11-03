@@ -112,15 +112,11 @@ return {
             end, "Format File")
           end
 
-          -- Inlay hints (Vue excluded, matching LazyVim)
+          -- Inlay hints are off by default; <leader>lh toggles them per buffer.
           if supports("textDocument/inlayHint") then
             bufmap("<leader>lh", function()
               vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ bufnr = ev.buf }), { bufnr = ev.buf })
             end, "Toggle Inlay Hints")
-
-            if vim.bo[ev.buf].filetype ~= "vue" then
-              vim.lsp.inlay_hint.enable(true, { bufnr = ev.buf })
-            end
           end
 
           -- LSP-backed folds
