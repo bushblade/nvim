@@ -2,7 +2,28 @@ vim.opt.relativenumber = true
 vim.opt.cursorline = true -- show the cursor line
 vim.opt.cursorcolumn = true -- show the cursor column
 vim.opt.mouse = "a" -- enable mouse
-vim.opt.clipboard = "unnamedplus" -- use system clipboard
+-- Sync unnamedplus with system clipboard
+vim.opt.clipboard = "unnamedplus"
+
+-- Use OSC 52 for yanking
+local osc52 = require("vim.ui.clipboard.osc52")
+vim.g.clipboard = {
+  name = "OSC 52",
+  copy = {
+    ["+"] = osc52.copy("+"),
+    ["*"] = osc52.copy("*"),
+  },
+  -- Reads are blocked in Herdr Desktop; paste from the host with Ctrl+Shift+V.
+  -- Stub these so a stray `p` / `"+p` does not wait for an OSC 52 reply.
+  paste = {
+    ["+"] = function()
+      return {}
+    end,
+    ["*"] = function()
+      return {}
+    end,
+  },
+}
 vim.opt.smartcase = true -- ignores case for search unless a capital is used in search
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
